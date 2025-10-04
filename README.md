@@ -5,15 +5,11 @@
 
 # 🛠️ Gerrit Reports
 
-Automated reports on Linux Foundation Gerrit servers and the
-projects/repositories they contain.
+Automated reports on Linux Foundation Gerrit servers and the projects/repositories they contain.
 
 ## Overview
 
-This repository contains automatically generated reports for various
-Linux Foundation projects. Reports are published automatically by the
-[project-reports](https://github.com/modeseven-lfit/project-reports)
-repository's CI/CD workflow.
+This repository contains automatically generated reports for various Linux Foundation projects. Reports are published automatically by the [project-reports](https://github.com/modeseven-lfit/project-reports) repository's CI/CD workflow.
 
 ## Report Structure
 
@@ -33,14 +29,22 @@ projects/
 ```
 
 Each project folder contains:
-- **`report.html`**: Main report file with comprehensive analytics
-- **`.provenance.json`**: Report generation metadata
+- **`report.html`**: The main report file with comprehensive analytics
+- **`.provenance.json`**: Metadata about when and how the report was generated
 
 ## Project Report Links
 
 ### Active Projects
 
-- *No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*
+- [AGL](https://modeseven-lfit.github.io/gerrit-reports/projects/agl/report.html)
+- [FDio](https://modeseven-lfit.github.io/gerrit-reports/projects/fdio/report.html)
+- [LF Broadband](https://modeseven-lfit.github.io/gerrit-reports/projects/lf-broadband/report.html)
+- [Linux Foundation](https://modeseven-lfit.github.io/gerrit-reports/projects/linux-foundation/report.html)
+- [O-RAN-SC](https://modeseven-lfit.github.io/gerrit-reports/projects/o-ran-sc/report.html)
+- [ONAP](https://modeseven-lfit.github.io/gerrit-reports/projects/onap/report.html)
+- [Opendaylight](https://modeseven-lfit.github.io/gerrit-reports/projects/opendaylight/report.html)
+- [OPNFV](https://modeseven-lfit.github.io/gerrit-reports/projects/opnfv/report.html)
+
 
 > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
 
