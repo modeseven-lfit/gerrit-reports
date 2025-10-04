@@ -107,6 +107,24 @@ jobs:
 
           Automated reports on Linux Foundation Gerrit servers and the projects/repositories they contain.
 
+          ## Project Report Links
+
+          ### Active Projects
+
+          EOF
+          
+          # Add project links or placeholder
+          if [ $project_count -eq 0 ]; then
+            echo "*No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*" >> README.md
+          else
+            echo "$project_links" >> README.md
+          fi
+          
+          # Add footer
+          cat >> README.md << 'EOF'
+
+          > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
+
           ## Overview
 
           This repository contains automatically generated reports for various Linux Foundation projects. Reports are published automatically by the [project-reports](https://github.com/modeseven-lfit/project-reports) repository's CI/CD workflow.
@@ -131,24 +149,6 @@ jobs:
           Each project folder contains:
           - **`report.html`**: The main report file with comprehensive analytics
           - **`.provenance.json`**: Metadata about when and how the report was generated
-
-          ## Project Report Links
-
-          ### Active Projects
-
-          EOF
-          
-          # Add project links or placeholder
-          if [ $project_count -eq 0 ]; then
-            echo "*No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*" >> README.md
-          else
-            echo "$project_links" >> README.md
-          fi
-          
-          # Add footer
-          cat >> README.md << 'EOF'
-
-          > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
 
           ## Viewing Reports
 
