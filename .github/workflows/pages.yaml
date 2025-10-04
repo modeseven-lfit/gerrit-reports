@@ -1,0 +1,336 @@
+---
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2025 The Linux Foundation
+
+name: "🌐 Deploy to GitHub Pages"
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run
+# in-progress and latest queued. However, do NOT cancel in-progress runs as we
+# want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: "Build Pages"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Harden the runner used by this workflow
+      # yamllint disable-line rule:line-length
+      - uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        with:
+          egress-policy: 'audit'
+
+      - name: "Checkout repository"
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Setup Pages"
+        # yamllint disable-line rule:line-length
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+
+      - name: "Discover and index reports"
+        shell: bash
+        # yamllint disable rule:line-length
+        run: |
+          set -euo pipefail
+
+          echo "🔍 Scanning for project reports..."
+
+          # Create temporary file for new README content
+          temp_readme=$(mktemp)
+
+          # Start with the header section
+          cat > "${temp_readme}" << 'EOF'
+          <!--
+          # SPDX-License-Identifier: Apache-2.0
+          # SPDX-FileCopyrightText: 2025 The Linux Foundation
+          -->
+
+          # 🛠️ Gerrit Reports
+
+          Automated reports on Linux Foundation Gerrit servers and the
+          projects/repositories they contain.
+
+          ## Overview
+
+          This repository contains automatically generated reports for various
+          Linux Foundation projects. Reports are published automatically by the
+          [project-reports](https://github.com/modeseven-lfit/project-reports)
+          repository's CI/CD workflow.
+
+          ## Report Structure
+
+          Reports are organized in a hierarchical folder structure:
+
+          ```
+          projects/
+          ├── onap/
+          │   ├── report.html
+          │   └── .provenance.json
+          ├── opendaylight/
+          │   ├── report.html
+          │   └── .provenance.json
+          └── [project-slug]/
+              ├── report.html
+              └── .provenance.json
+          ```
+
+          Each project folder contains:
+          - **`report.html`**: Main report file with comprehensive analytics
+          - **`.provenance.json`**: Report generation metadata
+
+          ## Project Report Links
+
+          ### Active Projects
+
+          EOF
+
+          # Find all project directories and their reports
+          project_count=0
+          if [ -d "projects" ]; then
+            for project_dir in projects/*/; do
+              if [ -d "$project_dir" ] && \
+                [ -f "${project_dir}report.html" ]; then
+                project_slug=$(basename "$project_dir")
+
+                # Read project name from provenance if available
+                project_name="$project_slug"
+                if [ -f "${project_dir}.provenance.json" ]; then
+                  project_name=$(jq -r '.project // .slug' \
+                  "${project_dir}.provenance.json" 2>/dev/null \
+                  || echo "$project_slug")
+                fi
+
+                # Convert slug to display name if no provenance found
+                if [ "$project_name" = "$project_slug" ]; then
+                  project_name=$(echo "$project_slug" | sed 's/-/ /g' | \
+                    sed 's/\b\w/\U&/g')
+                fi
+
+                # Add link to the README
+                echo "- [${project_name}](https://modeseven-lfit.github.io/gerrit-reports/projects/${project_slug}/report.html)" >> "${temp_readme}"
+
+                ((project_count++))
+              fi
+            done
+          fi
+
+          if [ $project_count -eq 0 ]; then
+            echo "- *No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*" >> "${temp_readme}"
+          fi
+
+          # Add the footer section
+          cat >> "${temp_readme}" << 'EOF'
+
+          > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
+
+          ## Viewing Reports
+
+          Reports can be viewed in several ways:
+
+          1. **GitHub Pages** (recommended): Click any project link above to view the rendered HTML report
+          2. **Raw HTML**: Access via GitHub's raw content URLs
+          3. **Local Clone**: Clone this repository and open the HTML files in your browser
+
+          ## Report Contents
+
+          Each report includes comprehensive analytics such as:
+
+          - Repository statistics and metrics
+          - Commit activity and contributor information
+          - Code review metrics
+          - Project health indicators
+          - Historical trends and analysis
+
+          ## Automation
+
+          Reports are automatically generated and published by the [project-reports workflow](https://github.com/modeseven-lfit/project-reports/blob/main/.github/workflows/reporting.yaml).
+
+          ### How It Works
+
+          1. The workflow runs on a schedule (weekly) or manual trigger
+          2. For each configured project, it:
+             - Clones all Gerrit repositories
+             - Runs comprehensive analytics
+             - Generates an HTML report
+             - Publishes the report to this repository
+          3. Reports are committed with metadata tracking the source run
+          4. This Pages workflow automatically updates the index and deploys to GitHub Pages
+
+          ### Project Slug Naming
+
+          Project names are converted to slugs using the following rules:
+          - Converted to lowercase
+          - Non-alphanumeric characters replaced with hyphens
+          - Leading/trailing hyphens removed
+
+          Examples:
+          - `ONAP` → `onap`
+          - `OpenDaylight` → `opendaylight`
+          - `LF Broadband` → `lf-broadband`
+
+          ## Contributing
+
+          This repository is automatically maintained. If you need to:
+
+          - **Add a new project**: Update the `PROJECTS_JSON` variable in the [project-reports repository](https://github.com/modeseven-lfit/project-reports)
+          - **Modify report generation**: Update the Python scripts in the [project-reports repository](https://github.com/modeseven-lfit/project-reports)
+          - **Report issues**: Open an issue in the [project-reports repository](https://github.com/modeseven-lfit/project-reports/issues)
+
+          ## License
+
+          This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+          EOF
+
+          # Update README.md if there are changes
+          if ! cmp -s "${temp_readme}" "README.md"; then
+            cp "${temp_readme}" "README.md"
+            echo "📝 Updated README.md with ${project_count} project(s)"
+
+            # Commit the updated README if we're not in a PR
+            if [ "${{ github.event_name }}" != "pull_request" ]; then
+              git config --local user.email "lf-releng+pages-bot@linuxfoundation.org"
+              git config --local user.name "lf-releng-pages-bot"
+              git add README.md
+              if git diff --staged --quiet; then
+                echo "No changes to commit"
+              else
+                git commit -m "docs: update project index with ${project_count} reports
+
+                Auto-generated by GitHub Pages workflow
+                Run: ${{ github.run_id }}"
+                git push
+                echo "✅ Pushed updated README.md"
+              fi
+            fi
+          else
+            echo "📄 README.md is already up to date"
+          fi
+
+          rm -f "${temp_readme}"
+
+          echo "📊 Found ${project_count} project report(s) ready for deployment"
+          echo "project_count=${project_count}" >> "$GITHUB_OUTPUT"
+
+      - name: "Create index.html redirect"
+        shell: bash
+        run: |
+          # Create a simple index.html that redirects to the README
+          # This ensures GitHub Pages has a proper entry point
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="refresh" content="0; url=https://github.com/modeseven-lfit/gerrit-reports#readme">
+            <title>Gerrit Reports - Linux Foundation</title>
+            <style>
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                text-align: center;
+                padding: 2rem;
+                background: #f6f8fa;
+              }
+              .container {
+                max-width: 600px;
+                margin: 0 auto;
+                background: white;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+              }
+              h1 { color: #24292e; }
+              p { color: #586069; margin: 1rem 0; }
+              a { color: #0366d6; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>🛠️ Linux Foundation Gerrit Reports</h1>
+              <p>Automated reports on Linux Foundation Gerrit servers and projects.</p>
+              <p>Redirecting to the <a href="https://github.com/modeseven-lfit/gerrit-reports#readme">main repository page</a>...</p>
+              <p>If you're not redirected automatically, <a href="https://github.com/modeseven-lfit/gerrit-reports#readme">click here</a>.</p>
+            </div>
+          </body>
+          </html>
+          EOF
+
+          echo "📄 Created index.html redirect page"
+
+      - name: "Build with Jekyll"
+        # yamllint disable-line rule:line-length
+        uses: actions/jekyll-build-pages@b178f9334b208360999a0a57b523613563698c66 # v1.0.13
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: "Upload artifact"
+        # yamllint disable-line rule:line-length
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+
+  deploy:
+    name: "Deploy to GitHub Pages"
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    timeout-minutes: 10
+    steps:
+      - name: "Deploy to GitHub Pages"
+        id: deployment
+        # yamllint disable-line rule:line-length
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+
+  summary:
+    name: "Deployment Summary"
+    needs: [build, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: "Generate deployment summary"
+        shell: bash
+        run: |
+          {
+            echo "## 🌐 GitHub Pages Deployment"
+            echo ""
+            echo "**Status:** ${{ needs.deploy.result == 'success' && '✅ Deployed successfully' || '❌ Deployment failed' }}"
+            echo "**Deployed at:** $(date -u)"
+            echo ""
+            if [ "${{ needs.deploy.result }}" = "success" ]; then
+              echo "### 📊 Site Information"
+              echo "- **Main site:** https://modeseven-lfit.github.io/gerrit-reports/"
+              echo "- **Repository:** https://github.com/modeseven-lfit/gerrit-reports"
+              echo "- **Reports location:** \`projects/[project-slug]/report.html\`"
+              echo ""
+              echo "### 🔗 Direct Report Access"
+              echo "Reports are now accessible at:"
+              echo "- \`https://modeseven-lfit.github.io/gerrit-reports/projects/[project-slug]/report.html\`"
+            else
+              echo "### ❌ Deployment Issues"
+              echo "Please check the workflow logs for deployment errors."
+            fi
+            echo ""
+            echo "Updated at: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } >> "$GITHUB_STEP_SUMMARY"
