@@ -5,11 +5,15 @@
 
 # 🛠️ Gerrit Reports
 
-Automated reports on Linux Foundation Gerrit servers and the projects/repositories they contain.
+Automated reports on Linux Foundation Gerrit servers and the
+projects/repositories they contain.
 
 ## Overview
 
-This repository contains automatically generated reports for various Linux Foundation projects. Reports are published automatically by the [project-reports](https://github.com/modeseven-lfit/project-reports) repository's CI/CD workflow.
+This repository contains automatically generated reports for various
+Linux Foundation projects. Reports are published automatically by the
+[project-reports](https://github.com/modeseven-lfit/project-reports)
+repository's CI/CD workflow.
 
 ## Report Structure
 
@@ -29,15 +33,14 @@ projects/
 ```
 
 Each project folder contains:
-
-- **`report.html`**: The main report file with comprehensive analytics
-- **`.provenance.json`**: Metadata about when and how the report was generated
+- **`report.html`**: Main report file with comprehensive analytics
+- **`.provenance.json`**: Report generation metadata
 
 ## Project Report Links
 
 ### Active Projects
 
-*Reports will appear here automatically once the first workflow run completes and GitHub Pages is enabled.*
+- *No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*
 
 > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
 
@@ -49,9 +52,7 @@ Reports can be viewed in several ways:
 2. **Raw HTML**: Access via GitHub's raw content URLs
 3. **Local Clone**: Clone this repository and open the HTML files in your browser
 
-## Report
-
- Contents
+## Report Contents
 
 Each report includes comprehensive analytics such as:
 
@@ -79,13 +80,11 @@ Reports are automatically generated and published by the [project-reports workfl
 ### Project Slug Naming
 
 Project names are converted to slugs using the following rules:
-
 - Converted to lowercase
 - Non-alphanumeric characters replaced with hyphens
 - Leading/trailing hyphens removed
 
 Examples:
-
 - `ONAP` → `onap`
 - `OpenDaylight` → `opendaylight`
 - `LF Broadband` → `lf-broadband`
