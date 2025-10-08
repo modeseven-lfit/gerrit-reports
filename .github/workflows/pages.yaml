@@ -55,23 +55,23 @@ jobs:
         shell: bash
         run: |
           echo "🔍 Scanning for project reports..."
-          
+
           # Count projects safely
           project_count=0
           project_links=""
-          
+
           # Check if projects directory exists and has subdirectories
           if [ -d "projects" ]; then
             for project_dir in projects/*/; do
               # Check if this is actually a directory (not just the glob pattern)
               if [ -d "$project_dir" ]; then
                 project_slug=$(basename "$project_dir")
-                
+
                 # Skip .gitkeep and other non-project files
                 if [ "$project_slug" = "*" ] || [ -f "projects/$project_slug" ]; then
                   continue
                 fi
-                
+
                 # Check if report.html exists
                 if [ -f "${project_dir}report.html" ]; then
                   # Get project name from provenance or use slug
@@ -79,12 +79,12 @@ jobs:
                   if [ -f "${project_dir}.provenance.json" ]; then
                     project_name=$(jq -r '.project // .slug' "${project_dir}.provenance.json" 2>/dev/null || echo "$project_slug")
                   fi
-                  
+
                   # Convert slug to display name if no provenance found
                   if [ "$project_name" = "$project_slug" ]; then
                     project_name=$(echo "$project_slug" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2))} 1')
                   fi
-                  
+
                   # Add to project links
                   project_links="${project_links}- [${project_name}](https://modeseven-lfit.github.io/gerrit-reports/projects/${project_slug}/report.html)
           "
@@ -93,9 +93,9 @@ jobs:
               fi
             done
           fi
-          
+
           echo "Found $project_count project reports"
-          
+
           # Update README.md
           cat > README.md << 'EOF'
           <!--
@@ -112,14 +112,14 @@ jobs:
           ### Active Projects
 
           EOF
-          
+
           # Add project links or placeholder
           if [ $project_count -eq 0 ]; then
             echo "*No reports available yet. Reports are generated automatically every Monday at 7:00 AM UTC.*" >> README.md
           else
             echo "$project_links" >> README.md
           fi
-          
+
           # Add footer
           cat >> README.md << 'EOF'
 
@@ -207,11 +207,11 @@ jobs:
 
           This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
           EOF
-          
+
           # Commit changes if needed
           git config --local user.email "lf-releng+pages-bot@linuxfoundation.org"
           git config --local user.name "lf-releng-pages-bot"
-          
+
           if ! git diff --quiet README.md; then
             git add README.md
             git commit -m "docs: update project index with ${project_count} reports
@@ -222,7 +222,7 @@ jobs:
           else
             echo "📄 README.md is already up to date"
           fi
-          
+
           echo "project_count=$project_count" >> "$GITHUB_OUTPUT"
 
       - name: "Create index.html redirect"
@@ -267,7 +267,7 @@ jobs:
           </body>
           </html>
           EOF
-          
+
           echo "📄 Created index.html redirect page"
 
       - name: "Build with Jekyll"
