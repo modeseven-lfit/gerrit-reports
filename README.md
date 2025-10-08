@@ -20,6 +20,7 @@ Automated reports on Linux Foundation Gerrit servers and the projects/repositori
 - [Opendaylight](https://modeseven-lfit.github.io/gerrit-reports/projects/opendaylight/report.html)
 - [OPNFV](https://modeseven-lfit.github.io/gerrit-reports/projects/opnfv/report.html)
 
+
 > **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
 
 ## Overview
@@ -44,7 +45,6 @@ projects/
 ```
 
 Each project folder contains:
-
 - **`report.html`**: The main report file with comprehensive analytics
 - **`.provenance.json`**: Metadata about when and how the report was generated
 
@@ -84,13 +84,11 @@ Reports are automatically generated and published by the [project-reports workfl
 ### Project Slug Naming
 
 Project names are converted to slugs using the following rules:
-
 - Converted to lowercase
 - Non-alphanumeric characters replaced with hyphens
 - Leading/trailing hyphens removed
 
 Examples:
-
 - `ONAP` → `onap`
 - `OpenDaylight` → `opendaylight`
 - `LF Broadband` → `lf-broadband`
