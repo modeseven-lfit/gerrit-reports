@@ -154,6 +154,48 @@
             text-decoration: underline;
             cursor: default;
         }
+
+        /* Tooltip for non-mirrored repositories */
+        .mirror-warning {
+            cursor: help;
+            position: relative;
+            display: inline-block;
+        }
+
+        .mirror-warning .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -90px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .mirror-warning .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .mirror-warning:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* Custom styles for Simple-DataTables integration */
@@ -228,7 +270,7 @@
 <body>
     <h1 id="gerrit-project-analysis-report-linux-foundation">📊 Gerrit Project Analysis Report: Linux Foundation</h1>
 
-<p><strong>Generated:</strong> October 13, 2025 at 07:21 UTC</p>
+<p><strong>Generated:</strong> October 14, 2025 at 10:48 UTC</p>
 <p><strong>Schema Version:</strong> 1.0.0</p>
 
 <h2 id="global-summary">📈 Global Summary</h2>
@@ -270,7 +312,7 @@
 </tr>
 <tr>
 <td>Total Commits</td>
-<td>178</td>
+<td>180</td>
 <td>-</td>
 </tr>
 <tr>
@@ -298,10 +340,10 @@
 <td>1</td>
 <td>linuxfoundation.org</td>
 <td>31</td>
-<td>173</td>
+<td>175</td>
 <td>+214783</td>
-<td>217343</td>
-<td>+1241.5</td>
+<td>217347</td>
+<td>+1227.3</td>
 <td>35</td>
 </tr>
 <tr>
@@ -684,10 +726,10 @@
 <tr>
 <td>2</td>
 <td>Anil Belur</td>
-<td>39</td>
+<td>41</td>
 <td>+1576</td>
-<td>2108</td>
-<td>+40.4</td>
+<td>2112</td>
+<td>+38.4</td>
 <td>22</td>
 <td>linuxfoundation.org</td>
 </tr>
@@ -1418,8 +1460,8 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>9</td>
-<td>linux.com</td>
+<td>22</td>
+<td>linuxfoundation.org</td>
 </tr>
 <tr>
 <td>76</td>
@@ -1428,8 +1470,8 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>22</td>
-<td>linuxfoundation.org</td>
+<td>9</td>
+<td>linux.com</td>
 </tr>
 <tr>
 <td>77</td>
@@ -1730,7 +1772,7 @@
 <td>90</td>
 <td>+433</td>
 <td>7</td>
-<td>40</td>
+<td>41</td>
 <td>2025-09-03</td>
 <td>✅</td>
 </tr>
@@ -1739,8 +1781,8 @@
 <td>19</td>
 <td>+541</td>
 <td>5</td>
-<td>4</td>
-<td>2025-10-09</td>
+<td>6</td>
+<td>2025-10-08</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -1748,7 +1790,7 @@
 <td>19</td>
 <td>+592</td>
 <td>4</td>
-<td>3</td>
+<td>4</td>
 <td>2025-10-10</td>
 <td>✅</td>
 </tr>
@@ -1757,7 +1799,7 @@
 <td>9</td>
 <td>+7</td>
 <td>3</td>
-<td>55</td>
+<td>56</td>
 <td>2025-08-19</td>
 <td>✅</td>
 </tr>
@@ -1766,7 +1808,7 @@
 <td>8</td>
 <td>+819</td>
 <td>4</td>
-<td>30</td>
+<td>31</td>
 <td>2025-09-13</td>
 <td>✅</td>
 </tr>
@@ -1775,7 +1817,7 @@
 <td>4</td>
 <td>+51</td>
 <td>2</td>
-<td>128</td>
+<td>129</td>
 <td>2025-06-07</td>
 <td>✅</td>
 </tr>
@@ -1784,8 +1826,17 @@
 <td>4</td>
 <td>+44</td>
 <td>2</td>
-<td>160</td>
+<td>161</td>
 <td>2025-05-06</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/gerrit_to_platform</td>
+<td>4</td>
+<td>+20</td>
+<td>1</td>
+<td>7</td>
+<td>2025-10-07</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -1793,8 +1844,8 @@
 <td>4</td>
 <td>+212105</td>
 <td>1</td>
-<td>2</td>
-<td>2025-10-11</td>
+<td>4</td>
+<td>2025-10-10</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -1802,7 +1853,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1811,7 +1862,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1820,7 +1871,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1829,7 +1880,7 @@
 <td>2</td>
 <td>+44</td>
 <td>2</td>
-<td>131</td>
+<td>132</td>
 <td>2025-06-04</td>
 <td>✅</td>
 </tr>
@@ -1838,7 +1889,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1847,7 +1898,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1856,7 +1907,7 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1865,17 +1916,8 @@
 <td>2</td>
 <td>+45</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>releng/gerrit_to_platform</td>
-<td>2</td>
-<td>+20</td>
-<td>1</td>
-<td>4</td>
-<td>2025-10-09</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -1883,7 +1925,7 @@
 <td>1</td>
 <td>+12</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1892,7 +1934,7 @@
 <td>1</td>
 <td>-19</td>
 <td>1</td>
-<td>128</td>
+<td>129</td>
 <td>2025-06-07</td>
 <td>✅</td>
 </tr>
@@ -1901,7 +1943,7 @@
 <td>1</td>
 <td>+15</td>
 <td>1</td>
-<td>354</td>
+<td>355</td>
 <td>2024-10-24</td>
 <td>✅</td>
 </tr>
@@ -1910,7 +1952,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>416</td>
+<td>417</td>
 <td>2024-08-23</td>
 <td>☑️</td>
 </tr>
@@ -1919,7 +1961,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>2,474</td>
+<td>2,475</td>
 <td>2019-01-04</td>
 <td>🛑</td>
 </tr>
@@ -1928,7 +1970,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,671</td>
+<td>1,672</td>
 <td>2021-03-17</td>
 <td>🛑</td>
 </tr>
@@ -1937,7 +1979,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>2,683</td>
+<td>2,684</td>
 <td>2018-06-09</td>
 <td>🛑</td>
 </tr>
@@ -1946,7 +1988,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>3,174</td>
+<td>3,175</td>
 <td>2017-02-03</td>
 <td>🛑</td>
 </tr>
@@ -1955,7 +1997,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>3,392</td>
+<td>3,393</td>
 <td>2016-06-30</td>
 <td>🛑</td>
 </tr>
@@ -1964,7 +2006,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>586</td>
+<td>587</td>
 <td>2024-03-06</td>
 <td>☑️</td>
 </tr>
@@ -1973,7 +2015,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,135</td>
+<td>1,136</td>
 <td>2022-09-04</td>
 <td>🛑</td>
 </tr>
@@ -1982,7 +2024,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>495</td>
+<td>496</td>
 <td>2024-06-05</td>
 <td>☑️</td>
 </tr>
@@ -1991,7 +2033,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>2,690</td>
+<td>2,691</td>
 <td>2018-06-02</td>
 <td>🛑</td>
 </tr>
@@ -2000,7 +2042,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>500</td>
+<td>501</td>
 <td>2024-05-31</td>
 <td>☑️</td>
 </tr>
@@ -2009,7 +2051,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,162</td>
+<td>1,163</td>
 <td>2022-08-08</td>
 <td>🛑</td>
 </tr>
@@ -2018,7 +2060,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>754</td>
+<td>755</td>
 <td>2023-09-20</td>
 <td>☑️</td>
 </tr>
@@ -2027,7 +2069,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>696</td>
+<td>697</td>
 <td>2023-11-17</td>
 <td>☑️</td>
 </tr>
@@ -2036,7 +2078,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,845</td>
+<td>1,846</td>
 <td>2020-09-24</td>
 <td>🛑</td>
 </tr>
@@ -2128,6 +2170,16 @@
 <td>✅</td>
 </tr>
 <tr>
+<td>releng/gerrit_to_platform</td>
+<td>python</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
 <td>sandbox</td>
 <td>maven</td>
 <td>✅</td>
@@ -2138,7 +2190,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>ansible/roles/packer-install</td>
+<td>ansible/roles/lf-dev-libs</td>
 <td>None</td>
 <td>❌</td>
 <td>✅</td>
@@ -2158,27 +2210,17 @@
 <td>✅</td>
 </tr>
 <tr>
+<td>ansible/roles/packer-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
 <td>ansible/roles/mono-install</td>
-<td>None</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>ansible/roles/lf-dev-libs</td>
-<td>None</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>ansible/roles/haveged-install</td>
 <td>None</td>
 <td>❌</td>
 <td>✅</td>
@@ -2198,7 +2240,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>ansible/roles/system-update</td>
+<td>ansible/roles/haveged-install</td>
 <td>None</td>
 <td>❌</td>
 <td>✅</td>
@@ -2218,27 +2260,17 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>releng/gerrit_to_platform</td>
-<td>python</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>ansible/roles/protobuf-install</td>
+<td>ansible/roles/system-update</td>
 <td>None</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 </tr>
 <tr>
-<td>ansible/roles/sysstat-install</td>
+<td>ansible/roles/protobuf-install</td>
 <td>None</td>
 <td>❌</td>
 <td>✅</td>
@@ -2258,44 +2290,14 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>ansible/roles</td>
+<td>ansible/roles/sysstat-install</td>
 <td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>clav2test/ccla-only-project</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>clav2test/icla-and-ccla-project</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>lfn/process</td>
-<td>None</td>
-<td>❌</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>🛑</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>puppet/modules/gce</td>
@@ -2308,16 +2310,6 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>releng</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>puppet/modules/mailman3</td>
 <td>ruby</td>
 <td>❌</td>
@@ -2328,11 +2320,51 @@
 <td>🛑</td>
 </tr>
 <tr>
+<td>clav2test/ccla-only-project</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>ansible/roles</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>clav2test/icla-and-ccla-project</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
 <td>releng/ci-workshop</td>
 <td>docker</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>lfn/process</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>🛑</td>
@@ -2378,6 +2410,16 @@
 <td>🛑</td>
 </tr>
 <tr>
+<td>releng/sigul-docker</td>
+<td>docker</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>releng/python-one-password</td>
 <td>python</td>
 <td>❌</td>
@@ -2398,12 +2440,12 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>releng/sigul-docker</td>
-<td>docker</td>
+<td>releng</td>
+<td>None</td>
 <td>❌</td>
-<td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
+<td>❌</td>
 <td>❌</td>
 <td>☑️</td>
 </tr>
@@ -2423,145 +2465,145 @@
 </tr></thead><tbody>
 <tr>
 <td>ansible/roles/docker-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-docker-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-docker-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/haveged-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-haveged-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-haveged-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/java-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-java-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-java-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/lf-dev-libs</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-lf-dev-libs/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-lf-dev-libs/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/lf-recommended-tools</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-lf-recommended-tools/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-lf-recommended-tools/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/mono-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-mono-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-mono-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/packer-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-packer-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-packer-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/protobuf-install</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-protobuf-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/puppet-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-puppet-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-puppet-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/python-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-python-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-python-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/shellcheck-install</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-shellcheck-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-shellcheck-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/sysstat-install</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-sysstat-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr>
 <td>ansible/roles/system-update</td>
-<td><span class="status-unknown workflow-status">call-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/ansible-roles-system-update/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/ansible-roles-system-update/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/common-packer</td>
-<td><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-common-packer/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/releng-common-packer/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-common-packer/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/docs</td>
-<td><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/releng-docs/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/releng-docs/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/docs-conf</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-docs-conf/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-docs-conf/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/gerrit_to_platform</td>
-<td><span class="status-unknown workflow-status">codeql.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-gerrit_to_platform/actions/workflows/codeql.yaml" target="_blank"><span class="status-unknown workflow-status">codeql.yaml</span></a><br><a href="https://github.com/onap/releng-gerrit_to_platform/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-gerrit_to_platform/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/global-jjb</td>
-<td><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-global-jjb/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/releng-global-jjb/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-global-jjb/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>3</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/info-master</td>
-<td><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/releng-info-master/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/releng-info-master/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/lftools</td>
-<td><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span><br><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release-drafter.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-lftools/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/onap/releng-lftools/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-lftools/actions/workflows/release-drafter.yaml" target="_blank"><span class="status-unknown workflow-status">release-drafter.yaml</span></a><br><a href="https://github.com/onap/releng-lftools/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>4</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/nexus-upload</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span></td>
+<td><a href="https://github.com/onap/releng-nexus-upload/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/python-one-password</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-python-one-password/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-python-one-password/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>releng/sigul-docker</td>
-<td><span class="status-unknown workflow-status">gerrit-verify.yaml</span><br><span class="status-unknown workflow-status">release.yaml</span></td>
+<td><a href="https://github.com/onap/releng-sigul-docker/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/onap/releng-sigul-docker/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
 <tr>
 <td>sandbox</td>
-<td><span class="status-unknown workflow-status">gerrit-merge.yaml</span><br><span class="status-unknown workflow-status">github2gerrit.yaml</span></td>
+<td><a href="https://github.com/onap/sandbox/actions/workflows/gerrit-merge.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-merge.yaml</span></a><br><a href="https://github.com/onap/sandbox/actions/workflows/github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">github2gerrit.yaml</span></a></td>
 <td>2</td>
 <td>0</td>
 </tr>
