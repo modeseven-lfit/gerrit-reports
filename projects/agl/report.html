@@ -154,6 +154,48 @@
             text-decoration: underline;
             cursor: default;
         }
+
+        /* Tooltip for non-mirrored repositories */
+        .mirror-warning {
+            cursor: help;
+            position: relative;
+            display: inline-block;
+        }
+
+        .mirror-warning .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -90px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .mirror-warning .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .mirror-warning:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* Custom styles for Simple-DataTables integration */
@@ -228,7 +270,7 @@
 <body>
     <h1 id="gerrit-project-analysis-report-agl">📊 Gerrit Project Analysis Report: AGL</h1>
 
-<p><strong>Generated:</strong> October 13, 2025 at 07:22 UTC</p>
+<p><strong>Generated:</strong> October 14, 2025 at 10:49 UTC</p>
 <p><strong>Schema Version:</strong> 1.0.0</p>
 
 <h2 id="global-summary">📈 Global Summary</h2>
@@ -250,13 +292,13 @@
 </tr>
 <tr>
 <td>Current Gerrit Projects</td>
-<td>40</td>
-<td>18.9%</td>
+<td>37</td>
+<td>17.5%</td>
 </tr>
 <tr>
 <td>Active Gerrit Projects</td>
-<td>152</td>
-<td>71.7%</td>
+<td>155</td>
+<td>73.1%</td>
 </tr>
 <tr>
 <td>Inactive Gerrit Projects</td>
@@ -270,7 +312,7 @@
 </tr>
 <tr>
 <td>Total Commits</td>
-<td>365</td>
+<td>364</td>
 <td>-</td>
 </tr>
 <tr>
@@ -308,10 +350,10 @@
 <td>2</td>
 <td>linuxfoundation.org</td>
 <td>8</td>
-<td>90</td>
+<td>91</td>
 <td>-6752</td>
-<td>12636</td>
-<td>-75.0</td>
+<td>12638</td>
+<td>-74.2</td>
 <td>207</td>
 </tr>
 <tr>
@@ -338,10 +380,10 @@
 <td>5</td>
 <td>gmail.com</td>
 <td>48</td>
-<td>20</td>
+<td>18</td>
 <td>+549</td>
-<td>3223</td>
-<td>+27.4</td>
+<td>3213</td>
+<td>+30.5</td>
 <td>49</td>
 </tr>
 <tr>
@@ -1414,10 +1456,10 @@
 <tr>
 <td>2</td>
 <td>Jan-Simon Moeller</td>
-<td>90</td>
+<td>91</td>
 <td>-6752</td>
-<td>12636</td>
-<td>-75.0</td>
+<td>12638</td>
+<td>-74.2</td>
 <td>207</td>
 <td>linuxfoundation.org</td>
 </tr>
@@ -1463,22 +1505,22 @@
 </tr>
 <tr>
 <td>7</td>
-<td>Anuj Solanki</td>
-<td>7</td>
-<td>+79</td>
-<td>177</td>
-<td>+11.3</td>
-<td>10</td>
-<td>gmail.com</td>
-</tr>
-<tr>
-<td>8</td>
 <td>Suchinton Chakravarty</td>
 <td>6</td>
 <td>+626</td>
 <td>2250</td>
 <td>+104.3</td>
 <td>3</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Anuj Solanki</td>
+<td>5</td>
+<td>+79</td>
+<td>167</td>
+<td>+15.8</td>
+<td>10</td>
 <td>gmail.com</td>
 </tr>
 <tr>
@@ -2818,18 +2860,18 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>1</td>
-<td>github.com</td>
+<td>66</td>
+<td>fujitsu.com</td>
 </tr>
 <tr>
 <td>143</td>
-<td>Li, Xiaoming</td>
+<td>Li Xiaoming</td>
 <td>0</td>
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>66</td>
-<td>fujitsu.com</td>
+<td>1</td>
+<td>github.com</td>
 </tr>
 <tr>
 <td>144</td>
@@ -3858,8 +3900,8 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>2</td>
-<td>adit-jv.com</td>
+<td>1</td>
+<td>nttd-mse.com</td>
 </tr>
 <tr>
 <td>247</td>
@@ -3868,8 +3910,8 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>1</td>
-<td>nttd-mse.com</td>
+<td>2</td>
+<td>adit-jv.com</td>
 </tr>
 <tr>
 <td>248</td>
@@ -3958,21 +4000,11 @@
 <td>+0</td>
 <td>0</td>
 <td>-</td>
-<td>5</td>
-<td>linuxfoundation.org</td>
-</tr>
-<tr>
-<td>257</td>
-<td>Walt Miner</td>
-<td>0</td>
-<td>+0</td>
-<td>0</td>
-<td>-</td>
 <td>2</td>
 <td>linux.com</td>
 </tr>
 <tr>
-<td>258</td>
+<td>257</td>
 <td>Walt Miner</td>
 <td>0</td>
 <td>+0</td>
@@ -3982,7 +4014,7 @@
 <td>github.com</td>
 </tr>
 <tr>
-<td>259</td>
+<td>258</td>
 <td>Walter Lozano</td>
 <td>0</td>
 <td>+0</td>
@@ -3992,7 +4024,7 @@
 <td>collabora.com</td>
 </tr>
 <tr>
-<td>260</td>
+<td>259</td>
 <td>Wang Qi</td>
 <td>0</td>
 <td>+0</td>
@@ -4002,7 +4034,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>261</td>
+<td>260</td>
 <td>Wataru Mizuno</td>
 <td>0</td>
 <td>+0</td>
@@ -4012,7 +4044,7 @@
 <td>adit-jv.com</td>
 </tr>
 <tr>
-<td>262</td>
+<td>261</td>
 <td>Wataru Natsume</td>
 <td>0</td>
 <td>+0</td>
@@ -4022,7 +4054,7 @@
 <td>adit-jv.com</td>
 </tr>
 <tr>
-<td>263</td>
+<td>262</td>
 <td>Wesam Haddad</td>
 <td>0</td>
 <td>+0</td>
@@ -4032,7 +4064,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>264</td>
+<td>263</td>
 <td>William A. Kennington III</td>
 <td>0</td>
 <td>+0</td>
@@ -4042,7 +4074,7 @@
 <td>google.com</td>
 </tr>
 <tr>
-<td>265</td>
+<td>264</td>
 <td>Yan</td>
 <td>0</td>
 <td>+0</td>
@@ -4052,7 +4084,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>266</td>
+<td>265</td>
 <td>Yaniv Mordekhay</td>
 <td>0</td>
 <td>+0</td>
@@ -4062,7 +4094,7 @@
 <td>github.com</td>
 </tr>
 <tr>
-<td>267</td>
+<td>266</td>
 <td>Yannick Gicquel</td>
 <td>0</td>
 <td>+0</td>
@@ -4072,7 +4104,7 @@
 <td>iot.bzh</td>
 </tr>
 <tr>
-<td>268</td>
+<td>267</td>
 <td>Yordan Dimitrov</td>
 <td>0</td>
 <td>+0</td>
@@ -4082,7 +4114,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>269</td>
+<td>268</td>
 <td>Yoshiki Ito</td>
 <td>0</td>
 <td>+0</td>
@@ -4090,6 +4122,16 @@
 <td>-</td>
 <td>2</td>
 <td>panasonic.com</td>
+</tr>
+<tr>
+<td>269</td>
+<td>Yuichi Kusakabe</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>denso-ten.com</td>
 </tr>
 <tr>
 <td>270</td>
@@ -4103,16 +4145,6 @@
 </tr>
 <tr>
 <td>271</td>
-<td>Yuichi Kusakabe</td>
-<td>0</td>
-<td>+0</td>
-<td>0</td>
-<td>-</td>
-<td>1</td>
-<td>denso-ten.com</td>
-</tr>
-<tr>
-<td>272</td>
 <td>Yury Asheshov</td>
 <td>0</td>
 <td>+0</td>
@@ -4122,7 +4154,7 @@
 <td>k2l.de</td>
 </tr>
 <tr>
-<td>273</td>
+<td>272</td>
 <td>Yuta Doi</td>
 <td>0</td>
 <td>+0</td>
@@ -4132,7 +4164,7 @@
 <td>co.jp</td>
 </tr>
 <tr>
-<td>274</td>
+<td>273</td>
 <td>Yuya Ono</td>
 <td>0</td>
 <td>+0</td>
@@ -4142,7 +4174,7 @@
 <td>co.jp</td>
 </tr>
 <tr>
-<td>275</td>
+<td>274</td>
 <td>Zac Nelson</td>
 <td>0</td>
 <td>+0</td>
@@ -4152,7 +4184,7 @@
 <td>ford.com</td>
 </tr>
 <tr>
-<td>276</td>
+<td>275</td>
 <td>Zhang Nan</td>
 <td>0</td>
 <td>+0</td>
@@ -4162,7 +4194,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>277</td>
+<td>276</td>
 <td>ZhongLu</td>
 <td>0</td>
 <td>+0</td>
@@ -4172,7 +4204,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>278</td>
+<td>277</td>
 <td>Zhou Mingying</td>
 <td>0</td>
 <td>+0</td>
@@ -4182,7 +4214,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>279</td>
+<td>278</td>
 <td>Zhou Mingying</td>
 <td>0</td>
 <td>+0</td>
@@ -4192,7 +4224,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>280</td>
+<td>279</td>
 <td>amanarora_09</td>
 <td>0</td>
 <td>+0</td>
@@ -4202,7 +4234,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>281</td>
+<td>280</td>
 <td>bearrito</td>
 <td>0</td>
 <td>+0</td>
@@ -4212,7 +4244,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>282</td>
+<td>281</td>
 <td>berni155</td>
 <td>0</td>
 <td>+0</td>
@@ -4222,7 +4254,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>283</td>
+<td>282</td>
 <td>brian avery</td>
 <td>0</td>
 <td>+0</td>
@@ -4232,7 +4264,7 @@
 <td>intel.com</td>
 </tr>
 <tr>
-<td>284</td>
+<td>283</td>
 <td>build.automotivelinux.org</td>
 <td>0</td>
 <td>+0</td>
@@ -4242,7 +4274,7 @@
 <td>automotivelinux.org</td>
 </tr>
 <tr>
-<td>285</td>
+<td>284</td>
 <td>chintsung</td>
 <td>0</td>
 <td>+0</td>
@@ -4252,7 +4284,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>286</td>
+<td>285</td>
 <td>dch</td>
 <td>0</td>
 <td>+0</td>
@@ -4262,7 +4294,7 @@
 <td>co.uk</td>
 </tr>
 <tr>
-<td>287</td>
+<td>286</td>
 <td>dch</td>
 <td>0</td>
 <td>+0</td>
@@ -4272,7 +4304,7 @@
 <td>metaswitch.com</td>
 </tr>
 <tr>
-<td>288</td>
+<td>287</td>
 <td>dsouzahansenfrancis</td>
 <td>0</td>
 <td>+0</td>
@@ -4282,7 +4314,7 @@
 <td>crosschasm.com</td>
 </tr>
 <tr>
-<td>289</td>
+<td>288</td>
 <td>duerpei</td>
 <td>0</td>
 <td>+0</td>
@@ -4292,7 +4324,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>290</td>
+<td>289</td>
 <td>fulup</td>
 <td>0</td>
 <td>+0</td>
@@ -4302,7 +4334,7 @@
 <td>iot.bzh</td>
 </tr>
 <tr>
-<td>291</td>
+<td>290</td>
 <td>fulup</td>
 <td>0</td>
 <td>+0</td>
@@ -4312,7 +4344,7 @@
 <td>vannes.iot</td>
 </tr>
 <tr>
-<td>292</td>
+<td>291</td>
 <td>heartsucker</td>
 <td>0</td>
 <td>+0</td>
@@ -4322,7 +4354,7 @@
 <td>autistici.org</td>
 </tr>
 <tr>
-<td>293</td>
+<td>292</td>
 <td>hkojima</td>
 <td>0</td>
 <td>+0</td>
@@ -4332,7 +4364,7 @@
 <td>mentor.com</td>
 </tr>
 <tr>
-<td>294</td>
+<td>293</td>
 <td>hongyevgeny</td>
 <td>0</td>
 <td>+0</td>
@@ -4342,7 +4374,7 @@
 <td>drimaes.com</td>
 </tr>
 <tr>
-<td>295</td>
+<td>294</td>
 <td>hupeng</td>
 <td>0</td>
 <td>+0</td>
@@ -4352,7 +4384,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>296</td>
+<td>295</td>
 <td>isotes</td>
 <td>0</td>
 <td>+0</td>
@@ -4362,7 +4394,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>297</td>
+<td>296</td>
 <td>khilman</td>
 <td>0</td>
 <td>+0</td>
@@ -4372,7 +4404,7 @@
 <td>github.com</td>
 </tr>
 <tr>
-<td>298</td>
+<td>297</td>
 <td>liuyahui</td>
 <td>0</td>
 <td>+0</td>
@@ -4382,7 +4414,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>299</td>
+<td>298</td>
 <td>maratsabitov</td>
 <td>0</td>
 <td>+0</td>
@@ -4392,7 +4424,7 @@
 <td>mera.com</td>
 </tr>
 <tr>
-<td>300</td>
+<td>299</td>
 <td>mgiannikouris</td>
 <td>0</td>
 <td>+0</td>
@@ -4402,7 +4434,7 @@
 <td>crosschasm.com</td>
 </tr>
 <tr>
-<td>301</td>
+<td>300</td>
 <td>mudcam</td>
 <td>0</td>
 <td>+0</td>
@@ -4412,7 +4444,7 @@
 <td>live.fr</td>
 </tr>
 <tr>
-<td>302</td>
+<td>301</td>
 <td>nathani</td>
 <td>0</td>
 <td>+0</td>
@@ -4422,7 +4454,7 @@
 <td>validmanufacturing.com</td>
 </tr>
 <tr>
-<td>303</td>
+<td>302</td>
 <td>qinshulei</td>
 <td>0</td>
 <td>+0</td>
@@ -4432,7 +4464,7 @@
 <td>qq.com</td>
 </tr>
 <tr>
-<td>304</td>
+<td>303</td>
 <td>ronan</td>
 <td>0</td>
 <td>+0</td>
@@ -4442,7 +4474,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>305</td>
+<td>304</td>
 <td>ronan@iot.bzh</td>
 <td>0</td>
 <td>+0</td>
@@ -4452,7 +4484,7 @@
 <td>iot.bzh</td>
 </tr>
 <tr>
-<td>306</td>
+<td>305</td>
 <td>rwoberholzer</td>
 <td>0</td>
 <td>+0</td>
@@ -4462,7 +4494,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>307</td>
+<td>306</td>
 <td>sdx</td>
 <td>0</td>
 <td>+0</td>
@@ -4472,7 +4504,7 @@
 <td>iot.bzh</td>
 </tr>
 <tr>
-<td>308</td>
+<td>307</td>
 <td>seigot</td>
 <td>0</td>
 <td>+0</td>
@@ -4482,7 +4514,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>309</td>
+<td>308</td>
 <td>shi ce</td>
 <td>0</td>
 <td>+0</td>
@@ -4492,7 +4524,7 @@
 <td>fujitsu.com</td>
 </tr>
 <tr>
-<td>310</td>
+<td>309</td>
 <td>srimaldia</td>
 <td>0</td>
 <td>+0</td>
@@ -4502,7 +4534,7 @@
 <td>alps.com</td>
 </tr>
 <tr>
-<td>311</td>
+<td>310</td>
 <td>supriyasirbi</td>
 <td>0</td>
 <td>+0</td>
@@ -4512,7 +4544,7 @@
 <td>gmail.com</td>
 </tr>
 <tr>
-<td>312</td>
+<td>311</td>
 <td>tjahnk</td>
 <td>0</td>
 <td>+0</td>
@@ -4522,7 +4554,7 @@
 <td>github.com</td>
 </tr>
 <tr>
-<td>313</td>
+<td>312</td>
 <td>tkummermehr</td>
 <td>0</td>
 <td>+0</td>
@@ -4532,7 +4564,7 @@
 <td>k2l.de</td>
 </tr>
 <tr>
-<td>314</td>
+<td>313</td>
 <td>tte_zheng_wenlong</td>
 <td>0</td>
 <td>+0</td>
@@ -4542,7 +4574,7 @@
 <td>co.jp</td>
 </tr>
 <tr>
-<td>315</td>
+<td>314</td>
 <td>user</td>
 <td>0</td>
 <td>+0</td>
@@ -4552,7 +4584,7 @@
 <td>localhost.localdomain</td>
 </tr>
 <tr>
-<td>316</td>
+<td>315</td>
 <td>walzert</td>
 <td>0</td>
 <td>+0</td>
@@ -4562,7 +4594,7 @@
 <td>github.com</td>
 </tr>
 <tr>
-<td>317</td>
+<td>316</td>
 <td>wang_zhiqiang</td>
 <td>0</td>
 <td>+0</td>
@@ -4572,7 +4604,7 @@
 <td>nexty-ele.com</td>
 </tr>
 <tr>
-<td>318</td>
+<td>317</td>
 <td>wanglu</td>
 <td>0</td>
 <td>+0</td>
@@ -4582,7 +4614,7 @@
 <td>nexty-ele.com</td>
 </tr>
 <tr>
-<td>319</td>
+<td>318</td>
 <td>wangludong</td>
 <td>0</td>
 <td>+0</td>
@@ -4590,6 +4622,16 @@
 <td>-</td>
 <td>1</td>
 <td>msn.com</td>
+</tr>
+<tr>
+<td>319</td>
+<td>wminer</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>5</td>
+<td>linuxfoundation.org</td>
 </tr>
 <tr>
 <td>320</td>
@@ -4660,35 +4702,35 @@
 <td>92</td>
 <td>+6959</td>
 <td>8</td>
-<td>4</td>
+<td>5</td>
 <td>2025-10-09</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>AGL/meta-agl-devel</td>
-<td>60</td>
+<td>59</td>
 <td>-5568</td>
 <td>8</td>
-<td>24</td>
+<td>25</td>
 <td>2025-09-19</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>AGL/meta-agl-demo</td>
-<td>57</td>
+<td>56</td>
 <td>-11213</td>
 <td>6</td>
-<td>27</td>
+<td>28</td>
 <td>2025-09-16</td>
 <td>✅</td>
 </tr>
 <tr>
 <td>AGL/AGL-repo</td>
-<td>29</td>
+<td>30</td>
 <td>-8254</td>
 <td>5</td>
-<td>24</td>
-<td>2025-09-19</td>
+<td>3</td>
+<td>2025-10-11</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -4696,7 +4738,7 @@
 <td>28</td>
 <td>+822</td>
 <td>1</td>
-<td>89</td>
+<td>90</td>
 <td>2025-07-16</td>
 <td>✅</td>
 </tr>
@@ -4705,7 +4747,7 @@
 <td>24</td>
 <td>-524</td>
 <td>1</td>
-<td>142</td>
+<td>143</td>
 <td>2025-05-24</td>
 <td>✅</td>
 </tr>
@@ -4714,7 +4756,7 @@
 <td>9</td>
 <td>+48</td>
 <td>5</td>
-<td>66</td>
+<td>67</td>
 <td>2025-08-08</td>
 <td>✅</td>
 </tr>
@@ -4723,8 +4765,8 @@
 <td>6</td>
 <td>+2699</td>
 <td>3</td>
-<td>215</td>
-<td>2025-03-12</td>
+<td>217</td>
+<td>2025-03-11</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -4732,7 +4774,7 @@
 <td>5</td>
 <td>+402</td>
 <td>5</td>
-<td>298</td>
+<td>299</td>
 <td>2024-12-19</td>
 <td>✅</td>
 </tr>
@@ -4741,7 +4783,7 @@
 <td>5</td>
 <td>-1</td>
 <td>2</td>
-<td>27</td>
+<td>28</td>
 <td>2025-09-16</td>
 <td>✅</td>
 </tr>
@@ -4750,7 +4792,7 @@
 <td>5</td>
 <td>+449</td>
 <td>1</td>
-<td>270</td>
+<td>271</td>
 <td>2025-01-16</td>
 <td>✅</td>
 </tr>
@@ -4759,7 +4801,7 @@
 <td>4</td>
 <td>+21</td>
 <td>2</td>
-<td>275</td>
+<td>276</td>
 <td>2025-01-11</td>
 <td>✅</td>
 </tr>
@@ -4768,7 +4810,7 @@
 <td>4</td>
 <td>+576</td>
 <td>2</td>
-<td>151</td>
+<td>152</td>
 <td>2025-05-15</td>
 <td>✅</td>
 </tr>
@@ -4777,7 +4819,7 @@
 <td>3</td>
 <td>+23</td>
 <td>2</td>
-<td>121</td>
+<td>122</td>
 <td>2025-06-14</td>
 <td>✅</td>
 </tr>
@@ -4786,7 +4828,7 @@
 <td>3</td>
 <td>+13</td>
 <td>1</td>
-<td>27</td>
+<td>28</td>
 <td>2025-09-16</td>
 <td>✅</td>
 </tr>
@@ -4795,7 +4837,7 @@
 <td>3</td>
 <td>+20</td>
 <td>1</td>
-<td>141</td>
+<td>142</td>
 <td>2025-05-25</td>
 <td>✅</td>
 </tr>
@@ -4804,7 +4846,7 @@
 <td>3</td>
 <td>+1193</td>
 <td>1</td>
-<td>270</td>
+<td>271</td>
 <td>2025-01-16</td>
 <td>✅</td>
 </tr>
@@ -4813,7 +4855,7 @@
 <td>2</td>
 <td>+377</td>
 <td>1</td>
-<td>305</td>
+<td>306</td>
 <td>2024-12-12</td>
 <td>✅</td>
 </tr>
@@ -4822,7 +4864,7 @@
 <td>2</td>
 <td>+0</td>
 <td>2</td>
-<td>324</td>
+<td>325</td>
 <td>2024-11-23</td>
 <td>✅</td>
 </tr>
@@ -4831,7 +4873,7 @@
 <td>2</td>
 <td>+437</td>
 <td>1</td>
-<td>157</td>
+<td>158</td>
 <td>2025-05-09</td>
 <td>✅</td>
 </tr>
@@ -4840,7 +4882,7 @@
 <td>2</td>
 <td>+11</td>
 <td>2</td>
-<td>220</td>
+<td>221</td>
 <td>2025-03-07</td>
 <td>✅</td>
 </tr>
@@ -4849,7 +4891,7 @@
 <td>2</td>
 <td>+3</td>
 <td>1</td>
-<td>298</td>
+<td>299</td>
 <td>2024-12-19</td>
 <td>✅</td>
 </tr>
@@ -4858,7 +4900,7 @@
 <td>1</td>
 <td>+341</td>
 <td>1</td>
-<td>157</td>
+<td>158</td>
 <td>2025-05-09</td>
 <td>✅</td>
 </tr>
@@ -4867,7 +4909,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>156</td>
+<td>157</td>
 <td>2025-05-10</td>
 <td>✅</td>
 </tr>
@@ -4876,7 +4918,7 @@
 <td>1</td>
 <td>-2</td>
 <td>1</td>
-<td>171</td>
+<td>172</td>
 <td>2025-04-25</td>
 <td>✅</td>
 </tr>
@@ -4885,7 +4927,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4894,7 +4936,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4903,7 +4945,7 @@
 <td>1</td>
 <td>-1</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4912,7 +4954,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4921,7 +4963,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4930,7 +4972,7 @@
 <td>1</td>
 <td>+1</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4939,7 +4981,7 @@
 <td>1</td>
 <td>+34</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4948,7 +4990,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4957,7 +4999,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4966,7 +5008,7 @@
 <td>1</td>
 <td>+6</td>
 <td>1</td>
-<td>221</td>
+<td>222</td>
 <td>2025-03-06</td>
 <td>✅</td>
 </tr>
@@ -4975,7 +5017,7 @@
 <td>1</td>
 <td>+10</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4984,7 +5026,7 @@
 <td>1</td>
 <td>+0</td>
 <td>1</td>
-<td>327</td>
+<td>328</td>
 <td>2024-11-20</td>
 <td>✅</td>
 </tr>
@@ -4993,7 +5035,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>715</td>
+<td>716</td>
 <td>2023-10-29</td>
 <td>☑️</td>
 </tr>
@@ -5002,8 +5044,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,692</td>
-<td>2021-02-24</td>
+<td>1,694</td>
+<td>2021-02-23</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -5011,7 +5053,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5020,7 +5062,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5029,7 +5071,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>411</td>
+<td>412</td>
 <td>2024-08-28</td>
 <td>☑️</td>
 </tr>
@@ -5038,7 +5080,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5047,7 +5089,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>715</td>
+<td>716</td>
 <td>2023-10-29</td>
 <td>☑️</td>
 </tr>
@@ -5056,7 +5098,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5065,7 +5107,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5074,7 +5116,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5083,7 +5125,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5092,7 +5134,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5101,7 +5143,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5110,7 +5152,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5119,7 +5161,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5128,7 +5170,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5137,7 +5179,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5146,7 +5188,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5155,7 +5197,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5164,7 +5206,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5173,7 +5215,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5182,7 +5224,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5191,7 +5233,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5200,8 +5242,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,788</td>
-<td>2020-11-20</td>
+<td>1,790</td>
+<td>2020-11-19</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -5209,7 +5251,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5218,7 +5260,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5227,7 +5269,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5236,7 +5278,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5245,7 +5287,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5254,7 +5296,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5263,7 +5305,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5272,7 +5314,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5281,7 +5323,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5290,7 +5332,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5299,7 +5341,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5308,7 +5350,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5317,7 +5359,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5326,7 +5368,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5335,7 +5377,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5344,7 +5386,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5353,7 +5395,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>377</td>
+<td>378</td>
 <td>2024-10-01</td>
 <td>☑️</td>
 </tr>
@@ -5362,7 +5404,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5371,7 +5413,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5380,7 +5422,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5389,7 +5431,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5398,7 +5440,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5407,7 +5449,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5416,7 +5458,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5425,7 +5467,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5434,7 +5476,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5443,7 +5485,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5452,7 +5494,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5461,7 +5503,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5470,7 +5512,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5479,7 +5521,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5488,7 +5530,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5497,7 +5539,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5506,7 +5548,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5515,7 +5557,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5524,7 +5566,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5533,7 +5575,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5542,7 +5584,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5551,7 +5593,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5560,7 +5602,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5569,7 +5611,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5578,7 +5620,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5587,7 +5629,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>402</td>
+<td>403</td>
 <td>2024-09-06</td>
 <td>☑️</td>
 </tr>
@@ -5596,7 +5638,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5605,7 +5647,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5614,7 +5656,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>368</td>
+<td>369</td>
 <td>2024-10-10</td>
 <td>☑️</td>
 </tr>
@@ -5623,7 +5665,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5632,7 +5674,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5641,7 +5683,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5650,7 +5692,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5659,7 +5701,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5668,7 +5710,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5677,7 +5719,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5686,7 +5728,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5695,7 +5737,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5704,7 +5746,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5713,7 +5755,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>368</td>
+<td>369</td>
 <td>2024-10-10</td>
 <td>☑️</td>
 </tr>
@@ -5722,34 +5764,34 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>365</td>
+<td>366</td>
 <td>2024-10-13</td>
-<td>✅</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>apps/momiscreen</td>
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>365</td>
+<td>366</td>
 <td>2024-10-13</td>
-<td>✅</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>apps/momiweather</td>
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>365</td>
+<td>366</td>
 <td>2024-10-13</td>
-<td>✅</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>apps/navigation</td>
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5758,7 +5800,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5767,7 +5809,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5776,7 +5818,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5785,7 +5827,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5794,7 +5836,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5803,7 +5845,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5812,7 +5854,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,145</td>
+<td>1,146</td>
 <td>2022-08-25</td>
 <td>🛑</td>
 </tr>
@@ -5821,7 +5863,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5830,7 +5872,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,201</td>
+<td>1,202</td>
 <td>2022-06-30</td>
 <td>🛑</td>
 </tr>
@@ -5839,7 +5881,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,943</td>
+<td>1,944</td>
 <td>2020-06-18</td>
 <td>🛑</td>
 </tr>
@@ -5848,7 +5890,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>2,046</td>
+<td>2,047</td>
 <td>2020-03-07</td>
 <td>🛑</td>
 </tr>
@@ -5857,8 +5899,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,823</td>
-<td>2020-10-16</td>
+<td>1,825</td>
+<td>2020-10-15</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -5866,7 +5908,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,796</td>
+<td>1,797</td>
 <td>2020-11-12</td>
 <td>🛑</td>
 </tr>
@@ -5875,7 +5917,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>626</td>
+<td>627</td>
 <td>2024-01-26</td>
 <td>☑️</td>
 </tr>
@@ -5884,7 +5926,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>579</td>
+<td>580</td>
 <td>2024-03-13</td>
 <td>☑️</td>
 </tr>
@@ -5893,7 +5935,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5902,7 +5944,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5911,7 +5953,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5920,7 +5962,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5929,7 +5971,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5938,7 +5980,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5947,7 +5989,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5956,7 +5998,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>369</td>
+<td>370</td>
 <td>2024-10-09</td>
 <td>☑️</td>
 </tr>
@@ -5965,7 +6007,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5974,7 +6016,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5983,7 +6025,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -5992,7 +6034,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6001,7 +6043,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>420</td>
+<td>421</td>
 <td>2024-08-19</td>
 <td>☑️</td>
 </tr>
@@ -6010,8 +6052,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,847</td>
-<td>2020-09-22</td>
+<td>1,849</td>
+<td>2020-09-21</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -6019,7 +6061,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>556</td>
+<td>557</td>
 <td>2024-04-05</td>
 <td>☑️</td>
 </tr>
@@ -6028,7 +6070,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6037,7 +6079,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6046,8 +6088,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,917</td>
-<td>2020-07-14</td>
+<td>1,919</td>
+<td>2020-07-13</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -6055,7 +6097,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6064,7 +6106,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6073,7 +6115,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6082,7 +6124,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6091,7 +6133,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6100,7 +6142,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6109,7 +6151,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6118,7 +6160,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6127,7 +6169,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6136,7 +6178,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6145,7 +6187,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6154,8 +6196,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>556</td>
-<td>2024-04-05</td>
+<td>558</td>
+<td>2024-04-04</td>
 <td>☑️</td>
 </tr>
 <tr>
@@ -6163,7 +6205,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6172,7 +6214,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6181,7 +6223,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6190,7 +6232,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6199,7 +6241,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6208,7 +6250,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6217,7 +6259,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6226,7 +6268,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>371</td>
+<td>372</td>
 <td>2024-10-07</td>
 <td>☑️</td>
 </tr>
@@ -6235,7 +6277,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>420</td>
+<td>421</td>
 <td>2024-08-19</td>
 <td>☑️</td>
 </tr>
@@ -6244,7 +6286,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,137</td>
+<td>1,138</td>
 <td>2022-09-02</td>
 <td>🛑</td>
 </tr>
@@ -6253,7 +6295,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>705</td>
+<td>706</td>
 <td>2023-11-08</td>
 <td>☑️</td>
 </tr>
@@ -6262,7 +6304,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>733</td>
+<td>734</td>
 <td>2023-10-11</td>
 <td>☑️</td>
 </tr>
@@ -6271,7 +6313,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>753</td>
+<td>754</td>
 <td>2023-09-21</td>
 <td>☑️</td>
 </tr>
@@ -6280,7 +6322,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6289,7 +6331,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6298,7 +6340,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6307,7 +6349,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6316,7 +6358,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,851</td>
+<td>1,852</td>
 <td>2020-09-18</td>
 <td>🛑</td>
 </tr>
@@ -6325,7 +6367,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6334,7 +6376,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6343,7 +6385,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6352,7 +6394,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6361,7 +6403,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6370,7 +6412,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,846</td>
+<td>1,847</td>
 <td>2020-09-23</td>
 <td>🛑</td>
 </tr>
@@ -6379,8 +6421,8 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>1,788</td>
-<td>2020-11-20</td>
+<td>1,790</td>
+<td>2020-11-19</td>
 <td>🛑</td>
 </tr>
 <tr>
@@ -6388,7 +6430,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6397,7 +6439,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>601</td>
+<td>602</td>
 <td>2024-02-20</td>
 <td>☑️</td>
 </tr>
@@ -6406,7 +6448,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6415,7 +6457,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6424,7 +6466,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>538</td>
+<td>539</td>
 <td>2024-04-23</td>
 <td>☑️</td>
 </tr>
@@ -6433,7 +6475,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6442,7 +6484,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6451,7 +6493,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6460,7 +6502,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6469,7 +6511,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>2,070</td>
+<td>2,071</td>
 <td>2020-02-12</td>
 <td>🛑</td>
 </tr>
@@ -6478,7 +6520,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6487,7 +6529,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6496,7 +6538,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>751</td>
+<td>752</td>
 <td>2023-09-23</td>
 <td>☑️</td>
 </tr>
@@ -6505,7 +6547,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>607</td>
+<td>608</td>
 <td>2024-02-14</td>
 <td>☑️</td>
 </tr>
@@ -6514,7 +6556,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>3,680</td>
+<td>3,681</td>
 <td>2015-09-16</td>
 <td>🛑</td>
 </tr>
@@ -6523,7 +6565,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>715</td>
+<td>716</td>
 <td>2023-10-29</td>
 <td>☑️</td>
 </tr>
@@ -6532,7 +6574,7 @@
 <td>0</td>
 <td>+0</td>
 <td>0</td>
-<td>3,492</td>
+<td>3,493</td>
 <td>2016-03-22</td>
 <td>🛑</td>
 </tr>
@@ -6549,13 +6591,13 @@
 <th>Gerrit Project</th>
 </tr></thead><tbody>
 <tr>
-<td>zzz_acl</td>
-</tr>
-<tr>
 <td>zzz_acl/AGL_acl</td>
 </tr>
 <tr>
 <td>zzz_acl/noreplication</td>
+</tr>
+<tr>
+<td>zzz_acl</td>
 </tr>
 </tbody></table>
 
@@ -6655,11 +6697,11 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>AGL/documentation</td>
-<td>python</td>
+<td>src/virtio/virtio-loopback-adapter</td>
+<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -6675,8 +6717,18 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>src/virtio/virtio-loopback-adapter</td>
-<td>c_cpp</td>
+<td>AGL/documentation</td>
+<td>python</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>apps/tbtnavi</td>
+<td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -6695,8 +6747,8 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>apps/tbtnavi</td>
-<td>None</td>
+<td>src/virtio/virtio-loopback-driver</td>
+<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -6726,16 +6778,6 @@
 </tr>
 <tr>
 <td>src/cluster-refgui</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>src/virtio/virtio-loopback-driver</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -6795,7 +6837,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>apps/agl-qt-cluster-demo-receiver</td>
+<td>apps/agl-cluster-demo-dashboard</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -6805,7 +6847,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>apps/agl-cluster-demo-dashboard</td>
+<td>apps/agl-qt-cluster-demo-receiver</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -6885,7 +6927,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>apps/phone</td>
+<td>apps/ondemandnavi</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -6895,7 +6937,7 @@
 <td>✅</td>
 </tr>
 <tr>
-<td>apps/ondemandnavi</td>
+<td>apps/phone</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -6945,8 +6987,78 @@
 <td>✅</td>
 </tr>
 <tr>
+<td>src/virtio/adapter_app</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/virtio/virtio_driver</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/xds/xds-cli</td>
+<td>go</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/xds/xds-common</td>
+<td>go</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/xds/xds-gdb</td>
+<td>go</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>AGL/meta-agl-cluster-demo</td>
 <td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/xds/xds-docs</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/xds/xds-server</td>
+<td>go</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7005,16 +7117,6 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>apps/agl-service-bluetooth-map</td>
 <td>c_cpp</td>
 <td>❌</td>
@@ -7045,7 +7147,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-bluetooth</td>
+<td>apps/agl-service-cloudproxy</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7055,7 +7157,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-cloudproxy</td>
+<td>apps/agl-service-bluetooth</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7075,6 +7177,16 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>apps/agl-service-data-persistence</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>apps/agl-service-geofence</td>
 <td>c_cpp</td>
 <td>❌</td>
@@ -7085,7 +7197,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-data-persistence</td>
+<td>apps/agl-service-harvester</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7115,7 +7227,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-harvester</td>
+<td>apps/agl-service-iiodevices</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/agl-service-identity-agent</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7135,46 +7257,6 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>apps/agl-service-identity-agent</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/agl-service-iiodevices</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/agl-service-homescreen</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/agl-service-mediaplayer</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>apps/agl-service-mediascanner</td>
 <td>c_cpp</td>
 <td>❌</td>
@@ -7186,6 +7268,16 @@
 </tr>
 <tr>
 <td>apps/agl-service-navigation</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/agl-service-mediaplayer</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7235,17 +7327,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-soundmanager</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/agl-service-taskmanager</td>
+<td>apps/agl-service-homescreen</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7265,7 +7347,27 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>apps/agl-service-taskmanager</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>apps/agl-service-telephony</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/agl-service-soundmanager</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7295,26 +7397,6 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-voiceagent</td>
-<td>python</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/agl-service-voice-high</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>apps/agl-service-weather</td>
 <td>c_cpp</td>
 <td>❌</td>
@@ -7325,8 +7407,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-telematics-demo-recorder</td>
-<td>c_cpp</td>
+<td>apps/agl-service-voiceagent</td>
+<td>python</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7335,7 +7417,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-xds-monitoring</td>
+<td>apps/agl-telematics-demo-recorder</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7355,7 +7437,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-windowmanager</td>
+<td>apps/agl-service-voice-high</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/agl-service-xds-monitoring</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7385,7 +7477,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-unicens</td>
+<td>apps/app-afb-test</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7395,7 +7487,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/app-afb-test</td>
+<td>apps/agl-service-windowmanager</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -7425,6 +7517,16 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>apps/chromium</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>apps/camera-gstreamer</td>
 <td>None</td>
 <td>❌</td>
@@ -7435,28 +7537,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-signal-composer</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>apps/controls</td>
 <td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/chromium</td>
-<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7485,8 +7567,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/agl-service-can-low-level</td>
-<td>c_cpp</td>
+<td>apps/demo3-homescreen</td>
+<td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7495,7 +7577,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/demo3-homescreen</td>
+<td>apps/demo3-dashboard</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7515,17 +7597,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/demo3-tachometer</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/demo3-dashboard</td>
+<td>apps/demo3-warehouse</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7555,7 +7627,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/demo3-warehouse</td>
+<td>apps/demo3-tachometer</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7566,16 +7638,6 @@
 </tr>
 <tr>
 <td>apps/flutter-dashboard</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/flutter-homescreen</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7605,6 +7667,16 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>apps/flutter-homescreen</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>apps/flutter-instrument-cluster</td>
 <td>None</td>
 <td>❌</td>
@@ -7625,7 +7697,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/flutter-speechrecognition-demo</td>
+<td>apps/homescreen-demo-ci</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7635,7 +7707,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/homescreen-demo-ci</td>
+<td>apps/flutter-speechrecognition-demo</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7665,7 +7737,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/html5-mediaplayer</td>
+<td>apps/agl-service-unicens</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/html5-hvac</td>
 <td>node</td>
 <td>❌</td>
 <td>❌</td>
@@ -7685,7 +7767,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/html5-hvac</td>
+<td>apps/html5-mediaplayer</td>
 <td>node</td>
 <td>❌</td>
 <td>❌</td>
@@ -7705,8 +7787,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/html5-mixer</td>
-<td>node</td>
+<td>apps/mixer</td>
+<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7717,16 +7799,6 @@
 <tr>
 <td>apps/html5-settings</td>
 <td>node</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>apps/mixer</td>
-<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7752,17 +7824,17 @@
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>☑️</td>
 </tr>
 <tr>
-<td>apps/momiplayer</td>
-<td>c_cpp</td>
+<td>apps/html5-mixer</td>
+<td>node</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>apps/momiweather</td>
@@ -7771,16 +7843,6 @@
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>apps/onscreenapp</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
 <td>❌</td>
 <td>☑️</td>
 </tr>
@@ -7795,7 +7857,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/restriction-screen</td>
+<td>apps/onscreenapp</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7807,6 +7869,26 @@
 <tr>
 <td>apps/poi-yelp</td>
 <td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/momiplayer</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/restriction-screen</td>
+<td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -7835,7 +7917,27 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>apps/videoplayer</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>apps/voiceagent-demo</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>apps/webapp-samples</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7855,37 +7957,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/webapp-samples</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>docs-webtemplate</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>src</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>docs-sources</td>
+<td>src/agl-js-api</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7925,17 +7997,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/agl-js-api</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
-</tr>
-<tr>
-<td>src/app-framework-demo</td>
+<td>src/applaunchd</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7955,7 +8017,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>apps/videoplayer</td>
+<td>src/app-framework-main</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/app-framework-demo</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -7970,36 +8042,6 @@
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/cmake-apps-module</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/app-framework-main</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/app-framework-binder</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>☑️</td>
@@ -8025,12 +8067,42 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>src/cmake-apps-module</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>src/cynagora</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/homescreen-demo-ci</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>src/hvac-demo-microcontroller</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>❌</td>
 <td>☑️</td>
 </tr>
@@ -8055,26 +8127,6 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/inputeventmanager</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/libafb-helpers</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>src/libagl-compositor</td>
 <td>None</td>
 <td>❌</td>
@@ -8085,7 +8137,7 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>src/libaglnavigation</td>
+<td>src/inputeventmanager</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8095,7 +8147,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/applaunchd</td>
+<td>src/libaglnavigation</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8115,8 +8167,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/libqthomescreen</td>
-<td>None</td>
+<td>src/libafb-helpers</td>
+<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -8135,18 +8187,8 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/hvac-demo-microcontroller</td>
+<td>src/libqthomescreen</td>
 <td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/libappcontroller</td>
-<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -8165,16 +8207,6 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/librefop</td>
-<td>c_cpp</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>src/libsoundmanager</td>
 <td>c_cpp</td>
 <td>❌</td>
@@ -8185,7 +8217,27 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/low-level-can-generator</td>
+<td>src/librefop</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/log-utils</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/libappcontroller</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -8205,7 +8257,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/log-utils</td>
+<td>src/low-level-can-generator</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/most</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8235,17 +8297,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/pyagl</td>
-<td>python</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/qtaglextras</td>
+<td>src/qa-test-misc</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8255,7 +8307,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/qa-test-misc</td>
+<td>src/qtaglextras</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8275,14 +8327,24 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/homescreen-demo-ci</td>
-<td>None</td>
+<td>src/pyagl</td>
+<td>python</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/snips-inference-agl</td>
+<td>python</td>
 <td>❌</td>
 <td>❌</td>
-<td>🛑</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>src/steering-wheel-microcontroller</td>
@@ -8305,57 +8367,17 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/snips-inference-agl</td>
-<td>python</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/most</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/snips-model-agl</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/virtio/adapter_app</td>
+<td>src/vod-server</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/virtio/virtio_driver</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/vod-server</td>
+<td>src/weston-ivi-plugins</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -8375,8 +8397,18 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>src/weston-ivi-plugins</td>
-<td>c_cpp</td>
+<td>src/snips-model-agl</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>src/windowmanager</td>
+<td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -8395,57 +8427,7 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>src/windowmanager</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/xds/xds-cli</td>
-<td>go</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/xds/xds-common</td>
-<td>go</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/xds/xds-gdb</td>
-<td>go</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>src/xds/xds-docs</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>staging</td>
+<td>staging/agl-inputmethod-qt-plugin</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8463,26 +8445,6 @@
 <td>✅</td>
 <td>❌</td>
 <td>☑️</td>
-</tr>
-<tr>
-<td>src/xds/xds-server</td>
-<td>go</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>staging/agl-inputmethod-qt-plugin</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>🛑</td>
 </tr>
 <tr>
 <td>staging/libsoundmanager</td>
@@ -8505,16 +8467,6 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>staging/qlibsoundmanager</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
 <td>staging/qlibhomescreen</td>
 <td>None</td>
 <td>❌</td>
@@ -8525,7 +8477,7 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>staging/new-apps</td>
+<td>staging/qlibsoundmanager</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8545,6 +8497,16 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>src/app-framework-binder</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
 <td>staging/release-upload</td>
 <td>None</td>
 <td>❌</td>
@@ -8555,17 +8517,7 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>staging/basesystem</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>staging/soundmanager</td>
+<td>apps/agl-service-signal-composer</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -8585,14 +8537,24 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>zzz_acl</td>
+<td>staging/new-apps</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>staging/xdg-launcher</td>
+<td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
-<td>🛑</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>zzz_acl/AGL_acl</td>
@@ -8615,17 +8577,7 @@
 <td>🛑</td>
 </tr>
 <tr>
-<td>zzz_acl/src_acl</td>
-<td>None</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>☑️</td>
-</tr>
-<tr>
-<td>staging/xdg-launcher</td>
+<td>staging/soundmanager</td>
 <td>c_cpp</td>
 <td>❌</td>
 <td>❌</td>
@@ -8635,14 +8587,14 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>z_sandbox</td>
+<td>zzz_acl/src_acl</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>✅</td>
 <td>❌</td>
-<td>🛑</td>
+<td>❌</td>
+<td>☑️</td>
 </tr>
 <tr>
 <td>zzz_acl/staging_acl</td>
@@ -8665,7 +8617,77 @@
 <td>☑️</td>
 </tr>
 <tr>
-<td>staging/rba-tool</td>
+<td>apps</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>apps/agl-service-can-low-level</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>docs-sources</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>docs-webtemplate</td>
+<td>c_cpp</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>staging</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>z_sandbox</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>src</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>staging/basesystem</td>
 <td>None</td>
 <td>❌</td>
 <td>❌</td>
@@ -8675,12 +8697,32 @@
 <td>☑️</td>
 </tr>
 <tr>
+<td>zzz_acl</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
 <td>staging/vehicle2cloud-communication</td>
 <td>gradle</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>staging/rba-tool</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>☑️</td>
 </tr>
@@ -8699,7 +8741,7 @@
 <h2 id="deployed-cicd-jobs">🏁 Deployed CI/CD Jobs</h2>
 
 <p><strong>Total GitHub workflows:</strong> 1</p>
-<p><strong>Total Jenkins jobs:</strong> 30</p>
+<p><strong>Total Jenkins jobs:</strong> 5</p>
 
 <table class="sortable no-pagination cicd-jobs-table">
 <thead><tr>
@@ -8710,36 +8752,22 @@
 <th>Job Count</th>
 </tr></thead><tbody>
 <tr>
-<td>AGL</td>
-<td></td>
-<td>0</td>
-<td><span class="status-success jenkins-status">ci-platform-AGL-repo-remove-artifacts</span><br><span class="status-cancelled jenkins-status">ci-platform-AGL-repo-verify-CIB-bbe</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-finish-success</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-flutter-qemux86-64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-h3ulcb-nogfx</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-html5-qemux86-64</span><br><span class="status-failure jenkins-status">ci-platform-AGL-repo-verify-CIB-ic-multicontainer-qemux86-64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-qemuarm</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-qemuarm64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-qemux86-64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-raspberrypi4</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIB-raspberrypi5</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-bbe</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-complete</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-finish-success</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-h3ulcb-nogfx</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-qemuarm</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-qemuarm64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-qemux86-64</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-r8a7795-agl-refhw</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-raspberrypi4</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-CIBT-upsquare</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-failure</span><br><span class="status-success jenkins-status">ci-platform-AGL-repo-verify-YCL-qemux86-64</span></td>
-<td>24</td>
-</tr>
-<tr>
-<td>apps</td>
-<td></td>
-<td>0</td>
-<td><span class="status-disabled jenkins-status">sandbox-rm-apps</span></td>
-<td>1</td>
-</tr>
-<tr>
 <td>ci-management</td>
 <td></td>
 <td>0</td>
-<td><span class="status-failure jenkins-status">ci-management-merge</span><br><span class="status-success jenkins-status">ci-management-merge-packer-ubuntu-16.04-basebuild-agl-test-slave</span><br><span class="status-disabled jenkins-status">ci-management-merge-packer-ubuntu-16.04-basebuild-control-slave</span><br><span class="status-success jenkins-status">ci-management-verify-jjb</span><br><span class="status-success jenkins-status">ci-management-verify-packer</span></td>
+<td><a href="https://build.automotivelinux.org/job/ci-management-merge/" target="_blank"><span class="status-failure jenkins-status">ci-management-merge</span></a><br><a href="https://build.automotivelinux.org/job/ci-management-merge-packer-ubuntu-16.04-basebuild-agl-test-slave/" target="_blank"><span class="status-success jenkins-status">ci-management-merge-packer-ubuntu-16.04-basebuild-agl-test-slave</span></a><br><a href="https://build.automotivelinux.org/job/ci-management-merge-packer-ubuntu-16.04-basebuild-control-slave/" target="_blank"><span class="status-disabled jenkins-status">ci-management-merge-packer-ubuntu-16.04-basebuild-control-slave</span></a><br><a href="https://build.automotivelinux.org/job/ci-management-verify-jjb/" target="_blank"><span class="status-success jenkins-status">ci-management-verify-jjb</span></a><br><a href="https://build.automotivelinux.org/job/ci-management-verify-packer/" target="_blank"><span class="status-success jenkins-status">ci-management-verify-packer</span></a></td>
 <td>5</td>
 </tr>
 <tr>
 <td>src/virtio/qemu</td>
-<td><span class="status-unknown workflow-status">lockdown.yml</span></td>
+<td><a href="https://github.com/onap/src-virtio-qemu/actions/workflows/lockdown.yml" target="_blank"><span class="status-unknown workflow-status">lockdown.yml</span></a></td>
 <td>1</td>
 <td></td>
 <td>0</td>
 </tr>
 </tbody></table>
 
-<p><strong>Total:</strong> 4 repositories with CI/CD jobs</p>
+<p><strong>Total:</strong> 2 repositories with CI/CD jobs</p>
 
 <p>Generated with ❤️ by Release Engineering</p>
     
