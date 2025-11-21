@@ -1,8 +1,0 @@
-{
-  "project": "TestProject",
-  "metrics": {
-    "total_commits": 100,
-    "contributors": 10
-  },
-  "test": true
-}
