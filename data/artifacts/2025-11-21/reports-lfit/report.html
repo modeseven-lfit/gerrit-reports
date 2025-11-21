@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerrit Project Analysis Report</title>
+    
+    <!-- Simple-DataTables CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+
+        code {
+            background-color: #f1f2f6;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        .emoji {
+            font-size: 1.1em;
+        }
+
+        .number {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-weight: 500;
+        }
+
+        .metadata {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 1em 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+
+        /* CI/CD Job Status Styling */
+        .status-success {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .status-failure {
+            color: #dc3545;
+            font-weight: 500;
+        }
+
+        .status-warning {
+            color: #ffc107;
+            font-weight: 500;
+        }
+
+        .status-building {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .status-disabled {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .status-cancelled {
+            color: #fd7e14;
+            font-weight: 500;
+        }
+
+        .status-unknown {
+            color: #6c757d;
+        }
+
+        .status-in-progress {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .status-neutral {
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .status-skipped {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .status-no-runs {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* Hover effects for better UX */
+        .workflow-status:hover, .jenkins-status:hover {
+            text-decoration: underline;
+            cursor: default;
+        }
+
+        /* Tooltip for non-mirrored repositories */
+        .mirror-warning {
+            cursor: help;
+            position: relative;
+            display: inline-block;
+        }
+
+        .mirror-warning .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -90px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .mirror-warning .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .mirror-warning:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Custom styles for Simple-DataTables integration */
+        .dataTable-wrapper {
+            margin: 1em 0;
+        }
+
+        .dataTable-top, .dataTable-bottom {
+            padding: 8px 0;
+        }
+
+        .dataTable-search {
+            margin-bottom: 1em;
+        }
+
+        .dataTable-search input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 250px;
+        }
+
+        .dataTable-selector select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .dataTable-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .dataTable-pagination a {
+            padding: 6px 12px;
+            margin: 0 2px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        .dataTable-pagination a:hover {
+            background-color: #e8f4f8;
+        }
+
+        .dataTable-pagination a.active {
+            background-color: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        /* Custom column widths for specific tables */
+        .feature-matrix-table th:nth-child(1) { width: 30%; } /* Gerrit Project */
+        .feature-matrix-table th:nth-child(2) { width: 12%; } /* Type */
+        .feature-matrix-table th:nth-child(3) { width: 12%; } /* Dependabot */
+        .feature-matrix-table th:nth-child(4) { width: 12%; } /* Pre-commit */
+        .feature-matrix-table th:nth-child(5) { width: 12%; } /* ReadTheDocs */
+        .feature-matrix-table th:nth-child(6) { width: 12%; } /* .gitreview */
+        .feature-matrix-table th:nth-child(7) { width: 10%; } /* Status */
+
+        /* CI/CD Jobs table - handles both 4 and 5 column layouts */
+        .cicd-jobs-table th:nth-child(1) { width: 20%; } /* Gerrit Project */
+        .cicd-jobs-table th:nth-child(2) { width: 30%; } /* GitHub Workflows */
+        .cicd-jobs-table th:nth-child(3) { width: 15%; } /* Workflow Count */
+        .cicd-jobs-table th:nth-child(4) { width: 35%; } /* Job Count (4-col) or Jenkins Jobs (5-col) */
+        .cicd-jobs-table th:nth-child(5) { width: 15%; } /* Job Count (5-col only) */
+    </style>
+</head>
+<body>
+    <h1 id="gerrit-project-analysis-report-linux-foundation">📊 Gerrit Project Analysis Report: Linux Foundation</h1>
+
+<p><strong>Generated:</strong> November 21, 2025 at 12:48 UTC</p>
+<p><strong>Schema Version:</strong> 1.0.0</p>
+
+<h2 id="global-summary">📈 Global Summary</h2>
+
+<p><strong>✅ Current</strong> commits within last 365 days</p>
+<p><strong>☑️ Active</strong> commits between 365-1095 days</p>
+<p><strong>🛑 Inactive</strong> no commits in 1095+ days</p>
+
+<table class="no-search no-pagination">
+<thead><tr>
+<th>Metric</th>
+<th>Count</th>
+<th>Percentage</th>
+</tr></thead><tbody>
+<tr>
+<td>Total Gerrit Projects</td>
+<td>35</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Current Gerrit Projects</td>
+<td>12</td>
+<td>34.3%</td>
+</tr>
+<tr>
+<td>Active Gerrit Projects</td>
+<td>14</td>
+<td>40.0%</td>
+</tr>
+<tr>
+<td>Inactive Gerrit Projects</td>
+<td>9</td>
+<td>25.7%</td>
+</tr>
+<tr>
+<td>No Apparent Commits</td>
+<td>0</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>Total Commits</td>
+<td>248</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Total Lines of Code</td>
+<td>217.4K</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="top-organizations-last-year">🏢 Top Organizations (Last Year)</h2>
+<p><strong>Organizations Found:</strong> 37</p>
+
+<table class="sortable">
+<thead><tr>
+<th>Rank</th>
+<th>Organization</th>
+<th>Contributors</th>
+<th>Commits</th>
+<th>LOC</th>
+<th>Δ LOC</th>
+<th>Avg LOC/Commit</th>
+<th>Unique Repositories</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>linuxfoundation.org</td>
+<td>31</td>
+<td>235</td>
+<td>+215617</td>
+<td>218833</td>
+<td>+917.5</td>
+<td>35</td>
+</tr>
+<tr>
+<td>2</td>
+<td>github.com</td>
+<td>1</td>
+<td>9</td>
+<td>+0</td>
+<td>28</td>
+<td>+0.0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>highstreet-technologies.com</td>
+<td>1</td>
+<td>2</td>
+<td>+103</td>
+<td>103</td>
+<td>+51.5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>samsung.com</td>
+<td>3</td>
+<td>1</td>
+<td>+44</td>
+<td>44</td>
+<td>+44.0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>telekom.de</td>
+<td>2</td>
+<td>1</td>
+<td>+10</td>
+<td>20</td>
+<td>+10.0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>att.com</td>
+<td>8</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>bell.ca</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>chinamobile.com</td>
+<td>2</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>cisco.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>colindixon.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>enea.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ensicaen.fr</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>ericsson.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>14</td>
+<td>est.tech</td>
+<td>3</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>15</td>
+<td>gmail.com</td>
+<td>13</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>21</td>
+</tr>
+<tr>
+<td>16</td>
+<td>hcl.com</td>
+<td>2</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>17</td>
+<td>hpe.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>18</td>
+<td>hq.sk</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>19</td>
+<td>huawei.com</td>
+<td>2</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>20</td>
+<td>intel.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>21</td>
+<td>intracom-telecom.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>linux.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>9</td>
+</tr>
+<tr>
+<td>23</td>
+<td>navy.mil</td>
+<td>3</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>nokia.com</td>
+<td>3</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>opennetworking.org</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>orange.com</td>
+<td>5</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>27</td>
+<td>pantheon.tech</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>28</td>
+<td>protonmail.ch</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>29</td>
+<td>redhat.com</td>
+<td>4</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>30</td>
+<td>schweflinghaus.de</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>31</td>
+<td>t-mobile.pl</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>32</td>
+<td>tieto.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>33</td>
+<td>verizon.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>vexxhost.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>35</td>
+<td>walledcity.org</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>36</td>
+<td>windriver.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>37</td>
+<td>yahoo.com</td>
+<td>1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<h2 id="top-contributors-last-year">👥 Top Contributors (Last Year)</h2>
+
+<p><strong>Contributors Found:</strong> 105</p>
+
+<table class="sortable">
+<thead><tr>
+<th>Rank</th>
+<th>Contributor</th>
+<th>Commits</th>
+<th>LOC</th>
+<th>Δ LOC</th>
+<th>Avg LOC/Commit</th>
+<th>Repositories</th>
+<th>Organization</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>LF Jenkins CI</td>
+<td>104</td>
+<td>+244</td>
+<td>850</td>
+<td>+2.3</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Matthew Watkins</td>
+<td>64</td>
+<td>+212568</td>
+<td>214222</td>
+<td>+3321.4</td>
+<td>9</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Anil Belur</td>
+<td>29</td>
+<td>+1763</td>
+<td>2183</td>
+<td>+60.8</td>
+<td>22</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Andrew Grimberg</td>
+<td>15</td>
+<td>+8</td>
+<td>116</td>
+<td>+0.5</td>
+<td>29</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Eric Ball</td>
+<td>13</td>
+<td>+11</td>
+<td>247</td>
+<td>+0.8</td>
+<td>16</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>6</td>
+<td>dependabot[bot]</td>
+<td>9</td>
+<td>+0</td>
+<td>28</td>
+<td>+0.0</td>
+<td>2</td>
+<td>github.com</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Kevin Sandi</td>
+<td>7</td>
+<td>+394</td>
+<td>580</td>
+<td>+56.3</td>
+<td>5</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Vanessa Valderrama</td>
+<td>2</td>
+<td>+629</td>
+<td>631</td>
+<td>+314.5</td>
+<td>6</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>9</td>
+<td>alex.stancu</td>
+<td>2</td>
+<td>+103</td>
+<td>103</td>
+<td>+51.5</td>
+<td>1</td>
+<td>highstreet-technologies.com</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Subhash Kumar Singh</td>
+<td>1</td>
+<td>+44</td>
+<td>44</td>
+<td>+44.0</td>
+<td>1</td>
+<td>samsung.com</td>
+</tr>
+<tr>
+<td>11</td>
+<td>benzelleroehr</td>
+<td>1</td>
+<td>+10</td>
+<td>20</td>
+<td>+10.0</td>
+<td>1</td>
+<td>telekom.de</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Jessica Wagantall</td>
+<td>1</td>
+<td>+0</td>
+<td>4</td>
+<td>+0.0</td>
+<td>9</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Alexandru Avadanii</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>enea.com</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Anil Belur</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Aric Gardner</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>11</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Ayush</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Bengt Thuree</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>7</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Bruno Sakoto</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>bell.ca</td>
+</tr>
+<tr>
+<td>19</td>
+<td>C.J. Collier</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Chandra Dasari</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Chau Do</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>navy.mil</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Christopher Lott (cl778h)</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Claudio D. Gasparini</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Claudio D. Gasparini</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>pantheon.tech</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Colin Dixon</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>colindixon.com</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Cédric Ollivier</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>orange.com</td>
+</tr>
+<tr>
+<td>27</td>
+<td>DW Talton</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>4</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Dan Timoney</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Daniel Farrell</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>redhat.com</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Daniel Farrell</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Daniel Pono Takamori</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>4</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Dave Wallace</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>33</td>
+<td>David Deal</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Dimitrios Markou</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>intracom-telecom.com</td>
+</tr>
+<tr>
+<td>35</td>
+<td>E. Scott Daniels</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Ed Warnicke</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Eric Searcy</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Faseela K</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>ericsson.com</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Fiete Ostkamp</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>telekom.de</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Georg Schweflinghaus</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>schweflinghaus.de</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Gerrit Code Review</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Gilles Thouenon</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>orange.com</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Gregory Elkinbard</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Houa Yang</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Jackie Huang</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>windriver.com</td>
+</tr>
+<tr>
+<td>46</td>
+<td>James E. Blair</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>redhat.com</td>
+</tr>
+<tr>
+<td>47</td>
+<td>James Gregg</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>intel.com</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Jamo Luhrsen</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Jamo Luhrsen</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>redhat.com</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Jeremy Phelps</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>9</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>51</td>
+<td>John McInerney</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>navy.mil</td>
+</tr>
+<tr>
+<td>52</td>
+<td>JohnKeeney</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>est.tech</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Jordan Conway</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Jordan Evans</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Josh Farwell</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Konstantin Ryabitsev</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Krzysztof Kuzmicki</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>nokia.com</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Lott, Christopher (cl778h)</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>4</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Luis Gomez</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Martin Klozik</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+<td>tieto.com</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Michal Jagiello</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>t-mobile.pl</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Milin Jaiswal</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Mohammed Naser</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+<td>vexxhost.com</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Navin Agrawal</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Nitin Gupta (Bangalore)</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>yahoo.com</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Prateek</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Robert Varga</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>hq.sk</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Ry Jones</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Ry Jones</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>walledcity.org</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Sam Hague</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>redhat.com</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Sandra Biton</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>hpe.com</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Sangwook Ha</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>verizon.com</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Suresh Channamallu</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Sylvain Desbureaux</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>orange.com</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Thanh Ha</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>18</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Thanh Ha</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>9</td>
+<td>linux.com</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Thanh Ha</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>22</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Tim Johnson</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>5</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>79</td>
+<td>ToineSiebelink</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>est.tech</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Tomasz Wrobel</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>nokia.com</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Tommy Carpenter</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Trevor Bramwell</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>12</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Vratko Polak</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>2</td>
+<td>cisco.com</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Zack Williams</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>opennetworking.org</td>
+</tr>
+<tr>
+<td>85</td>
+<td>alejandro monje</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>navy.mil</td>
+</tr>
+<tr>
+<td>86</td>
+<td>amit.sarnath</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>hcl.com</td>
+</tr>
+<tr>
+<td>87</td>
+<td>czichy</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>nokia.com</td>
+</tr>
+<tr>
+<td>88</td>
+<td>dmcbride1</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>89</td>
+<td>guillaume.lambert</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>3</td>
+<td>orange.com</td>
+</tr>
+<tr>
+<td>90</td>
+<td>hekeguang</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>chinamobile.com</td>
+</tr>
+<tr>
+<td>91</td>
+<td>hoejoo.lee</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>samsung.com</td>
+</tr>
+<tr>
+<td>92</td>
+<td>josephthaliath</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>samsung.com</td>
+</tr>
+<tr>
+<td>93</td>
+<td>kaixiliu</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>chinamobile.com</td>
+</tr>
+<tr>
+<td>94</td>
+<td>lfit.gh2gerrit</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>95</td>
+<td>morganrol</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>orange.com</td>
+</tr>
+<tr>
+<td>96</td>
+<td>niamhcore</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>est.tech</td>
+</tr>
+<tr>
+<td>97</td>
+<td>ops5gjenkins</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>gmail.com</td>
+</tr>
+<tr>
+<td>98</td>
+<td>pmikus</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>protonmail.ch</td>
+</tr>
+<tr>
+<td>99</td>
+<td>quentinDERORY</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>ensicaen.fr</td>
+</tr>
+<tr>
+<td>100</td>
+<td>sabdul</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>linuxfoundation.org</td>
+</tr>
+<tr>
+<td>101</td>
+<td>sebdet</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>102</td>
+<td>seshukm</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>huawei.com</td>
+</tr>
+<tr>
+<td>103</td>
+<td>singh.sunil</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>hcl.com</td>
+</tr>
+<tr>
+<td>104</td>
+<td>vv770d</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>att.com</td>
+</tr>
+<tr>
+<td>105</td>
+<td>zhuguanyu</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>-</td>
+<td>1</td>
+<td>huawei.com</td>
+</tr>
+</tbody></table>
+
+<h2 id="gerrit-projects">📊 Gerrit Projects</h2>
+
+<table class="sortable">
+<thead><tr>
+<th>Gerrit Project</th>
+<th>Commits</th>
+<th>LOC</th>
+<th>Contributors</th>
+<th>Days Inactive</th>
+<th>Last Commit Date</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td>releng/info-master</td>
+<td>113</td>
+<td>+482</td>
+<td>6</td>
+<td>1</td>
+<td>2025-11-20</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>sandbox</td>
+<td>49</td>
+<td>+212013</td>
+<td>2</td>
+<td>9</td>
+<td>2025-11-12</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/global-jjb</td>
+<td>21</td>
+<td>+564</td>
+<td>5</td>
+<td>30</td>
+<td>2025-10-22</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/lftools</td>
+<td>20</td>
+<td>+605</td>
+<td>4</td>
+<td>1</td>
+<td>2025-11-20</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/gerrit_to_platform</td>
+<td>19</td>
+<td>+700</td>
+<td>5</td>
+<td>22</td>
+<td>2025-10-30</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/common-packer</td>
+<td>12</td>
+<td>+1401</td>
+<td>4</td>
+<td>7</td>
+<td>2025-11-14</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/docs</td>
+<td>7</td>
+<td>+11</td>
+<td>3</td>
+<td>94</td>
+<td>2025-08-19</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/java-install</td>
+<td>2</td>
+<td>+6</td>
+<td>1</td>
+<td>167</td>
+<td>2025-06-07</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/puppet-install</td>
+<td>2</td>
+<td>-1</td>
+<td>2</td>
+<td>199</td>
+<td>2025-05-06</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-recommended-tools</td>
+<td>1</td>
+<td>+11</td>
+<td>1</td>
+<td>170</td>
+<td>2025-06-04</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/python-install</td>
+<td>1</td>
+<td>-19</td>
+<td>1</td>
+<td>167</td>
+<td>2025-06-07</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/system-update</td>
+<td>1</td>
+<td>+1</td>
+<td>1</td>
+<td>6</td>
+<td>2025-11-15</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>455</td>
+<td>2024-08-23</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/docker-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/haveged-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-dev-libs</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/mono-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/packer-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/protobuf-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/shellcheck-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/sysstat-install</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>393</td>
+<td>2024-10-24</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>clav2test/ccla-only-project</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>2,513</td>
+<td>2019-01-04</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>clav2test/icla-and-ccla-project</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>1,710</td>
+<td>2021-03-17</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>lfn/process</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>2,723</td>
+<td>2018-06-08</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>puppet/modules/gce</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>3,213</td>
+<td>2017-02-03</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>puppet/modules/mailman3</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>3,431</td>
+<td>2016-06-30</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>625</td>
+<td>2024-03-06</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/ci-workshop</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>1,174</td>
+<td>2022-09-04</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/docs-conf</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>534</td>
+<td>2024-06-05</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/license-checker</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>2,729</td>
+<td>2018-06-02</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/nexus-upload</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>539</td>
+<td>2024-05-31</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/pipelines</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>1,201</td>
+<td>2022-08-08</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/python-one-password</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>793</td>
+<td>2023-09-20</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/sigul-docker</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>735</td>
+<td>2023-11-17</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>sandbox-info-master</td>
+<td>0</td>
+<td>+0</td>
+<td>0</td>
+<td>1,884</td>
+<td>2020-09-24</td>
+<td>🛑</td>
+</tr>
+</tbody></table>
+
+<p><strong>Total:</strong> 35 repositories</p>
+
+<h2 id="gerrit-project-feature-matrix">🔧 Gerrit Project Feature Matrix</h2>
+
+<table class="sortable no-pagination feature-matrix-table">
+<thead><tr>
+<th>Gerrit Project</th>
+<th>Type</th>
+<th>Dependabot</th>
+<th>Pre-commit</th>
+<th>ReadTheDocs</th>
+<th>.gitreview</th>
+<th>G2G</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td>releng/info-master</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>sandbox</td>
+<td>maven</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/global-jjb</td>
+<td>python</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/lftools</td>
+<td>python</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/gerrit_to_platform</td>
+<td>python</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/common-packer</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>releng/docs</td>
+<td>python</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/java-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/puppet-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-recommended-tools</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/python-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/system-update</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ansible/roles/protobuf-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/mono-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-dev-libs</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/haveged-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/docker-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>puppet/modules/gce</td>
+<td>ruby</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>puppet/modules/mailman3</td>
+<td>ruby</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>ansible/roles</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>clav2test/ccla-only-project</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>clav2test/icla-and-ccla-project</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>lfn/process</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/ci-workshop</td>
+<td>docker</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>ansible/roles/packer-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/sysstat-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>ansible/roles/shellcheck-install</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/license-checker</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/docs-conf</td>
+<td>python</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/pipelines</td>
+<td>gradle</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/nexus-upload</td>
+<td>None</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>sandbox-info-master</td>
+<td>None</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🛑</td>
+</tr>
+<tr>
+<td>releng/python-one-password</td>
+<td>python</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>releng/sigul-docker</td>
+<td>docker</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>☑️</td>
+</tr>
+</tbody></table>
+
+<h2 id="deployed-cicd-jobs">🏁 Deployed CI/CD Jobs</h2>
+
+<p><strong>Total GitHub workflows:</strong> 50</p>
+<p><strong>Total Jenkins jobs:</strong> 0</p>
+
+<table class="sortable no-pagination cicd-jobs-table">
+<thead><tr>
+<th>Gerrit Project</th>
+<th>GitHub Workflows</th>
+<th>Workflow Count</th>
+<th>Job Count</th>
+</tr></thead><tbody>
+<tr>
+<td>ansible/roles/docker-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-docker-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-docker-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/haveged-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-haveged-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-haveged-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/java-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-java-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-java-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-dev-libs</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-lf-dev-libs/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-lf-dev-libs/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/lf-recommended-tools</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-lf-recommended-tools/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-lf-recommended-tools/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/mono-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-mono-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-mono-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/packer-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-packer-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-packer-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/protobuf-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-protobuf-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/puppet-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-puppet-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-puppet-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/python-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-python-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-python-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/shellcheck-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-shellcheck-install/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-shellcheck-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/sysstat-install</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-sysstat-install/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ansible/roles/system-update</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-system-update/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-ansible-roles-system-update/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/common-packer</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-common-packer/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-common-packer/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-common-packer/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/docs</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-docs/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-docs/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/docs-conf</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-docs-conf/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-docs-conf/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/gerrit_to_platform</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-gerrit_to_platform/actions/workflows/codeql.yaml" target="_blank"><span class="status-unknown workflow-status">codeql.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-gerrit_to_platform/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-gerrit_to_platform/actions/workflows/github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-gerrit_to_platform/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/global-jjb</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-global-jjb/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-global-jjb/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-global-jjb/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/info-master</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-info-master/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-info-master/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/lftools</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-lftools/actions/workflows/call-composed-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-composed-github2gerrit.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-lftools/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-lftools/actions/workflows/release-drafter.yaml" target="_blank"><span class="status-unknown workflow-status">release-drafter.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-lftools/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/nexus-upload</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-nexus-upload/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/python-one-password</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-python-one-password/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-python-one-password/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>releng/sigul-docker</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-sigul-docker/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a><br><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-releng-sigul-docker/actions/workflows/release.yaml" target="_blank"><span class="status-unknown workflow-status">release.yaml</span></a></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>sandbox</td>
+<td><a href="https://github.com/linuxfoundation/gerrit-reporting-tool-gerrit.linuxfoundation.org-sandbox/actions/workflows/github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">github2gerrit.yaml</span></a></td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+
+<p><strong>Total:</strong> 24 repositories with CI/CD jobs</p>
+
+<p>Generated with ❤️ by Release Engineering</p>
+    
+    <!-- Simple-DataTables JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <script>
+        // Initialize Simple-DataTables on all tables with the sortable class
+        document.addEventListener('DOMContentLoaded', function() {
+            const tables = document.querySelectorAll('table.sortable');
+            tables.forEach(function(table) {
+                // Skip tables that are too small to benefit from sorting
+                const rows = table.querySelectorAll('tbody tr');
+                if (rows.length < 3) {
+                    return;
+                }
+
+                // Check if this table should have pagination disabled
+                const noPagination = table.classList.contains('no-pagination');
+                const noSearch = table.classList.contains('no-search');
+                const usePagination = noPagination ? false : true;
+                const useSearch = noSearch ? false : true;
+
+                new simpleDatatables.DataTable(table, {
+                    searchable: useSearch,
+                    sortable: true,
+                    paging: usePagination,
+                    perPage: 20,
+                    perPageSelect: [20, 50, 100, 200],
+                    classes: {
+                        active: "active",
+                        disabled: "disabled"
+                    },
+                    labels: {
+                        placeholder: "Search repositories, contributors, etc...",
+                        perPage: "entries per page",
+                        noRows: "No entries found",
+                        info: "Showing {start} to {end} of {rows} entries"
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
