@@ -1,0 +1,1915 @@
+# 📊 Gerrit Project Analysis Report: LF Broadband
+
+**Generated:** January 21, 2026 at 07:28 UTC
+**Schema Version:** 1.2.0
+
+## 📈 Global Summary
+
+**✅ Current** commits within last 365 days
+**☑️ Active** commits between 365-1095 days
+**🛑 Inactive** no commits in 1095+ days
+
+| Metric | Count | Percentage |
+|--------|-------|------------|
+| Total Gerrit Projects | 255 | 100% |
+| Current Gerrit Projects | 20 | 7.8% |
+| Active Gerrit Projects | 33 | 12.9% |
+| Inactive Gerrit Projects | 200 | 78.4% |
+| No Apparent Commits | 2 | 0.8% |
+| Total Commits | 181 | - |
+| Total Lines of Code | 1.9M | - |
+
+## 🏢 Top Organizations
+
+The data presented in the table below covers the past 365 days.
+
+**Organizations Found:** 269
+
+| Rank | Organization | Contributors | Commits | LOC | Δ LOC | Avg LOC/Commit | Unique Repositories |
+|------|--------------|--------------|---------|-----|-------|----------------|---------------------|
+| 1 | radisys.com | 50 | 118 | +1333192 | 2364282 | +11298.2 | 32 |
+| 2 | linuxfoundation.org | 3 | 37 | -7123 | 14331 | -192.5 | 34 |
+| 3 | opennetworking.org | 56 | 10 | +1306 | 1326 | +130.6 | 233 |
+| 4 | bisdn.de | 4 | 8 | -44 | 136 | -5.5 | 6 |
+| 5 | netsia.com | 15 | 5 | -21 | 55 | -4.2 | 31 |
+| 6 | github.com | 6 | 3 | +0 | 8 | +0.0 | 6 |
+| 7 | 10ur.org | 1 | 0 | +0 | 0 | - | 1 |
+| 8 | 14v.de | 1 | 0 | +0 | 0 | - | 1 |
+| 9 | 163.com | 1 | 0 | +0 | 0 | - | 1 |
+| 10 | 6wind.com | 4 | 0 | +0 | 0 | - | 1 |
+| 11 | 99cloud.net | 1 | 0 | +0 | 0 | - | 1 |
+| 12 | ac.jp | 1 | 0 | +0 | 0 | - | 1 |
+| 13 | ac.uk | 1 | 0 | +0 | 0 | - | 1 |
+| 14 | accton.com | 1 | 0 | +0 | 0 | - | 1 |
+| 15 | ad.jp | 2 | 0 | +0 | 0 | - | 1 |
+| 16 | adtran.com | 7 | 0 | +0 | 0 | - | 16 |
+| 17 | akamai.com | 1 | 0 | +0 | 0 | - | 1 |
+| 18 | alt.net | 1 | 0 | +0 | 0 | - | 1 |
+| 19 | altencalsoftlabs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 20 | altlinux.ru | 1 | 0 | +0 | 0 | - | 1 |
+| 21 | amazon.com | 5 | 0 | +0 | 0 | - | 1 |
+| 22 | android.com | 9 | 0 | +0 | 0 | - | 1 |
+| 23 | angband.pl | 1 | 0 | +0 | 0 | - | 1 |
+| 24 | arcor.de | 1 | 0 | +0 | 0 | - | 1 |
+| 25 | argon.org | 1 | 0 | +0 | 0 | - | 1 |
+| 26 | aristanetworks.com | 1 | 0 | +0 | 0 | - | 1 |
+| 27 | arizona.edu | 2 | 0 | +0 | 0 | - | 28 |
+| 28 | arm.com | 2 | 0 | +0 | 0 | - | 2 |
+| 29 | artisancomputer.com | 1 | 0 | +0 | 0 | - | 12 |
+| 30 | atcorp.com | 2 | 0 | +0 | 0 | - | 1 |
+| 31 | ate-mahoroba.jp | 1 | 0 | +0 | 0 | - | 1 |
+| 32 | att.com | 8 | 0 | +0 | 0 | - | 13 |
+| 33 | attlocal.net | 1 | 0 | +0 | 0 | - | 1 |
+| 34 | bbn.com | 2 | 0 | +0 | 0 | - | 1 |
+| 35 | bcsw.net | 1 | 0 | +0 | 0 | - | 1 |
+| 36 | bigswitch.com | 13 | 0 | +0 | 0 | - | 1 |
+| 37 | bluecatnetworks.com | 1 | 0 | +0 | 0 | - | 1 |
+| 38 | bmw-carit.de | 1 | 0 | +0 | 0 | - | 1 |
+| 39 | bnovc.com | 1 | 0 | +0 | 0 | - | 1 |
+| 40 | boeing.com | 1 | 0 | +0 | 0 | - | 1 |
+| 41 | borea.si | 1 | 0 | +0 | 0 | - | 1 |
+| 42 | cablelabs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 43 | calsoftlabs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 44 | carbon.local | 1 | 0 | +0 | 0 | - | 1 |
+| 45 | carroll.com | 1 | 0 | +0 | 0 | - | 1 |
+| 46 | cavium.com | 1 | 0 | +0 | 0 | - | 1 |
+| 47 | ccascone.net | 1 | 0 | +0 | 0 | - | 3 |
+| 48 | chromium.org | 5 | 0 | +0 | 0 | - | 1 |
+| 49 | ciena.com | 18 | 0 | +0 | 0 | - | 37 |
+| 50 | cigtech.com | 1 | 0 | +0 | 0 | - | 2 |
+| 51 | cisco.com | 1 | 0 | +0 | 0 | - | 5 |
+| 52 | cloudlab.us | 9 | 0 | +0 | 0 | - | 4 |
+| 53 | cluster.local | 3 | 0 | +0 | 0 | - | 3 |
+| 54 | co.il | 1 | 0 | +0 | 0 | - | 1 |
+| 55 | co.jp | 1 | 0 | +0 | 0 | - | 1 |
+| 56 | co.nz | 1 | 0 | +0 | 0 | - | 1 |
+| 57 | cochard.me | 1 | 0 | +0 | 0 | - | 1 |
+| 58 | codeaurora.org | 5 | 0 | +0 | 0 | - | 1 |
+| 59 | codenomicon.com | 1 | 0 | +0 | 0 | - | 1 |
+| 60 | collab.net | 1 | 0 | +0 | 0 | - | 1 |
+| 61 | com.br | 1 | 0 | +0 | 0 | - | 1 |
+| 62 | com.cn | 2 | 0 | +0 | 0 | - | 4 |
+| 63 | com.tr | 1 | 0 | +0 | 0 | - | 4 |
+| 64 | com.tw | 3 | 0 | +0 | 0 | - | 3 |
+| 65 | compute.internal | 1 | 0 | +0 | 0 | - | 1 |
+| 66 | comstyle.com | 1 | 0 | +0 | 0 | - | 1 |
+| 67 | coplanar.net | 1 | 0 | +0 | 0 | - | 1 |
+| 68 | cord.lab | 1 | 0 | +0 | 0 | - | 1 |
+| 69 | coredump.fr | 1 | 0 | +0 | 0 | - | 1 |
+| 70 | corenova.com | 1 | 0 | +0 | 0 | - | 1 |
+| 71 | crfreenet.org | 1 | 0 | +0 | 0 | - | 1 |
+| 72 | cumulusnetworks.com | 13 | 0 | +0 | 0 | - | 1 |
+| 73 | cyaninc.com | 1 | 0 | +0 | 0 | - | 1 |
+| 74 | cyanogenmod.org | 1 | 0 | +0 | 0 | - | 1 |
+| 75 | darkjames.pl | 1 | 0 | +0 | 0 | - | 1 |
+| 76 | davidberard.fr | 1 | 0 | +0 | 0 | - | 1 |
+| 77 | debian.(none) | 1 | 0 | +0 | 0 | - | 1 |
+| 78 | debian.org | 3 | 0 | +0 | 0 | - | 1 |
+| 79 | deedums.com | 1 | 0 | +0 | 0 | - | 1 |
+| 80 | deltaww.com | 1 | 0 | +0 | 0 | - | 1 |
+| 81 | diac24.net | 1 | 0 | +0 | 0 | - | 1 |
+| 82 | digikod.net | 1 | 0 | +0 | 0 | - | 1 |
+| 83 | dogonthesun.net | 1 | 0 | +0 | 0 | - | 1 |
+| 84 | droidmod.org | 1 | 0 | +0 | 0 | - | 1 |
+| 85 | dti2.net | 1 | 0 | +0 | 0 | - | 1 |
+| 86 | dtu.dk | 1 | 0 | +0 | 0 | - | 2 |
+| 87 | edge-core.com | 5 | 0 | +0 | 0 | - | 7 |
+| 88 | edu.tw | 1 | 0 | +0 | 0 | - | 2 |
+| 89 | emulab.net | 4 | 0 | +0 | 0 | - | 1 |
+| 90 | enea.com | 1 | 0 | +0 | 0 | - | 2 |
+| 91 | ericsson.com | 1 | 0 | +0 | 0 | - | 10 |
+| 92 | etcnet.org | 1 | 0 | +0 | 0 | - | 1 |
+| 93 | fc8-storktest.lan | 1 | 0 | +0 | 0 | - | 1 |
+| 94 | finik.net | 1 | 0 | +0 | 0 | - | 1 |
+| 95 | flirble.org | 1 | 0 | +0 | 0 | - | 1 |
+| 96 | foobar.org | 1 | 0 | +0 | 0 | - | 1 |
+| 97 | forth.gr | 1 | 0 | +0 | 0 | - | 1 |
+| 98 | free-electrons.com | 1 | 0 | +0 | 0 | - | 1 |
+| 99 | fujitsu.com | 3 | 0 | +0 | 0 | - | 3 |
+| 100 | furukawaelectric.com | 1 | 0 | +0 | 0 | - | 2 |
+| 101 | furukawalatam.com | 3 | 0 | +0 | 0 | - | 12 |
+| 102 | garmin.com | 1 | 0 | +0 | 0 | - | 1 |
+| 103 | gatech.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 104 | gmail.com | 127 | 0 | +0 | 0 | - | 145 |
+| 105 | gmx.de | 1 | 0 | +0 | 0 | - | 1 |
+| 106 | gmx.net | 1 | 0 | +0 | 0 | - | 1 |
+| 107 | gnarf.org | 1 | 0 | +0 | 0 | - | 1 |
+| 108 | google.com | 57 | 0 | +0 | 0 | - | 4 |
+| 109 | googlemail.com | 1 | 0 | +0 | 0 | - | 1 |
+| 110 | grahamc.com | 1 | 0 | +0 | 0 | - | 1 |
+| 111 | gslab.com | 5 | 0 | +0 | 0 | - | 4 |
+| 112 | hackershells.com | 1 | 0 | +0 | 0 | - | 1 |
+| 113 | hcl.com | 6 | 0 | +0 | 0 | - | 5 |
+| 114 | highloadlab.com | 1 | 0 | +0 | 0 | - | 1 |
+| 115 | highwayman.com | 1 | 0 | +0 | 0 | - | 1 |
+| 116 | hisilicon.com | 1 | 0 | +0 | 0 | - | 1 |
+| 117 | hotmail.com | 2 | 0 | +0 | 0 | - | 2 |
+| 118 | hpe.com | 2 | 0 | +0 | 0 | - | 1 |
+| 119 | huawei.com | 1 | 0 | +0 | 0 | - | 1 |
+| 120 | igmo.org | 1 | 0 | +0 | 0 | - | 1 |
+| 121 | iki.fi | 1 | 0 | +0 | 0 | - | 1 |
+| 122 | inango-systems.com | 1 | 0 | +0 | 0 | - | 1 |
+| 123 | indiana.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 124 | inex.ie | 1 | 0 | +0 | 0 | - | 1 |
+| 125 | infosys.com | 16 | 0 | +0 | 0 | - | 38 |
+| 126 | inkylabs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 127 | instituut.net | 1 | 0 | +0 | 0 | - | 1 |
+| 128 | intel.com | 32 | 0 | +0 | 0 | - | 45 |
+| 129 | intercloud.net | 1 | 0 | +0 | 0 | - | 1 |
+| 130 | ipacct.com | 1 | 0 | +0 | 0 | - | 1 |
+| 131 | iptel.by | 1 | 0 | +0 | 0 | - | 1 |
+| 132 | iu.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 133 | jabil.com | 1 | 0 | +0 | 0 | - | 3 |
+| 134 | jakma.org | 1 | 0 | +0 | 0 | - | 1 |
+| 135 | joshtriplett.org | 1 | 0 | +0 | 0 | - | 1 |
+| 136 | joyent.com | 1 | 0 | +0 | 0 | - | 1 |
+| 137 | jussieu.fr | 2 | 0 | +0 | 0 | - | 1 |
+| 138 | kailashs-macbook-pro.local | 1 | 0 | +0 | 0 | - | 1 |
+| 139 | klfree.net | 1 | 0 | +0 | 0 | - | 1 |
+| 140 | kroenchenstadt.de | 1 | 0 | +0 | 0 | - | 1 |
+| 141 | labn.net | 1 | 0 | +0 | 0 | - | 1 |
+| 142 | lge.com | 1 | 0 | +0 | 0 | - | 1 |
+| 143 | link-me.it | 1 | 0 | +0 | 0 | - | 1 |
+| 144 | localhost.localdomain | 2 | 0 | +0 | 0 | - | 1 |
+| 145 | ltts.com | 1 | 0 | +0 | 0 | - | 1 |
+| 146 | luffy.cx | 1 | 0 | +0 | 0 | - | 1 |
+| 147 | lycos.com | 1 | 0 | +0 | 0 | - | 1 |
+| 148 | mail.ru | 1 | 0 | +0 | 0 | - | 1 |
+| 149 | mattakis.com | 1 | 0 | +0 | 0 | - | 1 |
+| 150 | mcords-macbook-pro.local | 1 | 0 | +0 | 0 | - | 1 |
+| 151 | medallia.com | 1 | 0 | +0 | 0 | - | 1 |
+| 152 | mellanox.com | 2 | 0 | +0 | 0 | - | 3 |
+| 153 | mit.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 154 | mogulmouse.net | 1 | 0 | +0 | 0 | - | 1 |
+| 155 | morganstanley.com | 1 | 0 | +0 | 0 | - | 1 |
+| 156 | motorola.com | 1 | 0 | +0 | 0 | - | 1 |
+| 157 | myyearbook.com | 1 | 0 | +0 | 0 | - | 1 |
+| 158 | nec.com | 1 | 0 | +0 | 0 | - | 3 |
+| 159 | networkplumber.org | 1 | 0 | +0 | 0 | - | 1 |
+| 160 | nfware.com | 1 | 0 | +0 | 0 | - | 1 |
+| 161 | nicira.com | 1 | 0 | +0 | 0 | - | 1 |
+| 162 | nokia.com | 2 | 0 | +0 | 0 | - | 4 |
+| 163 | northforgeinc.com | 2 | 0 | +0 | 0 | - | 2 |
+| 164 | nowhere.ws | 1 | 0 | +0 | 0 | - | 1 |
+| 165 | null.com | 1 | 0 | +0 | 0 | - | 2 |
+| 166 | nvidia.com | 1 | 0 | +0 | 0 | - | 1 |
+| 167 | onfs-macbook-pro-2.local | 1 | 0 | +0 | 0 | - | 1 |
+| 168 | onlab.us | 26 | 0 | +0 | 0 | - | 99 |
+| 169 | ooyala.com | 1 | 0 | +0 | 0 | - | 1 |
+| 170 | open.ch | 2 | 0 | +0 | 0 | - | 1 |
+| 171 | opencord.org | 1 | 0 | +0 | 0 | - | 15 |
+| 172 | opennetwokring.org | 1 | 0 | +0 | 0 | - | 1 |
+| 173 | opennetworking.org” | 1 | 0 | +0 | 0 | - | 1 |
+| 174 | opennetworkingorg | 1 | 0 | +0 | 0 | - | 1 |
+| 175 | opensourcerouting.org | 6 | 0 | +0 | 0 | - | 1 |
+| 176 | opteya.com | 1 | 0 | +0 | 0 | - | 1 |
+| 177 | oracle.com | 1 | 0 | +0 | 0 | - | 1 |
+| 178 | orange.com | 1 | 0 | +0 | 0 | - | 1 |
+| 179 | org.tw | 1 | 0 | +0 | 0 | - | 10 |
+| 180 | org.ua | 1 | 0 | +0 | 0 | - | 1 |
+| 181 | ota.si | 1 | 0 | +0 | 0 | - | 1 |
+| 182 | packetconsulting.pl | 1 | 0 | +0 | 0 | - | 1 |
+| 183 | parlakisik.com | 1 | 0 | +0 | 0 | - | 5 |
+| 184 | parrot.com | 3 | 0 | +0 | 0 | - | 1 |
+| 185 | pch.net | 1 | 0 | +0 | 0 | - | 1 |
+| 186 | pld-linux.org | 1 | 0 | +0 | 0 | - | 1 |
+| 187 | pobox.com | 1 | 0 | +0 | 0 | - | 1 |
+| 188 | poolp.org | 1 | 0 | +0 | 0 | - | 1 |
+| 189 | princeton.edu | 10 | 0 | +0 | 0 | - | 4 |
+| 190 | princeton.org | 1 | 0 | +0 | 0 | - | 1 |
+| 191 | prod1.menlo | 1 | 0 | +0 | 0 | - | 1 |
+| 192 | psc.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 193 | qq.com | 1 | 0 | +0 | 0 | - | 1 |
+| 194 | qrator.net | 1 | 0 | +0 | 0 | - | 1 |
+| 195 | quagga.net | 2 | 0 | +0 | 0 | - | 1 |
+| 196 | raedomain.com | 1 | 0 | +0 | 0 | - | 1 |
+| 197 | redhat.com | 1 | 0 | +0 | 0 | - | 1 |
+| 198 | reichmann.nl | 1 | 0 | +0 | 0 | - | 1 |
+| 199 | reply.it | 1 | 0 | +0 | 0 | - | 1 |
+| 200 | ringlet.net | 1 | 0 | +0 | 0 | - | 1 |
+| 201 | ripe.net | 1 | 0 | +0 | 0 | - | 1 |
+| 202 | ruggedcom.com | 1 | 0 | +0 | 0 | - | 1 |
+| 203 | rustyeddy.com | 1 | 0 | +0 | 0 | - | 1 |
+| 204 | sackheads.org | 1 | 0 | +0 | 0 | - | 1 |
+| 205 | sandia.gov | 1 | 0 | +0 | 0 | - | 1 |
+| 206 | sapans-macbook-pro.local | 1 | 0 | +0 | 0 | - | 1 |
+| 207 | saville.com | 1 | 0 | +0 | 0 | - | 1 |
+| 208 | seblu.net | 1 | 0 | +0 | 0 | - | 1 |
+| 209 | secunet.com | 1 | 0 | +0 | 0 | - | 1 |
+| 210 | securecomputing.com | 1 | 0 | +0 | 0 | - | 1 |
+| 211 | sevone.com | 1 | 0 | +0 | 0 | - | 1 |
+| 212 | seznam.cz | 1 | 0 | +0 | 0 | - | 1 |
+| 213 | sholland.org | 1 | 0 | +0 | 0 | - | 1 |
+| 214 | shrubbery.net | 1 | 0 | +0 | 0 | - | 1 |
+| 215 | siemens.com | 1 | 0 | +0 | 0 | - | 1 |
+| 216 | silverton.gr | 1 | 0 | +0 | 0 | - | 1 |
+| 217 | sk.com | 1 | 0 | +0 | 0 | - | 1 |
+| 218 | slimroms.net | 1 | 0 | +0 | 0 | - | 1 |
+| 219 | sonic.net | 1 | 0 | +0 | 0 | - | 1 |
+| 220 | sony.com | 1 | 0 | +0 | 0 | - | 1 |
+| 221 | sonyericsson.com | 4 | 0 | +0 | 0 | - | 1 |
+| 222 | sonymobile.com | 5 | 0 | +0 | 0 | - | 1 |
+| 223 | sophos.com | 2 | 0 | +0 | 0 | - | 1 |
+| 224 | sproute.com | 1 | 0 | +0 | 0 | - | 1 |
+| 225 | stanford.edu | 7 | 0 | +0 | 0 | - | 13 |
+| 226 | stericsson.com | 1 | 0 | +0 | 0 | - | 1 |
+| 227 | sterlite.com | 2 | 0 | +0 | 0 | - | 3 |
+| 228 | stingr.net | 1 | 0 | +0 | 0 | - | 1 |
+| 229 | sun.com | 2 | 0 | +0 | 0 | - | 1 |
+| 230 | suse.de | 1 | 0 | +0 | 0 | - | 1 |
+| 231 | sysnetsistemi.it | 1 | 0 | +0 | 0 | - | 1 |
+| 232 | tcs.com | 2 | 0 | +0 | 0 | - | 3 |
+| 233 | ted-4.local | 1 | 0 | +0 | 0 | - | 1 |
+| 234 | ted-intel.local | 1 | 0 | +0 | 0 | - | 1 |
+| 235 | ted.local | 1 | 0 | +0 | 0 | - | 1 |
+| 236 | tellabs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 237 | telstra.com | 1 | 0 | +0 | 0 | - | 1 |
+| 238 | ti82.(none) | 1 | 0 | +0 | 0 | - | 1 |
+| 239 | tomh.org | 1 | 0 | +0 | 0 | - | 1 |
+| 240 | toroki.com | 1 | 0 | +0 | 0 | - | 1 |
+| 241 | transmode.se | 1 | 0 | +0 | 0 | - | 1 |
+| 242 | tu-darmstadt.de | 1 | 0 | +0 | 0 | - | 1 |
+| 243 | tu-ilmenau.de | 1 | 0 | +0 | 0 | - | 1 |
+| 244 | ubuntu-vm-1.(none) | 2 | 0 | +0 | 0 | - | 1 |
+| 245 | univ-paris-diderot.fr | 1 | 0 | +0 | 0 | - | 1 |
+| 246 | uoc.gr | 1 | 0 | +0 | 0 | - | 1 |
+| 247 | uoregon.edu | 1 | 0 | +0 | 0 | - | 1 |
+| 248 | varna.net | 1 | 0 | +0 | 0 | - | 1 |
+| 249 | verivue.com | 1 | 0 | +0 | 0 | - | 1 |
+| 250 | viavisolutions.com | 1 | 0 | +0 | 0 | - | 5 |
+| 251 | vicci.org | 1 | 0 | +0 | 0 | - | 1 |
+| 252 | villa-technologies.com | 1 | 0 | +0 | 0 | - | 1 |
+| 253 | vio.us | 1 | 0 | +0 | 0 | - | 1 |
+| 254 | voltha | 1 | 0 | +0 | 0 | - | 1 |
+| 255 | vyatta.com | 4 | 0 | +0 | 0 | - | 1 |
+| 256 | windriver.com | 3 | 0 | +0 | 0 | - | 2 |
+| 257 | windstream.com | 1 | 0 | +0 | 0 | - | 1 |
+| 258 | wkwflp.org | 1 | 0 | +0 | 0 | - | 1 |
+| 259 | wq.cz | 1 | 0 | +0 | 0 | - | 1 |
+| 260 | wrs.com | 1 | 0 | +0 | 0 | - | 1 |
+| 261 | xevo.com | 1 | 0 | +0 | 0 | - | 1 |
+| 262 | xiaomi.com | 1 | 0 | +0 | 0 | - | 1 |
+| 263 | xip.at | 1 | 0 | +0 | 0 | - | 1 |
+| 264 | yahoo.fr | 3 | 0 | +0 | 0 | - | 2 |
+| 265 | yandex-team.ru | 2 | 0 | +0 | 0 | - | 1 |
+| 266 | yandex.ru | 2 | 0 | +0 | 0 | - | 1 |
+| 267 | yath.de | 1 | 0 | +0 | 0 | - | 1 |
+| 268 | zhaw.ch | 1 | 0 | +0 | 0 | - | 1 |
+| 269 | zooglr.com | 1 | 0 | +0 | 0 | - | 1 |
+
+## 👥 Top Contributors
+
+
+
+The data presented in the table below covers the past 365 days.
+
+
+
+**Contributors Found:** 820
+
+| Rank | Contributor | Commits | LOC | Δ LOC | Avg LOC/Commit | Repositories | Organization |
+|------|-------------|---------|-----|-------|----------------|--------------|--------------|
+| 1 | Eric Ball | 37 | -7123 | 14331 | -192.5 | 25 | linuxfoundation.org |
+| 2 | akashreddyk | 27 | +204243 | 393399 | +7564.6 | 11 | radisys.com |
+| 3 | Abhay Kumar | 18 | +1051120 | 1819610 | +58395.6 | 7 | radisys.com |
+| 4 | bseeniva | 18 | +185 | 777 | +10.3 | 5 | radisys.com |
+| 5 | mgouda | 16 | +62680 | 120972 | +3917.5 | 6 | radisys.com |
+| 6 | Sridhar Ravindra | 14 | +925 | 2723 | +66.1 | 8 | radisys.com |
+| 7 | Jenkins | 10 | +1306 | 1326 | +130.6 | 12 | opennetworking.org |
+| 8 | balaji.nagarajan | 10 | +491 | 4949 | +49.1 | 5 | radisys.com |
+| 9 | Amaia | 7 | -44 | 132 | -6.3 | 3 | bisdn.de |
+| 10 | abhayk | 4 | +14 | 32 | +3.5 | 9 | radisys.com |
+| 11 | praneeth.nalmas | 3 | +379 | 525 | +126.3 | 11 | radisys.com |
+| 12 | gst | 3 | +139 | 251 | +46.3 | 2 | radisys.com |
+| 13 | dependabot[bot] | 3 | +0 | 8 | +0.0 | 1 | github.com |
+| 14 | Serkant Uluderya | 3 | -21 | 51 | -7.0 | 11 | netsia.com |
+| 15 | Amit Ghosh | 2 | +11929 | 17505 | +5964.5 | 13 | radisys.com |
+| 16 | Abhilash Laxmeshwar | 2 | +1114 | 3434 | +557.0 | 11 | radisys.com |
+| 17 | Mahir Gunyel | 2 | +0 | 4 | +0.0 | 24 | netsia.com |
+| 18 | Cristina de Francisco | 1 | +0 | 4 | +0.0 | 4 | bisdn.de |
+| 19 | rbodapat | 1 | -27 | 105 | -27.0 | 1 | radisys.com |
+| 20 | A R Karthick | 0 | +0 | 0 | - | 7 | ciena.com |
+| 21 | A R Karthick | 0 | +0 | 0 | - | 1 | gmail.com |
+| 22 | A R. Karthick | 0 | +0 | 0 | - | 1 | cyaninc.com |
+| 23 | Aaron Kruglikov | 0 | +0 | 0 | - | 1 | fujitsu.com |
+| 24 | Abhilash Endurthi | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 25 | Adam Borowski | 0 | +0 | 0 | - | 1 | angband.pl |
+| 26 | Aharoni, Pavel (pa0916) | 0 | +0 | 0 | - | 1 | att.com |
+| 27 | Ajay Lotan Thakur | 0 | +0 | 0 | - | 3 | gmail.com |
+| 28 | Ajay Lotan Thakur | 0 | +0 | 0 | - | 4 | intel.com |
+| 29 | Akash Soni | 0 | +0 | 0 | - | 8 | radisys.com |
+| 30 | Akshay Verma | 0 | +0 | 0 | - | 1 | gmail.com |
+| 31 | Alex Yashchuk | 0 | +0 | 0 | - | 1 | cavium.com |
+| 32 | Alexander Bird | 0 | +0 | 0 | - | 1 | gmail.com |
+| 33 | Alexandre Boeglin | 0 | +0 | 0 | - | 1 | parrot.com |
+| 34 | Alexandre Chappuis | 0 | +0 | 0 | - | 1 | open.ch |
+| 35 | Alexandre Garnier | 0 | +0 | 0 | - | 1 | gmail.com |
+| 36 | Alexis Fasquel | 0 | +0 | 0 | - | 1 | pch.net |
+| 37 | Ali "The Bomb" Al-Shabibi | 0 | +0 | 0 | - | 29 | onlab.us |
+| 38 | Ali Utku Selen | 0 | +0 | 0 | - | 1 | sonyericsson.com |
+| 39 | Amir Zeidner | 0 | +0 | 0 | - | 1 | mellanox.com |
+| 40 | Amit Ghosh | 0 | +0 | 0 | - | 4 | radisys.com |
+| 41 | Amit Wankhede | 0 | +0 | 0 | - | 1 | gslab.com |
+| 42 | Amol Jaikar | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 43 | Amritha Nambiar | 0 | +0 | 0 | - | 1 | intel.com |
+| 44 | Anand S Katti | 0 | +0 | 0 | - | 1 | radisys.com |
+| 45 | Anatol Pomazau | 0 | +0 | 0 | - | 1 | google.com |
+| 46 | Anatol Pomozov | 0 | +0 | 0 | - | 1 | gmail.com |
+| 47 | Andrea Campanella | 0 | +0 | 0 | - | 21 | intel.com |
+| 48 | Andrea Campanella | 0 | +0 | 0 | - | 44 | opennetworking.org |
+| 49 | Andrea Campanella | 0 | +0 | 0 | - | 1 | opennetwokring.org |
+| 50 | Andrea Campanella | 0 | +0 | 0 | - | 8 | onlab.us |
+| 51 | Andrea Speranza | 0 | +0 | 0 | - | 2 | gmail.com |
+| 52 | Andreas Pantelopoulos | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 53 | Andrei Warkentin | 0 | +0 | 0 | - | 1 | motorola.com |
+| 54 | Andrej Ota | 0 | +0 | 0 | - | 1 | ota.si |
+| 55 | Andrew Certain | 0 | +0 | 0 | - | 1 | amazon.com |
+| 56 | Andrew J. Schorr | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 57 | Andrew J. Schorr | 0 | +0 | 0 | - | 1 | ti82.(none) |
+| 58 | Andrew Wheeler | 0 | +0 | 0 | - | 1 | gmail.com |
+| 59 | Andrew Wheeler | 0 | +0 | 0 | - | 1 | igmo.org |
+| 60 | Andrey Pozolotin | 0 | +0 | 0 | - | 19 | gmail.com |
+| 61 | Android Code Review | 0 | +0 | 0 | - | 1 | android.com |
+| 62 | Andy Bavier | 0 | +0 | 0 | - | 30 | opennetworking.org |
+| 63 | Andy Bavier | 0 | +0 | 0 | - | 52 | onlab.us |
+| 64 | Andy Bavier | 0 | +0 | 0 | - | 2 | princeton.edu |
+| 65 | Ang Way Chuang | 0 | +0 | 0 | - | 1 | gmail.com |
+| 66 | Anil Kumar Sanka | 0 | +0 | 0 | - | 1 | ciena.com |
+| 67 | Ankur Upadhyaya | 0 | +0 | 0 | - | 2 | intel.com |
+| 68 | Ankur Upadhyaya | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 69 | Anthony | 0 | +0 | 0 | - | 1 | bnovc.com |
+| 70 | Anthony King | 0 | +0 | 0 | - | 1 | slimroms.net |
+| 71 | Anthony Newnam | 0 | +0 | 0 | - | 1 | garmin.com |
+| 72 | Anthony Russello | 0 | +0 | 0 | - | 1 | gmail.com |
+| 73 | Arda Demir | 0 | +0 | 0 | - | 3 | gmail.com |
+| 74 | Ari Saha | 0 | +0 | 0 | - | 1 | att.com |
+| 75 | Arjun E K | 0 | +0 | 0 | - | 5 | infosys.com |
+| 76 | Arpit Agarwal | 0 | +0 | 0 | - | 2 | gmail.com |
+| 77 | Arrobo, Gabriel | 0 | +0 | 0 | - | 3 | intel.com |
+| 78 | Arthur Syu | 0 | +0 | 0 | - | 1 | com.tw |
+| 79 | Arun Arora | 0 | +0 | 0 | - | 2 | hcl.com |
+| 80 | Avneesh Sachdev | 0 | +0 | 0 | - | 1 | sproute.com |
+| 81 | Avneesh Sachdev | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 82 | Ayan Banerjee | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 83 | Aymen Bouaziz | 0 | +0 | 0 | - | 1 | parrot.com |
+| 84 | AyumuUeha | 0 | +0 | 0 | - | 1 | fujitsu.com |
+| 85 | Badhrinath Padmanabhan | 0 | +0 | 0 | - | 3 | gmail.com |
+| 86 | Badhrinath Padmanabhan | 0 | +0 | 0 | - | 2 | intel.com |
+| 87 | Balaji | 0 | +0 | 0 | - | 1 | gmail.com |
+| 88 | Baris Ertas | 0 | +0 | 0 | - | 1 | netsia.com |
+| 89 | Barry Friedman | 0 | +0 | 0 | - | 1 | google.com |
+| 90 | Bartek Kania | 0 | +0 | 0 | - | 1 | gnarf.org |
+| 91 | Baruch Siach | 0 | +0 | 0 | - | 1 | co.il |
+| 92 | Bavier, Andy | 0 | +0 | 0 | - | 1 | intel.com |
+| 93 | Beerappa S M | 0 | +0 | 0 | - | 1 | radisys.com |
+| 94 | Ben Komalo | 0 | +0 | 0 | - | 1 | google.com |
+| 95 | Ben Pfaff | 0 | +0 | 0 | - | 1 | nicira.com |
+| 96 | Bertrand SIMONNET | 0 | +0 | 0 | - | 1 | google.com |
+| 97 | Boian Bonev | 0 | +0 | 0 | - | 1 | ipacct.com |
+| 98 | Brad Smith | 0 | +0 | 0 | - | 1 | comstyle.com |
+| 99 | Brandon Heller | 0 | +0 | 0 | - | 1 | stanford.edu |
+| 100 | Brett Ciphery | 0 | +0 | 0 | - | 1 | windriver.com |
+| 101 | Brian Bennett | 0 | +0 | 0 | - | 1 | joyent.com |
+| 102 | Brian Harring | 0 | +0 | 0 | - | 1 | google.com |
+| 103 | Brian Harring | 0 | +0 | 0 | - | 1 | chromium.org |
+| 104 | Brian Harring | 0 | +0 | 0 | - | 1 | intel.com |
+| 105 | Brian Lube | 0 | +0 | 0 | - | 1 | windstream.com |
+| 106 | Brian O'Connor | 0 | +0 | 0 | - | 32 | opennetworking.org |
+| 107 | Brian O'Connor | 0 | +0 | 0 | - | 8 | onlab.us |
+| 108 | Brian Stanke | 0 | +0 | 0 | - | 3 | ciena.com |
+| 109 | Brian Utterback | 0 | +0 | 0 | - | 1 | oracle.com |
+| 110 | Brian Waters | 0 | +0 | 0 | - | 1 | wkwflp.org |
+| 111 | Bryan Jacobs | 0 | +0 | 0 | - | 1 | gmail.com |
+| 112 | Burak Gurdag | 0 | +0 | 0 | - | 2 | netsia.com |
+| 113 | CROSS | 0 | +0 | 0 | - | 1 | codenomicon.com |
+| 114 | Carlos Aguado | 0 | +0 | 0 | - | 1 | gmail.com |
+| 115 | Carmelo Cascone | 0 | +0 | 0 | - | 20 | opennetworking.org |
+| 116 | Carmelo Cascone | 0 | +0 | 0 | - | 3 | ccascone.net |
+| 117 | Cassidy Burden | 0 | +0 | 0 | - | 1 | codeaurora.org |
+| 118 | Cezary Baginski | 0 | +0 | 0 | - | 1 | gmail.com |
+| 119 | Chad Jones | 0 | +0 | 0 | - | 1 | google.com |
+| 120 | Chaitrashree G S | 0 | +0 | 0 | - | 4 | radisys.com |
+| 121 | Chandrakanth Nalkudre Gowda | 0 | +0 | 0 | - | 1 | radisys.com |
+| 122 | Changcheng Xiao | 0 | +0 | 0 | - | 1 | google.com |
+| 123 | Charles Chan | 0 | +0 | 0 | - | 14 | gmail.com |
+| 124 | Charles Chan | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 125 | Charles Chan | 0 | +0 | 0 | - | 2 | intel.com |
+| 126 | Che-Liang Chiou | 0 | +0 | 0 | - | 1 | google.com |
+| 127 | Chetan Gaonker | 0 | +0 | 0 | - | 1 | ciena.com |
+| 128 | Chetan Gaonker | 0 | +0 | 0 | - | 1 | calsoftlabs.com |
+| 129 | ChetanGaonker | 0 | +0 | 0 | - | 1 | ciena.com |
+| 130 | Cheuk Leung | 0 | +0 | 0 | - | 1 | gmail.com |
+| 131 | Chip Boling | 0 | +0 | 0 | - | 1 | bcsw.net |
+| 132 | Chip Boling | 0 | +0 | 0 | - | 1 | adtran.com |
+| 133 | Chirayu Desai | 0 | +0 | 0 | - | 1 | gmail.com |
+| 134 | Chirayu Desai | 0 | +0 | 0 | - | 1 | cyanogenmod.org |
+| 135 | Chris AtLee | 0 | +0 | 0 | - | 1 | gmail.com |
+| 136 | Chris Caputo | 0 | +0 | 0 | - | 1 | alt.net |
+| 137 | Chris Hall | 0 | +0 | 0 | - | 1 | highwayman.com |
+| 138 | Chris Luke | 0 | +0 | 0 | - | 1 | flirble.org |
+| 139 | Chris Wolfe | 0 | +0 | 0 | - | 1 | chromium.org |
+| 140 | Christer Fletcher | 0 | +0 | 0 | - | 1 | sonyericsson.com |
+| 141 | Christian Dickmann | 0 | +0 | 0 | - | 1 | gmail.com |
+| 142 | Christian Franke | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 143 | Christian Franke | 0 | +0 | 0 | - | 1 | nowhere.ws |
+| 144 | Christian Hammers | 0 | +0 | 0 | - | 1 | debian.org |
+| 145 | Christian Koestlin | 0 | +0 | 0 | - | 1 | gmail.com |
+| 146 | Ciprian Barbu | 0 | +0 | 0 | - | 2 | enea.com |
+| 147 | Colin Cross | 0 | +0 | 0 | - | 1 | android.com |
+| 148 | Colin Petrie | 0 | +0 | 0 | - | 1 | ripe.net |
+| 149 | Conley Owens | 0 | +0 | 0 | - | 1 | android.com |
+| 150 | Craig Lutgen | 0 | +0 | 0 | - | 1 | tellabs.com |
+| 151 | Daichi Ueura | 0 | +0 | 0 | - | 1 | sony.com |
+| 152 | Dan Morrill | 0 | +0 | 0 | - | 1 | google.com |
+| 153 | Dan Sandler | 0 | +0 | 0 | - | 1 | android.com |
+| 154 | Dan Talayco | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 155 | Dan Talayco | 0 | +0 | 0 | - | 1 | stanford.edu |
+| 156 | Dan Talayco | 0 | +0 | 0 | - | 1 | stanford.edu |
+| 157 | Dan Talayco | 0 | +0 | 0 | - | 1 | mogulmouse.net |
+| 158 | Dan Willemsen | 0 | +0 | 0 | - | 1 | google.com |
+| 159 | Dan Willemsen | 0 | +0 | 0 | - | 1 | nvidia.com |
+| 160 | Dana Dahlstrom | 0 | +0 | 0 | - | 1 | google.com |
+| 161 | Daniel Kozlowski | 0 | +0 | 0 | - | 1 | sevone.com |
+| 162 | Daniel Ng | 0 | +0 | 0 | - | 1 | lycos.com |
+| 163 | Daniel Park | 0 | +0 | 0 | - | 1 | sk.com |
+| 164 | Daniel Sandler | 0 | +0 | 0 | - | 1 | google.com |
+| 165 | Daniel Walton | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 166 | Daniel Walton | 0 | +0 | 0 | - | 1 | gmail.com |
+| 167 | Daniele Moro | 0 | +0 | 0 | - | 31 | opennetworking.org |
+| 168 | Daniele Moro | 0 | +0 | 0 | - | 1 | intel.com |
+| 169 | Daniele Rossi | 0 | +0 | 0 | - | 3 | hcl.com |
+| 170 | Dave Borowitz | 0 | +0 | 0 | - | 1 | google.com |
+| 171 | David 'Digit' Turner | 0 | +0 | 0 | - | 1 | google.com |
+| 172 | David Aguilar | 0 | +0 | 0 | - | 1 | gmail.com |
+| 173 | David BÉRARD | 0 | +0 | 0 | - | 1 | davidberard.fr |
+| 174 | David Ferguson | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 175 | David Holmer | 0 | +0 | 0 | - | 1 | gmail.com |
+| 176 | David James | 0 | +0 | 0 | - | 1 | google.com |
+| 177 | David K. Bainbridge | 0 | +0 | 0 | - | 33 | ciena.com |
+| 178 | David Lamparter | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 179 | David Lamparter | 0 | +0 | 0 | - | 1 | diac24.net |
+| 180 | David Payne | 0 | +0 | 0 | - | 1 | gmail.com |
+| 181 | David Pursehouse | 0 | +0 | 0 | - | 1 | collab.net |
+| 182 | David Pursehouse | 0 | +0 | 0 | - | 1 | sonymobile.com |
+| 183 | David Riley | 0 | +0 | 0 | - | 1 | google.com |
+| 184 | David Ward | 0 | +0 | 0 | - | 1 | mit.edu |
+| 185 | David Young | 0 | +0 | 0 | - | 1 | pobox.com |
+| 186 | Denil Vira | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 187 | Denis Ovsienko | 0 | +0 | 0 | - | 1 | yandex.ru |
+| 188 | Denis Ovsienko | 0 | +0 | 0 | - | 1 | etcnet.org |
+| 189 | Denis Ovsienko | 0 | +0 | 0 | - | 1 | org.ua |
+| 190 | Dinesh Belwalkar | 0 | +0 | 0 | - | 7 | gmail.com |
+| 191 | Dinesh Dutt | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 192 | Dmitrij Tejblum | 0 | +0 | 0 | - | 1 | yandex-team.ru |
+| 193 | Dmitry Fink | 0 | +0 | 0 | - | 1 | finik.net |
+| 194 | Dmitry Popov | 0 | +0 | 0 | - | 1 | highloadlab.com |
+| 195 | Don Newton | 0 | +0 | 0 | - | 2 | att.com |
+| 196 | Don Newton | 0 | +0 | 0 | - | 1 | gmail.com |
+| 197 | Donald Sharp | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 198 | Doug Anderson | 0 | +0 | 0 | - | 1 | chromium.org |
+| 199 | Doug Anderson | 0 | +0 | 0 | - | 1 | google.com |
+| 200 | Doug VanLeuven | 0 | +0 | 0 | - | 1 | sonic.net |
+| 201 | Doyoung Lee | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 202 | Dusan Klinec | 0 | +0 | 0 | - | 1 | gmail.com |
+| 203 | Dylan Deng | 0 | +0 | 0 | - | 1 | gmail.com |
+| 204 | Dylan Hall | 0 | +0 | 0 | - | 1 | deedums.com |
+| 205 | Dāvis Mosāns | 0 | +0 | 0 | - | 1 | gmail.com |
+| 206 | Ed Swierk | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 207 | Elena Stoeva | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 208 | Eli Ribble | 0 | +0 | 0 | - | 1 | google.com |
+| 209 | Elia Battiston | 0 | +0 | 0 | - | 14 | opennetworking.org |
+| 210 | Elia Battiston | 0 | +0 | 0 | - | 2 | radisys.com |
+| 211 | Emrehan UZUN | 0 | +0 | 0 | - | 1 | netsia.com |
+| 212 | Ereth McKnight-MacNeil | 0 | +0 | 0 | - | 1 | google.com |
+| 213 | Erwan Mahe | 0 | +0 | 0 | - | 1 | intel.com |
+| 214 | Esin Karaman | 0 | +0 | 0 | - | 7 | netsia.com |
+| 215 | Etan Cohen | 0 | +0 | 0 | - | 1 | google.com |
+| 216 | Everton Marques | 0 | +0 | 0 | - | 1 | gmail.com |
+| 217 | Evgeny Uskov | 0 | +0 | 0 | - | 1 | qrator.net |
+| 218 | Fatemeh Rouzbeh | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 219 | Fatemeh Rouzbeh | 0 | +0 | 0 | - | 1 | intel.com |
+| 220 | Feng Lu | 0 | +0 | 0 | - | 1 | 6wind.com |
+| 221 | Fernando Soto | 0 | +0 | 0 | - | 1 | bluecatnetworks.com |
+| 222 | Ficus Kirkpatrick | 0 | +0 | 0 | - | 1 | android.com |
+| 223 | Flavio Castro | 0 | +0 | 0 | - | 1 | gmail.com |
+| 224 | Flavio Castro | 0 | +0 | 0 | - | 1 | onlab.us |
+| 225 | Flavio Castro | 0 | +0 | 0 | - | 1 | gmail.com |
+| 226 | Flavio Castro | 0 | +0 | 0 | - | 1 | att.com |
+| 227 | Florian Vallee | 0 | +0 | 0 | - | 1 | gmail.com |
+| 228 | Francesco Dolcini | 0 | +0 | 0 | - | 1 | sysnetsistemi.it |
+| 229 | Fredrik Berggren | 0 | +0 | 0 | - | 1 | gmail.com |
+| 230 | Fridolin Siegmund | 0 | +0 | 0 | - | 1 | tu-darmstadt.de |
+| 231 | Fritz Reichmann | 0 | +0 | 0 | - | 1 | reichmann.nl |
+| 232 | Gabe Black | 0 | +0 | 0 | - | 5 | viavisolutions.com |
+| 233 | Gabe Black | 0 | +0 | 0 | - | 1 | chromium.org |
+| 234 | Gamze Abaka | 0 | +0 | 0 | - | 12 | netsia.com |
+| 235 | Ganesh Bhure | 0 | +0 | 0 | - | 2 | sterlite.com |
+| 236 | Ganeshbabu | 0 | +0 | 0 | - | 1 | hcl.com |
+| 237 | Gautam Kumar | 0 | +0 | 0 | - | 1 | amazon.com |
+| 238 | Gayathri.Selvan | 0 | +0 | 0 | - | 2 | infosys.com |
+| 239 | Gilles Depatie | 0 | +0 | 0 | - | 1 | northforgeinc.com |
+| 240 | Girish Gowdra | 0 | +0 | 0 | - | 8 | intel.com |
+| 241 | Girish Gowdra | 0 | +0 | 0 | - | 18 | opennetworking.org |
+| 242 | Girish Gowdru | 0 | +0 | 0 | - | 6 | radisys.com |
+| 243 | Girish Kumar | 0 | +0 | 0 | - | 8 | infosys.com |
+| 244 | Glen Gibb | 0 | +0 | 0 | - | 1 | stanford.edu |
+| 245 | Gopinath Taget | 0 | +0 | 0 | - | 10 | opennetworking.org |
+| 246 | Graham Christensen | 0 | +0 | 0 | - | 1 | grahamc.com |
+| 247 | Greg Troxel | 0 | +0 | 0 | - | 1 | bbn.com |
+| 248 | Greg Troxel | 0 | +0 | 0 | - | 1 | bbn.com |
+| 249 | Gregor Maier | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 250 | Gunaseelan | 0 | +0 | 0 | - | 1 | radisys.com |
+| 251 | Gunjan Patel | 0 | +0 | 0 | - | 1 | gmail.com |
+| 252 | Gustavo Silva | 0 | +0 | 0 | - | 8 | furukawalatam.com |
+| 253 | Hardik Windlass | 0 | +0 | 0 | - | 18 | infosys.com |
+| 254 | Hardik Windlass | 0 | +0 | 0 | - | 6 | intel.com |
+| 255 | Hardik Windlass | 0 | +0 | 0 | - | 10 | opennetworking.org |
+| 256 | Harsh Awasthi | 0 | +0 | 0 | - | 2 | gmail.com |
+| 257 | Harsh Awasthi | 0 | +0 | 0 | - | 1 | radisys.com |
+| 258 | Harshmeet Singh | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 259 | Hasso Tepper | 0 | +0 | 0 | - | 1 | gmail.com |
+| 260 | Hasso Tepper | 0 | +0 | 0 | - | 1 | quagga.net |
+| 261 | Hema | 0 | +0 | 0 | - | 2 | infosys.com |
+| 262 | Himani Chawla | 0 | +0 | 0 | - | 8 | ciena.com |
+| 263 | Himanshu Bhandari | 0 | +0 | 0 | - | 10 | infosys.com |
+| 264 | Hiroshi Yokoi | 0 | +0 | 0 | - | 1 | gmail.com |
+| 265 | Hitesh Chhabra | 0 | +0 | 0 | - | 1 | radisys.com |
+| 266 | Holger Hildebrandt | 0 | +0 | 0 | - | 10 | adtran.com |
+| 267 | Howard Persh | 0 | +0 | 0 | - | 1 | aristanetworks.com |
+| 268 | Howard Persh | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 269 | Howard Persh | 0 | +0 | 0 | - | 1 | ubuntu-vm-1.(none) |
+| 270 | Hu Xiuyun | 0 | +0 | 0 | - | 1 | qq.com |
+| 271 | Hu xiuyun | 0 | +0 | 0 | - | 1 | hisilicon.com |
+| 272 | Hung-Wei Chiu | 0 | +0 | 0 | - | 17 | opennetworking.org |
+| 273 | Huseyin Ahmet AYDIN | 0 | +0 | 0 | - | 2 | netsia.com |
+| 274 | Hyunsun | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 275 | Hyunsun | 0 | +0 | 0 | - | 1 | cluster.local |
+| 276 | Hyunsun | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 277 | Hyunsun Moon | 0 | +0 | 0 | - | 16 | gmail.com |
+| 278 | Hyunsun Moon | 0 | +0 | 0 | - | 14 | opennetworking.org |
+| 279 | Hyunsun Moon | 0 | +0 | 0 | - | 2 | intel.com |
+| 280 | Igor Ryzhov | 0 | +0 | 0 | - | 1 | nfware.com |
+| 281 | Ilayda Ozdemir | 0 | +0 | 0 | - | 8 | netsia.com |
+| 282 | Illyoung Choi | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 283 | Ingo Flaschberger | 0 | +0 | 0 | - | 1 | xip.at |
+| 284 | Isaku Yamahata | 0 | +0 | 0 | - | 1 | co.jp |
+| 285 | Ivan Moskalyov | 0 | +0 | 0 | - | 1 | mail.ru |
+| 286 | JR Rivers | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 287 | Jacob Cooper | 0 | +0 | 0 | - | 1 | intel.com |
+| 288 | Jafar Al-Gharaibeh | 0 | +0 | 0 | - | 1 | atcorp.com |
+| 289 | Jaikumar Ganesh | 0 | +0 | 0 | - | 1 | google.com |
+| 290 | Jakub Vrana | 0 | +0 | 0 | - | 1 | google.com |
+| 291 | Jakub Zawadzki | 0 | +0 | 0 | - | 1 | darkjames.pl |
+| 292 | James Li | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 293 | James W. Mills | 0 | +0 | 0 | - | 1 | gmail.com |
+| 294 | Jan Klare | 0 | +0 | 0 | - | 6 | bisdn.de |
+| 295 | Jan Klare | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 296 | Jarkko Pöyry | 0 | +0 | 0 | - | 1 | google.com |
+| 297 | Jaroslav Fojtik | 0 | +0 | 0 | - | 1 | seznam.cz |
+| 298 | Jason Huang | 0 | +0 | 0 | - | 2 | edge-core.com |
+| 299 | Javier Bravo Conde | 0 | +0 | 0 | - | 1 | gslab.com |
+| 300 | Jeff Bailey | 0 | +0 | 0 | - | 1 | google.com |
+| 301 | Jeff Davidson | 0 | +0 | 0 | - | 1 | google.com |
+| 302 | Jeff Hamilton | 0 | +0 | 0 | - | 1 | android.com |
+| 303 | Jeffrey Townsend | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 304 | Jenkins | 0 | +0 | 0 | - | 15 | opencord.org |
+| 305 | Jeremy Jackson | 0 | +0 | 0 | - | 1 | coplanar.net |
+| 306 | Jeremy Mowery | 0 | +0 | 0 | - | 1 | arizona.edu |
+| 307 | Jeremy Ronquillo | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 308 | Jesse Hall | 0 | +0 | 0 | - | 1 | google.com |
+| 309 | Jian Li | 0 | +0 | 0 | - | 5 | gmail.com |
+| 310 | JianHao | 0 | +0 | 0 | - | 10 | org.tw |
+| 311 | JianHao | 0 | +0 | 0 | - | 2 | edge-core.com |
+| 312 | Jim Carroll | 0 | +0 | 0 | - | 1 | carroll.com |
+| 313 | Jim Kao | 0 | +0 | 0 | - | 1 | gmail.com |
+| 314 | Jimmie Wester | 0 | +0 | 0 | - | 1 | stericsson.com |
+| 315 | Jingjing Duan | 0 | +0 | 0 | - | 1 | sun.com |
+| 316 | Jingzhao.Ni | 0 | +0 | 0 | - | 1 | arm.com |
+| 317 | Jiri tyr | 0 | +0 | 0 | - | 1 | gmail.com |
+| 318 | Joachim Nilsson | 0 | +0 | 0 | - | 1 | gmail.com |
+| 319 | Joakim Tjernlund | 0 | +0 | 0 | - | 1 | transmode.se |
+| 320 | Job Snijders | 0 | +0 | 0 | - | 1 | instituut.net |
+| 321 | Joe Hansche | 0 | +0 | 0 | - | 1 | myyearbook.com |
+| 322 | Joe Kilner | 0 | +0 | 0 | - | 1 | google.com |
+| 323 | Joe Onorato | 0 | +0 | 0 | - | 1 | google.com |
+| 324 | Joe Onorato | 0 | +0 | 0 | - | 1 | android.com |
+| 325 | Joey Armstrong | 0 | +0 | 0 | - | 35 | opennetworking.org |
+| 326 | Joey Armstrong | 0 | +0 | 0 | - | 14 | linuxfoundation.org |
+| 327 | John Glotzer | 0 | +0 | 0 | - | 1 | amazon.com |
+| 328 | John H. Hartman | 0 | +0 | 0 | - | 1 | akamai.com |
+| 329 | John Kemp | 0 | +0 | 0 | - | 1 | uoregon.edu |
+| 330 | John L. Villalovos | 0 | +0 | 0 | - | 1 | intel.com |
+| 331 | John Törnblom | 0 | +0 | 0 | - | 1 | gmail.com |
+| 332 | Jon Andersson | 0 | +0 | 0 | - | 1 | gmail.com |
+| 333 | Jon Hall | 0 | +0 | 0 | - | 1 | ciena.com |
+| 334 | Jonathan Davis | 0 | +0 | 0 | - | 1 | att.com |
+| 335 | Jonathan Hart | 0 | +0 | 0 | - | 4 | gmail.com |
+| 336 | Jonathan Hart | 0 | +0 | 0 | - | 36 | opennetworking.org |
+| 337 | Jonathan Hart | 0 | +0 | 0 | - | 11 | onlab.us |
+| 338 | Jonathan Nieder | 0 | +0 | 0 | - | 1 | google.com |
+| 339 | Jonathan Stout | 0 | +0 | 0 | - | 1 | indiana.edu |
+| 340 | Jonghwan Hyun | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 341 | JoonCheol Park | 0 | +0 | 0 | - | 1 | gmail.com |
+| 342 | Jorge Boncompte [DTI2] | 0 | +0 | 0 | - | 1 | dti2.net |
+| 343 | Jorge Gonzalez | 0 | +0 | 0 | - | 1 | google.com |
+| 344 | Josh Bailey | 0 | +0 | 0 | - | 1 | google.com |
+| 345 | Josh Guilfoyle | 0 | +0 | 0 | - | 1 | gmail.com |
+| 346 | Josh Triplett | 0 | +0 | 0 | - | 1 | joshtriplett.org |
+| 347 | Julien Campergue | 0 | +0 | 0 | - | 1 | parrot.com |
+| 348 | Julius Gustavsson | 0 | +0 | 0 | - | 1 | gmail.com |
+| 349 | Juliusz Chroboczek | 0 | +0 | 0 | - | 1 | jussieu.fr |
+| 350 | Kailash | 0 | +0 | 0 | - | 16 | onlab.us |
+| 351 | Kailash Khalasi | 0 | +0 | 0 | - | 1 | gmail.com |
+| 352 | Kailash Khalasi | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 353 | Kailash Khalasi | 0 | +0 | 0 | - | 1 | kailashs-macbook-pro.local |
+| 354 | Kaloyan Kovachev | 0 | +0 | 0 | - | 1 | varna.net |
+| 355 | Kartikey Dubey | 0 | +0 | 0 | - | 6 | infosys.com |
+| 356 | Ken Chiang | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 357 | Ken Williams | 0 | +0 | 0 | - | 1 | intel.com |
+| 358 | Kengof20xx | 0 | +0 | 0 | - | 2 | furukawaelectric.com |
+| 359 | Kenny Ho | 0 | +0 | 0 | - | 1 | gmail.com |
+| 360 | Kent Hagerman | 0 | +0 | 0 | - | 10 | ciena.com |
+| 361 | Kevin Degi | 0 | +0 | 0 | - | 1 | codeaurora.org |
+| 362 | Kim Kempf | 0 | +0 | 0 | - | 1 | radisys.com |
+| 363 | Kiran Poola | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 364 | Kis Gergely | 0 | +0 | 0 | - | 1 | mattakis.com |
+| 365 | Klemen Sladic | 0 | +0 | 0 | - | 1 | gmail.com |
+| 366 | Kris Giesing | 0 | +0 | 0 | - | 1 | google.com |
+| 367 | Krishna Kolakaluri | 0 | +0 | 0 | - | 1 | deltaww.com |
+| 368 | Krisztian Kovacs | 0 | +0 | 0 | - | 1 | morganstanley.com |
+| 369 | Kwanhong Lee | 0 | +0 | 0 | - | 1 | windriver.com |
+| 370 | Kyunam.jo | 0 | +0 | 0 | - | 1 | lge.com |
+| 371 | Larry Peterson | 0 | +0 | 0 | - | 22 | onlab.us |
+| 372 | Larry Peterson | 0 | +0 | 0 | - | 18 | opennetworking.org |
+| 373 | Larry Peterson | 0 | +0 | 0 | - | 3 | princeton.edu |
+| 374 | Leonard Herve | 0 | +0 | 0 | - | 1 | yahoo.fr |
+| 375 | Leonard Herve | 0 | +0 | 0 | - | 1 | yahoo.fr |
+| 376 | Leonard Tracy | 0 | +0 | 0 | - | 1 | amazon.com |
+| 377 | Leonid Rosenboim | 0 | +0 | 0 | - | 1 | wrs.com |
+| 378 | Leonid Rosenboim | 0 | +0 | 0 | - | 1 | windriver.com |
+| 379 | Linux Foundation Administrators | 0 | +0 | 0 | - | 1 | linuxfoundation.org |
+| 380 | Lou Berger | 0 | +0 | 0 | - | 1 | labn.net |
+| 381 | Luca Prete | 0 | +0 | 0 | - | 46 | onlab.us |
+| 382 | Luca Prete | 0 | +0 | 0 | - | 14 | opennetworking.org |
+| 383 | Luca Prete | 0 | +0 | 0 | - | 3 | gmail.com |
+| 384 | Luis Hector Chavez | 0 | +0 | 0 | - | 1 | google.com |
+| 385 | Macauley Cheng | 0 | +0 | 0 | - | 1 | accton.com |
+| 386 | Madan Jampani | 0 | +0 | 0 | - | 5 | onlab.us |
+| 387 | Mandeep Singh Baines | 0 | +0 | 0 | - | 1 | google.com |
+| 388 | Mani Chandel | 0 | +0 | 0 | - | 1 | tcs.com |
+| 389 | Maninder | 0 | +0 | 0 | - | 7 | ciena.com |
+| 390 | Manjunath Vanarajulu | 0 | +0 | 0 | - | 2 | radisys.com |
+| 391 | Marc De Leenheer | 0 | +0 | 0 | - | 7 | opennetworking.org |
+| 392 | Marc Herbert | 0 | +0 | 0 | - | 1 | intel.com |
+| 393 | Marcelo E. Magallon | 0 | +0 | 0 | - | 1 | gmail.com |
+| 394 | Marcos Aurelio Carrero | 0 | +0 | 0 | - | 7 | furukawalatam.com |
+| 395 | Maria Carmela Cascino | 0 | +0 | 0 | - | 1 | reply.it |
+| 396 | Marikkannu, Suresh | 0 | +0 | 0 | - | 1 | intel.com |
+| 397 | Mark E. Hamilton | 0 | +0 | 0 | - | 1 | sandia.gov |
+| 398 | Martin Cosyns | 0 | +0 | 0 | - | 2 | adtran.com |
+| 399 | Martin Kelly | 0 | +0 | 0 | - | 1 | xevo.com |
+| 400 | Martin Winter | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 401 | Masaya Suzuki | 0 | +0 | 0 | - | 1 | google.com |
+| 402 | Matevz Langus | 0 | +0 | 0 | - | 1 | borea.si |
+| 403 | Mathias Krause | 0 | +0 | 0 | - | 1 | secunet.com |
+| 404 | Mathieu Goessens | 0 | +0 | 0 | - | 1 | poolp.org |
+| 405 | Mats Bengtsson | 0 | +0 | 0 | - | 1 | gmail.com |
+| 406 | Matt Gumbel | 0 | +0 | 0 | - | 1 | intel.com |
+| 407 | Matt Jeanneret | 0 | +0 | 0 | - | 9 | att.com |
+| 408 | Matteo | 0 | +0 | 0 | - | 2 | github.com |
+| 409 | Matteo Scandolo | 0 | +0 | 0 | - | 124 | gmail.com |
+| 410 | Matteo Scandolo | 0 | +0 | 0 | - | 72 | opennetworking.org |
+| 411 | Matteo Scandolo | 0 | +0 | 0 | - | 10 | intel.com |
+| 412 | Matteo Scandolo | 0 | +0 | 0 | - | 1 | ted-intel.local |
+| 413 | Matteo Scandolo | 0 | +0 | 0 | - | 7 | onlab.us |
+| 414 | Matteo Scandolo | 0 | +0 | 0 | - | 3 | gmail.com |
+| 415 | Matteo Scandolo | 0 | +0 | 0 | - | 1 | ted.local |
+| 416 | Matteo Scandolo | 0 | +0 | 0 | - | 1 | ted-4.local |
+| 417 | Matteo Scandolo | 0 | +0 | 0 | - | 1 | link-me.it |
+| 418 | Matthew Buckett | 0 | +0 | 0 | - | 1 | ac.uk |
+| 419 | Matthew Davis | 0 | +0 | 0 | - | 1 | telstra.com |
+| 420 | Matthias Ferdinand | 0 | +0 | 0 | - | 1 | 14v.de |
+| 421 | Matthieu Boutier | 0 | +0 | 0 | - | 1 | univ-paris-diderot.fr |
+| 422 | Matthieu Boutier | 0 | +0 | 0 | - | 1 | jussieu.fr |
+| 423 | Matti-Oskari Leppänen | 0 | +0 | 0 | - | 1 | gmail.com |
+| 424 | Max Chu | 0 | +0 | 0 | - | 11 | gmail.com |
+| 425 | Max Chu | 0 | +0 | 0 | - | 3 | onlab.us |
+| 426 | Max Klyus | 0 | +0 | 0 | - | 1 | gmail.com |
+| 427 | Max Liu | 0 | +0 | 0 | - | 1 | gmail.com |
+| 428 | Michael Best | 0 | +0 | 0 | - | 1 | nokia.com |
+| 429 | Michael Lambert | 0 | +0 | 0 | - | 1 | psc.edu |
+| 430 | Michael Rossberg | 0 | +0 | 0 | - | 1 | tu-ilmenau.de |
+| 431 | Michael Zingg | 0 | +0 | 0 | - | 1 | zhaw.ch |
+| 432 | Michal Sekletar | 0 | +0 | 0 | - | 1 | redhat.com |
+| 433 | Mickaël Salaün | 0 | +0 | 0 | - | 1 | digikod.net |
+| 434 | Mike Bjorge | 0 | +0 | 0 | - | 1 | google.com |
+| 435 | Mike Frysinger | 0 | +0 | 0 | - | 1 | google.com |
+| 436 | Mike Lockwood | 0 | +0 | 0 | - | 1 | android.com |
+| 437 | Mike Pontillo | 0 | +0 | 0 | - | 1 | gmail.com |
+| 438 | Milan Kocian | 0 | +0 | 0 | - | 1 | wq.cz |
+| 439 | Mitchel Humpherys | 0 | +0 | 0 | - | 1 | codeaurora.org |
+| 440 | Morgan Stewart | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 441 | Moshe Levi | 0 | +0 | 0 | - | 2 | mellanox.com |
+| 442 | Murat Parlakisik | 0 | +0 | 0 | - | 5 | parlakisik.com |
+| 443 | Naga Manjunath | 0 | +0 | 0 | - | 4 | radisys.com |
+| 444 | Nandita Biradar | 0 | +0 | 0 | - | 2 | radisys.com |
+| 445 | Naresh Kumar Palanisamy | 0 | +0 | 0 | - | 1 | radisys.com |
+| 446 | Naseer Ahmed | 0 | +0 | 0 | - | 1 | gmail.com |
+| 447 | Nasser Grainawi | 0 | +0 | 0 | - | 1 | codeaurora.org |
+| 448 | Naveen Sampath | 0 | +0 | 0 | - | 1 | radisys.com |
+| 449 | Neha Sharma | 0 | +0 | 0 | - | 6 | infosys.com |
+| 450 | Nick Hilliard | 0 | +0 | 0 | - | 1 | foobar.org |
+| 451 | Nick Hilliard | 0 | +0 | 0 | - | 1 | inex.ie |
+| 452 | Nico Golde | 0 | +0 | 0 | - | 1 | debian.org |
+| 453 | Nico Sallembien | 0 | +0 | 0 | - | 1 | google.com |
+| 454 | Nicolas Cornu | 0 | +0 | 0 | - | 1 | yahoo.fr |
+| 455 | Nicolas Dichtel | 0 | +0 | 0 | - | 1 | 6wind.com |
+| 456 | Nicolas Palpacuer | 0 | +0 | 0 | - | 2 | att.com |
+| 457 | Nikolai Merinov | 0 | +0 | 0 | - | 1 | inango-systems.com |
+| 458 | Nitin Subramanian | 0 | +0 | 0 | - | 1 | zooglr.com |
+| 459 | Nolan Leake | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 460 | Oleg A. Arkhangelsky | 0 | +0 | 0 | - | 1 | yandex.ru |
+| 461 | Oleg Polyakov | 0 | +0 | 0 | - | 1 | northforgeinc.com |
+| 462 | Olivier Cochard-Labbé | 0 | +0 | 0 | - | 1 | cochard.me |
+| 463 | Olivier Dugeon | 0 | +0 | 0 | - | 1 | orange.com |
+| 464 | Olof Johansson | 0 | +0 | 0 | - | 1 | sonymobile.com |
+| 465 | Omar Abdelkader | 0 | +0 | 0 | - | 1 | gmail.com |
+| 466 | Ondrej Zajicek | 0 | +0 | 0 | - | 1 | crfreenet.org |
+| 467 | Onur Kalinagac | 0 | +0 | 0 | - | 2 | netsia.com |
+| 468 | Orhan Kupusoglu | 0 | +0 | 0 | - | 3 | netsia.com |
+| 469 | Osman Amjad | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 470 | PUSHP RAJ | 0 | +0 | 0 | - | 1 | gslab.com |
+| 471 | Pascal Bach | 0 | +0 | 0 | - | 1 | siemens.com |
+| 472 | Pascal Muetschard | 0 | +0 | 0 | - | 1 | google.com |
+| 473 | Patrick Dubroy | 0 | +0 | 0 | - | 1 | google.com |
+| 474 | Paul Jakma | 0 | +0 | 0 | - | 1 | jakma.org |
+| 475 | Paul Jakma | 0 | +0 | 0 | - | 1 | hpe.com |
+| 476 | Paul Jakma | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 477 | Paul Jakma | 0 | +0 | 0 | - | 1 | quagga.net |
+| 478 | Paul Jakma | 0 | +0 | 0 | - | 1 | sun.com |
+| 479 | Paul P Komkoff Jr | 0 | +0 | 0 | - | 1 | stingr.net |
+| 480 | Pawel Wieczorkiewicz | 0 | +0 | 0 | - | 1 | suse.de |
+| 481 | Pawit Pornkitprasan | 0 | +0 | 0 | - | 1 | gmail.com |
+| 482 | Peter K. Lee | 0 | +0 | 0 | - | 1 | intercloud.net |
+| 483 | Peter Lee | 0 | +0 | 0 | - | 1 | corenova.com |
+| 484 | Peter Pentchev | 0 | +0 | 0 | - | 1 | ringlet.net |
+| 485 | Peter Szilagyi | 0 | +0 | 0 | - | 1 | gmail.com |
+| 486 | Phaneendra Manda | 0 | +0 | 0 | - | 1 | radisys.com |
+| 487 | Phil Laverdiere | 0 | +0 | 0 | - | 1 | securecomputing.com |
+| 488 | Philippe Guibert | 0 | +0 | 0 | - | 1 | 6wind.com |
+| 489 | Pier | 0 | +0 | 0 | - | 2 | onlab.us |
+| 490 | Pierre Tardy | 0 | +0 | 0 | - | 1 | intel.com |
+| 491 | Pingping Lin | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 492 | Pingping Lin | 0 | +0 | 0 | - | 25 | onlab.us |
+| 493 | Piotr Chytła | 0 | +0 | 0 | - | 1 | packetconsulting.pl |
+| 494 | Pradosh Mohapatra | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 495 | Pragya Arya | 0 | +0 | 0 | - | 2 | radisys.com |
+| 496 | Prateek Sarda | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 497 | Prince Pereira | 0 | +0 | 0 | - | 1 | radisys.com |
+| 498 | Pär Åsfält | 0 | +0 | 0 | - | 1 | gmail.com |
+| 499 | Qianqian Hu | 0 | +0 | 0 | - | 1 | com.cn |
+| 500 | Quentin Young | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 501 | Rajeswara Rao | 0 | +0 | 0 | - | 1 | radisys.com |
+| 502 | Rakesh Garimella | 0 | +0 | 0 | - | 1 | sophos.com |
+| 503 | Randy Levensalor | 0 | +0 | 0 | - | 1 | cablelabs.com |
+| 504 | Raphael Vicente Rosa | 0 | +0 | 0 | - | 5 | opennetworking.org |
+| 505 | Ray Milkey | 0 | +0 | 0 | - | 5 | onlab.us |
+| 506 | Ray Milkey | 0 | +0 | 0 | - | 2 | gmail.com |
+| 507 | Ray Milkey | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 508 | Remi Gacogne | 0 | +0 | 0 | - | 1 | coredump.fr |
+| 509 | Renato Westphal | 0 | +0 | 0 | - | 1 | opensourcerouting.org |
+| 510 | Renato Westphal | 0 | +0 | 0 | - | 1 | gmail.com |
+| 511 | Renaud Paquay | 0 | +0 | 0 | - | 1 | google.com |
+| 512 | Rich Lane | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 513 | Rich Lane | 0 | +0 | 0 | - | 1 | gmail.com |
+| 514 | Rich Lane | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 515 | Richard Jankowski | 0 | +0 | 0 | - | 1 | ciena.com |
+| 516 | Rizwan Haider | 0 | +0 | 0 | - | 4 | nokia.com |
+| 517 | Rob Sherwood | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 518 | Rob Ward | 0 | +0 | 0 | - | 1 | googlemail.com |
+| 519 | Robert Bays | 0 | +0 | 0 | - | 1 | vyatta.com |
+| 520 | Roderick Schertler | 0 | +0 | 0 | - | 1 | argon.org |
+| 521 | Roger Luethi | 0 | +0 | 0 | - | 3 | bisdn.de |
+| 522 | Roger Luethi | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 523 | Rohan Agrawal | 0 | +0 | 0 | - | 7 | infosys.com |
+| 524 | Roman Bubyr | 0 | +0 | 0 | - | 1 | gmail.com |
+| 525 | Roman Hoog Antink | 0 | +0 | 0 | - | 1 | open.ch |
+| 526 | Roy | 0 | +0 | 0 | - | 1 | vio.us |
+| 527 | Roy Lee | 0 | +0 | 0 | - | 1 | gmail.com |
+| 528 | Ruchit Bawa | 0 | +0 | 0 | - | 1 | gslab.com |
+| 529 | Ruslan Bilovol | 0 | +0 | 0 | - | 1 | gmail.com |
+| 530 | Rusty Eddy | 0 | +0 | 0 | - | 1 | rustyeddy.com |
+| 531 | Ryan | 0 | +0 | 0 | - | 1 | com.tw |
+| 532 | S.Çağlar Onur | 0 | +0 | 0 | - | 1 | 10ur.org |
+| 533 | Saleil Bhat | 0 | +0 | 0 | - | 5 | stanford.edu |
+| 534 | Samuel Holland | 0 | +0 | 0 | - | 1 | sholland.org |
+| 535 | Santosh Kumar | 0 | +0 | 0 | - | 1 | altencalsoftlabs.com |
+| 536 | Sapan Bhatia | 0 | +0 | 0 | - | 43 | gmail.com |
+| 537 | Sapan Bhatia | 0 | +0 | 0 | - | 15 | opennetworking.org |
+| 538 | Sapan Bhatia | 0 | +0 | 0 | - | 1 | princeton.org |
+| 539 | Sapan Bhatia | 0 | +0 | 0 | - | 1 | sapans-macbook-pro.local |
+| 540 | Sapan Bhatia | 0 | +0 | 0 | - | 1 | onlab.us |
+| 541 | Sapan Bhatia | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 542 | Sarah Owens | 0 | +0 | 0 | - | 1 | inkylabs.com |
+| 543 | Saurav Das | 0 | +0 | 0 | - | 8 | stanford.edu |
+| 544 | Saurav Das | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 545 | Savannah SR#108542 | 0 | +0 | 0 | - | 1 | atcorp.com |
+| 546 | Scott Anderson | 0 | +0 | 0 | - | 1 | droidmod.org |
+| 547 | Scott Baker | 0 | +0 | 0 | - | 75 | gmail.com |
+| 548 | Scott Baker | 0 | +0 | 0 | - | 3 | opennetworking.org |
+| 549 | Scott Baker | 0 | +0 | 0 | - | 14 | onlab.us |
+| 550 | Scott Baker | 0 | +0 | 0 | - | 1 | intel.com |
+| 551 | Scott Fan | 0 | +0 | 0 | - | 1 | gmail.com |
+| 552 | Sean Condon | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 553 | SeanCondon | 0 | +0 | 0 | - | 1 | intel.com |
+| 554 | Sebastian Frias | 0 | +0 | 0 | - | 1 | gmail.com |
+| 555 | Sebastian Schmidt | 0 | +0 | 0 | - | 1 | yath.de |
+| 556 | Sebastian Schuberth | 0 | +0 | 0 | - | 1 | gmail.com |
+| 557 | Sergey Y. Afonin | 0 | +0 | 0 | - | 1 | altlinux.ru |
+| 558 | Serj Kalichev | 0 | +0 | 0 | - | 1 | gmail.com |
+| 559 | Shad Ansari | 0 | +0 | 0 | - | 12 | opennetworking.org |
+| 560 | Shad Ansari | 0 | +0 | 0 | - | 1 | onlab.us |
+| 561 | Shad Ansari | 0 | +0 | 0 | - | 1 | attlocal.net |
+| 562 | Shad Ansari | 0 | +0 | 0 | - | 2 | intel.com |
+| 563 | Shad Ansari | 0 | +0 | 0 | - | 1 | gmail.com |
+| 564 | Shad Ansari | 0 | +0 | 0 | - | 1 | opennetworking.org” |
+| 565 | Shad Ansari | 0 | +0 | 0 | - | 1 | carbon.local |
+| 566 | Shawn Pearce | 0 | +0 | 0 | - | 1 | google.com |
+| 567 | Shivanagouda Malaginahalli | 0 | +0 | 0 | - | 2 | radisys.com |
+| 568 | Sho SHIMIZU | 0 | +0 | 0 | - | 1 | fujitsu.com |
+| 569 | Shouheng Zhang | 0 | +0 | 0 | - | 1 | intel.com |
+| 570 | Shrey Baid | 0 | +0 | 0 | - | 4 | gmail.com |
+| 571 | ShreyaPandita | 0 | +0 | 0 | - | 1 | iu.edu |
+| 572 | Shubham Sharma | 0 | +0 | 0 | - | 5 | infosys.com |
+| 573 | Shudong Zhou | 0 | +0 | 0 | - | 1 | gmail.com |
+| 574 | Simon Hunt | 0 | +0 | 0 | - | 3 | onlab.us |
+| 575 | Simon Ruggier | 0 | +0 | 0 | - | 1 | gmail.com |
+| 576 | Simran Basi | 0 | +0 | 0 | - | 1 | google.com |
+| 577 | Siobhan Tully | 0 | +0 | 0 | - | 1 | verivue.com |
+| 578 | Skyler Kaufman | 0 | +0 | 0 | - | 1 | google.com |
+| 579 | Sonal Kasliwal | 0 | +0 | 0 | - | 3 | infosys.com |
+| 580 | Sreeju Sreedhar | 0 | +0 | 0 | - | 3 | jabil.com |
+| 581 | Srikanth Vavilapalli | 0 | +0 | 0 | - | 10 | ericsson.com |
+| 582 | Stas Nichiporovich | 0 | +0 | 0 | - | 1 | iptel.by |
+| 583 | Stefan Beller | 0 | +0 | 0 | - | 1 | google.com |
+| 584 | Stephen Finucane | 0 | +0 | 0 | - | 1 | hotmail.com |
+| 585 | Stephen Hemminger | 0 | +0 | 0 | - | 1 | networkplumber.org |
+| 586 | Stephen Hemminger | 0 | +0 | 0 | - | 1 | vyatta.com |
+| 587 | Stephen Hemminger | 0 | +0 | 0 | - | 1 | vyatta.com |
+| 588 | Stephen Hemminger | 0 | +0 | 0 | - | 1 | debian.(none) |
+| 589 | Steve Hill | 0 | +0 | 0 | - | 1 | sackheads.org |
+| 590 | Steve Pucci | 0 | +0 | 0 | - | 1 | google.com |
+| 591 | Steve Rae | 0 | +0 | 0 | - | 1 | raedomain.com |
+| 592 | Steven Burrows | 0 | +0 | 0 | - | 1 | villa-technologies.com |
+| 593 | Stig Thormodsrud | 0 | +0 | 0 | - | 1 | vyatta.com |
+| 594 | Subbaiah Venkata | 0 | +0 | 0 | - | 1 | google.com |
+| 595 | Suchitra Vemuri | 0 | +0 | 0 | - | 4 | opennetworking.org |
+| 596 | Suchitra Vemuri | 0 | +0 | 0 | - | 8 | onlab.us |
+| 597 | Suhas Gururaj | 0 | +0 | 0 | - | 1 | radisys.com |
+| 598 | Suraj Gour | 0 | +0 | 0 | - | 1 | infosys.com |
+| 599 | Svata Dedic | 0 | +0 | 0 | - | 1 | klfree.net |
+| 600 | Sébastien Luttringer | 0 | +0 | 0 | - | 1 | seblu.net |
+| 601 | T.R. Fullhart | 0 | +0 | 0 | - | 1 | google.com |
+| 602 | Takahiro Suzuki | 0 | +0 | 0 | - | 5 | opennetworking.org |
+| 603 | Takashi Sogabe | 0 | +0 | 0 | - | 1 | ad.jp |
+| 604 | Takeshi Kanemoto | 0 | +0 | 0 | - | 1 | sonymobile.com |
+| 605 | Tatsuya Yabe | 0 | +0 | 0 | - | 1 | stanford.edu |
+| 606 | Terence Haddock | 0 | +0 | 0 | - | 1 | google.com |
+| 607 | Test User | 0 | +0 | 0 | - | 2 | null.com |
+| 608 | Than McIntosh | 0 | +0 | 0 | - | 1 | google.com |
+| 609 | Thangavelu K S | 0 | +0 | 0 | - | 1 | ciena.com |
+| 610 | The Android Open Source Project | 0 | +0 | 0 | - | 1 | android.com |
+| 611 | Thiago Farina | 0 | +0 | 0 | - | 1 | gmail.com |
+| 612 | Thijs Kinkhorst | 0 | +0 | 0 | - | 1 | debian.org |
+| 613 | Thiyagarajan Subramani | 0 | +0 | 0 | - | 3 | radisys.com |
+| 614 | Thomas Lee S | 0 | +0 | 0 | - | 5 | radisys.com |
+| 615 | Thomas Petazzoni | 0 | +0 | 0 | - | 1 | free-electrons.com |
+| 616 | Thomas Ries | 0 | +0 | 0 | - | 1 | gmx.net |
+| 617 | Thomas Vachuska | 0 | +0 | 0 | - | 6 | onlab.us |
+| 618 | Thorvald Natvig | 0 | +0 | 0 | - | 1 | medallia.com |
+| 619 | Tim Kilbourn | 0 | +0 | 0 | - | 1 | google.com |
+| 620 | Tim Schumacher | 0 | +0 | 0 | - | 1 | arcor.de |
+| 621 | Timo Lotterbach | 0 | +0 | 0 | - | 1 | bmw-carit.de |
+| 622 | Timo Schöler | 0 | +0 | 0 | - | 1 | kroenchenstadt.de |
+| 623 | Timo Teräs | 0 | +0 | 0 | - | 1 | iki.fi |
+| 624 | Tinoj Joseph | 0 | +0 | 0 | - | 3 | radisys.com |
+| 625 | Tiruveedula, Vijaya | 0 | +0 | 0 | - | 2 | intel.com |
+| 626 | Tobias Droste | 0 | +0 | 0 | - | 1 | gmx.de |
+| 627 | Tom Goff | 0 | +0 | 0 | - | 1 | boeing.com |
+| 628 | Tom Henderson | 0 | +0 | 0 | - | 1 | tomh.org |
+| 629 | Tomasz Pala | 0 | +0 | 0 | - | 1 | pld-linux.org |
+| 630 | Tony Chou | 0 | +0 | 0 | - | 1 | gmail.com |
+| 631 | Tony Mack | 0 | +0 | 0 | - | 2 | gmail.com |
+| 632 | Tony Mack | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 633 | Tony Mack | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 634 | Tony Mack | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 635 | Tony van der Peet | 0 | +0 | 0 | - | 1 | co.nz |
+| 636 | Torne (Richard Coles) | 0 | +0 | 0 | - | 1 | google.com |
+| 637 | Torsten Thieme | 0 | +0 | 0 | - | 5 | adtran.com |
+| 638 | Trond Norbye | 0 | +0 | 0 | - | 1 | gmail.com |
+| 639 | Tseng, Yi | 0 | +0 | 0 | - | 1 | intel.com |
+| 640 | Tunahan Sezen | 0 | +0 | 0 | - | 3 | netsia.com |
+| 641 | Ubuntu | 0 | +0 | 0 | - | 1 | voltha |
+| 642 | Udaya Shankara KS | 0 | +0 | 0 | - | 1 | gmail.com |
+| 643 | Ulrich Weber | 0 | +0 | 0 | - | 1 | sophos.com |
+| 644 | Ulrik Sjolin | 0 | +0 | 0 | - | 1 | gmail.com |
+| 645 | Ulrik Sjölin | 0 | +0 | 0 | - | 1 | sonyericsson.com |
+| 646 | User | 0 | +0 | 0 | - | 1 | hackershells.com |
+| 647 | Vadim Bendebury | 0 | +0 | 0 | - | 1 | chromium.org |
+| 648 | Varun Belur | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 649 | Vasilis Tsiligiannis | 0 | +0 | 0 | - | 1 | silverton.gr |
+| 650 | Victor Boivie | 0 | +0 | 0 | - | 1 | sonymobile.com |
+| 651 | Victor Boivie | 0 | +0 | 0 | - | 1 | sonyericsson.com |
+| 652 | Vijaya Rani | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 653 | Vijaya Tiruveedula | 0 | +0 | 0 | - | 1 | compute.internal |
+| 654 | Vijaya Tiruveedula | 0 | +0 | 0 | - | 1 | localhost |
+| 655 | Vijaykumar Kushwaha | 0 | +0 | 0 | - | 2 | infosys.com |
+| 656 | Vincent Bernat | 0 | +0 | 0 | - | 1 | luffy.cx |
+| 657 | Vincent JARDIN | 0 | +0 | 0 | - | 1 | 6wind.com |
+| 658 | Vini Gajjar | 0 | +0 | 0 | - | 2 | gslab.com |
+| 659 | Vipin Kumar | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 660 | Vishal Kumar | 0 | +0 | 0 | - | 1 | gmail.com |
+| 661 | Vitaliy Senchyshyn | 0 | +0 | 0 | - | 1 | toroki.com |
+| 662 | Vivek Venkatraman | 0 | +0 | 0 | - | 1 | cumulusnetworks.com |
+| 663 | Vladimir L Ivanov | 0 | +0 | 0 | - | 1 | yandex-team.ru |
+| 664 | Vyacheslav Trushkin | 0 | +0 | 0 | - | 1 | dogonthesun.net |
+| 665 | Vystoropskyi, Sergii | 0 | +0 | 0 | - | 1 | amazon.com |
+| 666 | Wailok Shum | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 667 | Warren Turkal | 0 | +0 | 0 | - | 1 | ooyala.com |
+| 668 | Wataru Tanitsu | 0 | +0 | 0 | - | 1 | ate-mahoroba.jp |
+| 669 | Wei-Yu Chen | 0 | +0 | 0 | - | 18 | opennetworking.org |
+| 670 | Wei-Yu Chen | 0 | +0 | 0 | - | 12 | gmail.com |
+| 671 | Wei-Yu Chen | 0 | +0 | 0 | - | 1 | intel.com |
+| 672 | Wenjian Ma | 0 | +0 | 0 | - | 1 | 163.com |
+| 673 | Will Richey | 0 | +0 | 0 | - | 1 | gmail.com |
+| 674 | William Kurkian | 0 | +0 | 0 | - | 5 | gmail.com |
+| 675 | William Kurkian | 0 | +0 | 0 | - | 5 | cisco.com |
+| 676 | Wilson Ng | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 677 | Wink Saville | 0 | +0 | 0 | - | 1 | saville.com |
+| 678 | Wink Saville | 0 | +0 | 0 | - | 1 | google.com |
+| 679 | Woojoong Kim | 0 | +0 | 0 | - | 20 | opennetworking.org |
+| 680 | Xiaodong Xu | 0 | +0 | 0 | - | 1 | gmail.com |
+| 681 | Xiaohui Chen | 0 | +0 | 0 | - | 1 | google.com |
+| 682 | Xin Li | 0 | +0 | 0 | - | 1 | google.com |
+| 683 | YAMAMOTO Shigeru | 0 | +0 | 0 | - | 1 | ad.jp |
+| 684 | YJ | 0 | +0 | 0 | - | 1 | furukawalatam.com |
+| 685 | YOUNG HO CHA | 0 | +0 | 0 | - | 1 | gmail.com |
+| 686 | Yang Zhenhui | 0 | +0 | 0 | - | 1 | sonymobile.com |
+| 687 | Yann Droneaud | 0 | +0 | 0 | - | 1 | opteya.com |
+| 688 | Yasuhiro Ohara | 0 | +0 | 0 | - | 1 | ac.jp |
+| 689 | Yestin Sun | 0 | +0 | 0 | - | 1 | gmail.com |
+| 690 | Yi Tseng | 0 | +0 | 0 | - | 6 | opennetworking.org |
+| 691 | Yi Tseng | 0 | +0 | 0 | - | 2 | gmail.com |
+| 692 | You Wang | 0 | +0 | 0 | - | 9 | opennetworking.org |
+| 693 | You Wang | 0 | +0 | 0 | - | 1 | opennetworkingorg |
+| 694 | You Wang | 0 | +0 | 0 | - | 1 | onlab.us |
+| 695 | Yunpeng Zhang | 0 | +0 | 0 | - | 2 | gmail.com |
+| 696 | Yuta HIGUCHI | 0 | +0 | 0 | - | 3 | nec.com |
+| 697 | Zac Livingston | 0 | +0 | 0 | - | 1 | codeaurora.org |
+| 698 | Zack Williams | 0 | +0 | 0 | - | 182 | opennetworking.org |
+| 699 | Zack Williams | 0 | +0 | 0 | - | 9 | intel.com |
+| 700 | Zack Williams | 0 | +0 | 0 | - | 12 | artisancomputer.com |
+| 701 | Zack Williams | 0 | +0 | 0 | - | 28 | arizona.edu |
+| 702 | Zack Williams | 0 | +0 | 0 | - | 3 | github.com |
+| 703 | Zafer Kaban | 0 | +0 | 0 | - | 1 | netsia.com |
+| 704 | Zdravko Bozakov | 0 | +0 | 0 | - | 1 | radisys.com |
+| 705 | Zhiguang Li | 0 | +0 | 0 | - | 1 | gmail.com |
+| 706 | Zsolt Haraszti | 0 | +0 | 0 | - | 5 | ciena.com |
+| 707 | abat | 0 | +0 | 0 | - | 1 | bigswitch.com |
+| 708 | adtran | 0 | +0 | 0 | - | 1 | adtran.com |
+| 709 | agmimidi | 0 | +0 | 0 | - | 2 | dtu.dk |
+| 710 | aishwaryarana01 | 0 | +0 | 0 | - | 2 | gmail.com |
+| 711 | aishwaryarana01 | 0 | +0 | 0 | - | 1 | att.com |
+| 712 | alshabib | 0 | +0 | 0 | - | 31 | gmail.com |
+| 713 | anatoly techtonik | 0 | +0 | 0 | - | 1 | gmail.com |
+| 714 | ashokrad | 0 | +0 | 0 | - | 1 | hcl.com |
+| 715 | badhri85 | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 716 | badhri85 | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 717 | badhri85 | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 718 | badhri85 | 0 | +0 | 0 | - | 1 | cluster.local |
+| 719 | bharat raj | 0 | +0 | 0 | - | 1 | radisys.com |
+| 720 | bijia | 0 | +0 | 0 | - | 1 | xiaomi.com |
+| 721 | boris yakubov | 0 | +0 | 0 | - | 1 | ruggedcom.com |
+| 722 | boyoung | 0 | +0 | 0 | - | 2 | gmail.com |
+| 723 | breezestars | 0 | +0 | 0 | - | 3 | gmail.com |
+| 724 | caowei | 0 | +0 | 0 | - | 1 | gmail.com |
+| 725 | castroflavio | 0 | +0 | 0 | - | 1 | gatech.edu |
+| 726 | cbabu | 0 | +0 | 0 | - | 2 | radisys.com |
+| 727 | chenguodong | 0 | +0 | 0 | - | 1 | huawei.com |
+| 728 | chiisaihayashi | 0 | +0 | 0 | - | 1 | gmail.com |
+| 729 | chip_boling | 0 | +0 | 0 | - | 2 | gmail.com |
+| 730 | chrli | 0 | +0 | 0 | - | 1 | google.com |
+| 731 | cuilin2018 | 0 | +0 | 0 | - | 2 | cigtech.com |
+| 732 | dileepbk | 0 | +0 | 0 | - | 2 | edge-core.com |
+| 733 | divyadesai | 0 | +0 | 0 | - | 12 | infosys.com |
+| 734 | dmohapatro | 0 | +0 | 0 | - | 1 | ltts.com |
+| 735 | dpaul | 0 | +0 | 0 | - | 4 | radisys.com |
+| 736 | dvaddire | 0 | +0 | 0 | - | 5 | ciena.com |
+| 737 | ederlf | 0 | +0 | 0 | - | 1 | com.br |
+| 738 | fran | 0 | +0 | 0 | - | 1 | gmail.com |
+| 739 | francesco | 0 | +0 | 0 | - | 1 | onlab.us |
+| 740 | gerardo.laurenzi | 0 | +0 | 0 | - | 4 | hcl.com |
+| 741 | gongysh | 0 | +0 | 0 | - | 1 | 99cloud.net |
+| 742 | gunjan5 | 0 | +0 | 0 | - | 1 | ciena.com |
+| 743 | gwsapan | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 744 | heasley | 0 | +0 | 0 | - | 1 | shrubbery.net |
+| 745 | heping | 0 | +0 | 0 | - | 1 | hotmail.com |
+| 746 | hkouser | 0 | +0 | 0 | - | 4 | radisys.com |
+| 747 | jcnelson | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 748 | jeremy | 0 | +0 | 0 | - | 1 | emulab.net |
+| 749 | ke han | 0 | +0 | 0 | - | 4 | com.cn |
+| 750 | kesavand | 0 | +0 | 0 | - | 9 | gmail.com |
+| 751 | kevinb | 0 | +0 | 0 | - | 1 | com.tw |
+| 752 | khenaidoo | 0 | +0 | 0 | - | 9 | ciena.com |
+| 753 | kishore | 0 | +0 | 0 | - | 4 | radisys.com |
+| 754 | kitty | 0 | +0 | 0 | - | 1 | hpe.com |
+| 755 | kmarquardsen | 0 | +0 | 0 | - | 1 | opennetworking.org |
+| 756 | macauley | 0 | +0 | 0 | - | 1 | gmail.com |
+| 757 | macauley | 0 | +0 | 0 | - | 1 | google.com |
+| 758 | manikkaraj k | 0 | +0 | 0 | - | 3 | radisys.com |
+| 759 | mc | 0 | +0 | 0 | - | 3 | edge-core.com |
+| 760 | mcord | 0 | +0 | 0 | - | 1 | mcords-macbook-pro.local |
+| 761 | michele.pezzutti | 0 | +0 | 0 | - | 1 | hcl.com |
+| 762 | mpagenko | 0 | +0 | 0 | - | 2 | adtran.com |
+| 763 | nickhuang | 0 | +0 | 0 | - | 1 | edge-core.com |
+| 764 | nikesh.krishnan | 0 | +0 | 0 | - | 7 | radisys.com |
+| 765 | nosignal | 0 | +0 | 0 | - | 2 | edu.tw |
+| 766 | npujar | 0 | +0 | 0 | - | 4 | radisys.com |
+| 767 | onf | 0 | +0 | 0 | - | 1 | onfs-macbook-pro-2.local |
+| 768 | onkar.kundargi | 0 | +0 | 0 | - | 1 | sterlite.com |
+| 769 | onkarkundargi | 0 | +0 | 0 | - | 2 | gmail.com |
+| 770 | ozgecanetsia | 0 | +0 | 0 | - | 2 | netsia.com |
+| 771 | pelya | 0 | +0 | 0 | - | 1 | gmail.com |
+| 772 | ph4r05 | 0 | +0 | 0 | - | 1 | gmail.com |
+| 773 | pierventre | 0 | +0 | 0 | - | 7 | opennetworking.org |
+| 774 | pudelkoM | 0 | +0 | 0 | - | 1 | github.com |
+| 775 | rajesh | 0 | +0 | 0 | - | 1 | radisys.com |
+| 776 | rdudyala | 0 | +0 | 0 | - | 2 | tcs.com |
+| 777 | root | 0 | +0 | 0 | - | 1 | ubuntu-vm-1.(none) |
+| 778 | root | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 779 | root | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 780 | root | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 781 | root | 0 | +0 | 0 | - | 1 | emulab.net |
+| 782 | root | 0 | +0 | 0 | - | 1 | localhost.localdomain |
+| 783 | root | 0 | +0 | 0 | - | 1 | vicci.org |
+| 784 | saikrishna edupuganti | 0 | +0 | 0 | - | 2 | intel.com |
+| 785 | salmansiddiqui | 0 | +0 | 0 | - | 8 | gmail.com |
+| 786 | sangho | 0 | +0 | 0 | - | 1 | onlab.us |
+| 787 | sbarbari | 0 | +0 | 0 | - | 3 | ciena.com |
+| 788 | sbconsulting | 0 | +0 | 0 | - | 1 | github.com |
+| 789 | schowdhury | 0 | +0 | 0 | - | 1 | radisys.com |
+| 790 | selvamuthukumaran_c | 0 | +0 | 0 | - | 3 | infosys.com |
+| 791 | sepon | 0 | +0 | 0 | - | 4 | com.tr |
+| 792 | shad | 0 | +0 | 0 | - | 1 | prod1.menlo |
+| 793 | shivani vaidya | 0 | +0 | 0 | - | 1 | onlab.us |
+| 794 | siddharthgogar | 0 | +0 | 0 | - | 2 | gmail.com |
+| 795 | slowr | 0 | +0 | 0 | - | 2 | opennetworking.org |
+| 796 | slowr | 0 | +0 | 0 | - | 1 | forth.gr |
+| 797 | slowr | 0 | +0 | 0 | - | 1 | uoc.gr |
+| 798 | smbaker | 0 | +0 | 0 | - | 1 | localhost.localdomain |
+| 799 | smbaker | 0 | +0 | 0 | - | 1 | fc8-storktest.lan |
+| 800 | srikanthvavila | 0 | +0 | 0 | - | 1 | github.com |
+| 801 | sslobodr | 0 | +0 | 0 | - | 1 | ciena.com |
+| 802 | stevenchiu30801 | 0 | +0 | 0 | - | 1 | gmail.com |
+| 803 | suhasgrao | 0 | +0 | 0 | - | 1 | gmail.com |
+| 804 | sumithdev09 | 0 | +0 | 0 | - | 1 | gmail.com |
+| 805 | svavilap | 0 | +0 | 0 | - | 1 | cloudlab.us |
+| 806 | svavilap | 0 | +0 | 0 | - | 1 | emulab.net |
+| 807 | teone | 0 | +0 | 0 | - | 1 | onlab.us |
+| 808 | teone | 0 | +0 | 0 | - | 1 | emulab.net |
+| 809 | tmack-pl | 0 | +0 | 0 | - | 1 | princeton.edu |
+| 810 | trevor tao | 0 | +0 | 0 | - | 1 | arm.com |
+| 811 | ubuntu | 0 | +0 | 0 | - | 1 | cord.lab |
+| 812 | ubuntu | 0 | +0 | 0 | - | 1 | cluster.local |
+| 813 | uwe ottrembka | 0 | +0 | 0 | - | 2 | adtran.com |
+| 814 | vigneshethiraj | 0 | +0 | 0 | - | 9 | infosys.com |
+| 815 | vikschw | 0 | +0 | 0 | - | 1 | gmail.com |
+| 816 | vinod | 0 | +0 | 0 | - | 3 | radisys.com |
+| 817 | yasin sapli | 0 | +0 | 0 | - | 7 | netsia.com |
+| 818 | zhubingbing | 0 | +0 | 0 | - | 1 | gmail.com |
+| 819 | Łukasz Gardoń | 0 | +0 | 0 | - | 1 | gmail.com |
+| 820 | 高鹏 | 0 | +0 | 0 | - | 1 | gmail.com |
+
+## 📊 Gerrit Projects
+
+| Gerrit Project | Commits | LOC | Contributors | Days Inactive | Last Commit Date | Status |
+|----------------|---------|---------|--------------|---------------|------------------|--------|
+| ci-management | 29 | -7721 | 6 | 42 | 2025-12-10 | ✅ |
+| voltha-openonu-adapter-go | 26 | +188557 | 8 | 7 | 2026-01-14 | ✅ |
+| voltha-go | 25 | +234460 | 6 | 42 | 2025-12-10 | ✅ |
+| voltha-openolt-adapter | 20 | +453156 | 7 | 9 | 2026-01-12 | ✅ |
+| cord-charts-repo | 10 | +1306 | 1 | 13 | 2026-01-08 | ✅ |
+| voltha-docs | 9 | +600 | 1 | 146 | 2025-08-28 | ✅ |
+| voltha-go-controller | 9 | +160149 | 6 | 40 | 2025-12-12 | ✅ |
+| voltha-system-tests | 9 | -250 | 5 | 214 | 2025-06-21 | ✅ |
+| voltha-helm-charts | 8 | +297 | 3 | 28 | 2025-12-24 | ✅ |
+| voltha-lib-go | 8 | +233470 | 4 | 83 | 2025-10-30 | ✅ |
+| voltha-docker-tools | 6 | +5 | 4 | 33 | 2025-12-19 | ✅ |
+| pod-configs | 5 | -20 | 2 | 35 | 2025-12-17 | ✅ |
+| voltha-protos | 4 | +1143 | 3 | 113 | 2025-09-30 | ✅ |
+| openolt | 3 | +643 | 3 | 204 | 2025-07-01 | ✅ |
+| device-management-interface | 2 | +11929 | 1 | 109 | 2025-10-04 | ✅ |
+| helm-repo-tools | 2 | -1 | 1 | 364 | 2025-01-22 | ✅ |
+| shared-workflows | 2 | +317 | 1 | 15 | 2026-01-06 | ✅ |
+| voltctl | 2 | +49201 | 2 | 188 | 2025-07-17 | ✅ |
+| cord-tester | 1 | -1 | 1 | 284 | 2025-04-12 | ✅ |
+| omci-lib-go | 1 | +70 | 1 | 155 | 2025-08-19 | ✅ |
+| .github | 0 | +0 | 0 | 494 | 2024-09-14 | ☑️ |
+| ActiveTest | 0 | +0 | 0 | 3,092 | 2017-08-04 | 🛑 |
+| Aether-Projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| CORD-Projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| Ignite | 0 | +0 | 0 | 2,148 | 2020-03-05 | 🛑 |
+| Infra-Projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| MME2 | 0 | +0 | 0 | 2,249 | 2019-11-25 | 🛑 |
+| ONOS-App-projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| PassiveTest | 0 | +0 | 0 | 3,092 | 2017-08-04 | 🛑 |
+| PublicTest | 0 | +0 | 0 | 1,287 | 2022-07-14 | 🛑 |
+| SDCore-Projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| SDFabric-Projects | 0 | +0 | 0 | 488 | 2024-09-20 | ☑️ |
+| VOLTHA-Projects | 0 | +0 | 0 | 424 | 2024-11-23 | ☑️ |
+| aaa | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| acordion | 0 | +0 | 0 | 2,807 | 2018-05-16 | 🛑 |
+| addressmanager | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| alpine-grpc-base | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| ansible/onf-ansible | 0 | +0 | 0 | 1,380 | 2022-04-12 | 🛑 |
+| ansible/role/389ds | 0 | +0 | 0 | 1,596 | 2021-09-08 | 🛑 |
+| ansible/role/acme | 0 | +0 | 0 | 1,280 | 2022-07-21 | 🛑 |
+| ansible/role/apt_source | 0 | +0 | 0 | 1,499 | 2021-12-14 | 🛑 |
+| ansible/role/bird | 0 | +0 | 0 | 1,394 | 2022-03-29 | 🛑 |
+| ansible/role/chrony | 0 | +0 | 0 | 1,273 | 2022-07-28 | 🛑 |
+| ansible/role/devtools | 0 | +0 | 0 | 1,305 | 2022-06-26 | 🛑 |
+| ansible/role/dhcpd | 0 | +0 | 0 | 1,148 | 2022-11-30 | 🛑 |
+| ansible/role/dkms | 0 | +0 | 0 | 1,449 | 2022-02-02 | 🛑 |
+| ansible/role/docker | 0 | +0 | 0 | 1,348 | 2022-05-14 | 🛑 |
+| ansible/role/ds389 | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/edgemonagent | 0 | +0 | 0 | 1,757 | 2021-03-31 | 🛑 |
+| ansible/role/enodebd | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/gerrit | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/golang | 0 | +0 | 0 | 1,315 | 2022-06-16 | 🛑 |
+| ansible/role/jenkins | 0 | +0 | 0 | 1,901 | 2020-11-07 | 🛑 |
+| ansible/role/keycloak | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/lbackup | 0 | +0 | 0 | 1,891 | 2020-11-17 | 🛑 |
+| ansible/role/lua | 0 | +0 | 0 | 1,531 | 2021-11-12 | 🛑 |
+| ansible/role/mariadb | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/netbox | 0 | +0 | 0 | 1,235 | 2022-09-04 | 🛑 |
+| ansible/role/netprep | 0 | +0 | 0 | 1,576 | 2021-09-28 | 🛑 |
+| ansible/role/nginx | 0 | +0 | 0 | 1,346 | 2022-05-16 | 🛑 |
+| ansible/role/node_exporter | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/nodejs | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/nsd | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/onieboot | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/openvpn | 0 | +0 | 0 | 1,396 | 2022-03-27 | 🛑 |
+| ansible/role/php | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/postgresql | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/proxmox | 0 | +0 | 0 | 1,463 | 2022-01-19 | 🛑 |
+| ansible/role/pxeboot | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/qat | 0 | +0 | 0 | 1,408 | 2022-03-15 | 🛑 |
+| ansible/role/rbackup | 0 | +0 | 0 | 1,891 | 2020-11-17 | 🛑 |
+| ansible/role/redis | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/rke2 | 0 | +0 | 0 | 1,420 | 2022-03-03 | 🛑 |
+| ansible/role/sriov | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/strongswan | 0 | +0 | 0 | 1,289 | 2022-07-12 | 🛑 |
+| ansible/role/timesheets | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/unbound | 0 | +0 | 0 | 1,134 | 2022-12-14 | 🛑 |
+| ansible/role/unifi | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/users | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| ansible/role/usrp | 0 | +0 | 0 | 1,233 | 2022-09-06 | 🛑 |
+| asfvolt16-driver | 0 | +0 | 0 | 2,673 | 2018-09-27 | 🛑 |
+| asfvolt16-onl | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| att-workflow-driver | 0 | +0 | 0 | 2,064 | 2020-05-28 | 🛑 |
+| automation-tools | 0 | +0 | 0 | 1,946 | 2020-09-23 | 🛑 |
+| bbsim | 0 | +0 | 0 | 391 | 2024-12-26 | ☑️ |
+| bbsim-sadis-server | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| bng | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| carrierethernet | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cbrstools | 0 | +0 | 0 | 1,467 | 2022-01-15 | 🛑 |
+| certification | 0 | +0 | 0 | 2,360 | 2019-08-06 | 🛑 |
+| cggs | 0 | +0 | 0 | 785 | 2023-11-28 | ☑️ |
+| chameleon | 0 | +0 | 0 | 2,161 | 2020-02-21 | 🛑 |
+| comac-helm-charts | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| composer | 0 | +0 | 0 | 3,281 | 2017-01-27 | 🛑 |
+| config | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cord | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cord-omec | 0 | +0 | 0 | 2,388 | 2019-07-09 | 🛑 |
+| cord-onos-publisher | 0 | +0 | 0 | 2,197 | 2020-01-16 | 🛑 |
+| cord-platform | 0 | +0 | 0 | 2,206 | 2020-01-07 | 🛑 |
+| cord-service-boilerplate | 0 | +0 | 0 | 3,217 | 2017-04-01 | 🛑 |
+| cord-workflow-airflow | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cord-workflow-controller | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cord-workflow-controller-client | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cord-workflow-probe | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| cordctl | 0 | +0 | 0 | 2,094 | 2020-04-28 | 🛑 |
+| device-management | 0 | +0 | 0 | 1,737 | 2021-04-20 | 🛑 |
+| dhcpl2relay | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| docs | 0 | +0 | 0 | 1,708 | 2021-05-19 | 🛑 |
+| dt-workflow-driver | 0 | +0 | 0 | 2,064 | 2020-05-28 | 🛑 |
+| ecord | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| enodebd | 0 | +0 | 0 | 1,303 | 2022-06-28 | 🛑 |
+| epc-service | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| exampleservice | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| fabric | 0 | +0 | 0 | 2,034 | 2020-06-27 | 🛑 |
+| fabric-crossconnect | 0 | +0 | 0 | 2,037 | 2020-06-24 | 🛑 |
+| fabric-oftest | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| fabric-tofino | 0 | +0 | 0 | 1,525 | 2021-11-18 | 🛑 |
+| foo-app | 0 | +0 | 0 | 2,792 | 2018-05-31 | 🛑 |
+| fpcagent | 0 | +0 | 0 | 2,860 | 2018-03-24 | 🛑 |
+| freeDiameter-old | 0 | +0 | 0 | 2,752 | 2018-07-10 | 🛑 |
+| fwaas | 0 | +0 | 0 | 2,909 | 2018-02-03 | 🛑 |
+| globalxos | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| go-manifest | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| goloxi | 0 | +0 | 0 | 2,099 | 2020-04-23 | 🛑 |
+| grpc-robot | 0 | +0 | 0 | 1,443 | 2022-02-08 | 🛑 |
+| helm-charts | 0 | +0 | 0 | 1,234 | 2022-09-05 | 🛑 |
+| hippie-oss | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| hss_db | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| hypercache | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| igmp | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| igmpca | 0 | +0 | 0 | 1,014 | 2023-04-13 | ☑️ |
+| igmpproxy | 0 | +0 | 0 | 369 | 2025-01-17 | ☑️ |
+| infra-containers | 0 | +0 | 0 | 1,595 | 2021-09-09 | 🛑 |
+| infra-manifest | 0 | +0 | 0 | 1,280 | 2022-07-21 | 🛑 |
+| internetemulator | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| ipxe-build | 0 | +0 | 0 | 1,343 | 2022-05-19 | 🛑 |
+| k8sepcservice | 0 | +0 | 0 | 2,699 | 2018-09-01 | 🛑 |
+| kafka-onos | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| kafka-robot | 0 | +0 | 0 | 1,574 | 2021-09-30 | 🛑 |
+| kafka-topic-exporter | 0 | +0 | 0 | 1,398 | 2022-03-25 | 🛑 |
+| kafkaloghandler | 0 | +0 | 0 | 2,633 | 2018-11-06 | 🛑 |
+| kolla | 0 | +0 | 0 | 2,989 | 2017-11-15 | 🛑 |
+| kolla-ansible | 0 | +0 | 0 | 2,932 | 2018-01-11 | 🛑 |
+| kubernetes-service | 0 | +0 | 0 | 2,121 | 2020-04-01 | 🛑 |
+| lbaas | 0 | +0 | 0 | 3,015 | 2017-10-20 | 🛑 |
+| maas | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| mac-learning | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| manifest | 0 | +0 | 0 | 2,198 | 2020-01-15 | 🛑 |
+| mcast | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| mcord | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| mcord-configs | 0 | +0 | 0 | 2,909 | 2018-02-03 | 🛑 |
+| metro-net | 0 | +0 | 0 | 3,057 | 2017-09-08 | 🛑 |
+| metronet-local | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| mgmt-gateway-vm | 0 | +0 | 0 | 2,720 | 2018-08-11 | 🛑 |
+| mn-stratum-siab | 0 | +0 | 0 | 2,255 | 2019-11-19 | 🛑 |
+| monitoring | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| multifabric | 0 | +0 | 0 | 2,181 | 2020-02-01 | 🛑 |
+| multistructlog | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| nem-ondemand-proxy | 0 | +0 | 0 | 2,132 | 2020-03-21 | 🛑 |
+| network-diag-app | 0 | +0 | 0 | 1,093 | 2023-01-24 | ☑️ |
+| ng-xos-lib | 0 | +0 | 0 | 3,087 | 2017-08-09 | 🛑 |
+| ntt-workflow-driver | 0 | +0 | 0 | 1,771 | 2021-03-17 | 🛑 |
+| ofagent-go | 0 | +0 | 0 | 369 | 2025-01-17 | ☑️ |
+| olt | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| olt-service | 0 | +0 | 0 | 2,121 | 2020-04-01 | 🛑 |
+| olttopology | 0 | +0 | 0 | 723 | 2024-01-29 | ☑️ |
+| omec-cni | 0 | +0 | 0 | 1,264 | 2022-08-06 | 🛑 |
+| omec-pod-init | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| onf-docs | 0 | +0 | 0 | 1,418 | 2022-03-05 | 🛑 |
+| onf-make | 0 | +0 | 0 | 456 | 2024-10-22 | ☑️ |
+| onf-scripts | 0 | +0 | 0 | 510 | 2024-08-29 | ☑️ |
+| onfca | 0 | +0 | 0 | 1,183 | 2022-10-26 | 🛑 |
+| onos-classic-helm-utils | 0 | +0 | 0 | 1,643 | 2021-07-23 | 🛑 |
+| onos-service | 0 | +0 | 0 | 2,121 | 2020-04-01 | 🛑 |
+| openairinterface | 0 | +0 | 0 | 1,911 | 2020-10-28 | 🛑 |
+| opencloud | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| opendevice-manager | 0 | +0 | 0 | 1,700 | 2021-05-27 | 🛑 |
+| opendm-agent | 0 | +0 | 0 | 1,736 | 2021-04-21 | 🛑 |
+| openolt-api | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| openolt-scale-tester | 0 | +0 | 0 | 1,664 | 2021-07-02 | 🛑 |
+| openolt-test | 0 | +0 | 0 | 1,818 | 2021-01-29 | 🛑 |
+| openomci | 0 | +0 | 0 | 2,960 | 2017-12-14 | 🛑 |
+| openstack | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| osam | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| person-detection-app | 0 | +0 | 0 | 1,321 | 2022-06-10 | 🛑 |
+| platform-install | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| plyxproto | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| pppoeagent | 0 | +0 | 0 | 368 | 2025-01-18 | ☑️ |
+| pppoel2relay | 0 | +0 | 0 | 2,307 | 2019-09-28 | 🛑 |
+| progran | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| pubsafe | 0 | +0 | 0 | 3,269 | 2017-02-08 | 🛑 |
+| qa-manifest | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| quagga | 0 | +0 | 0 | 3,057 | 2017-09-08 | 🛑 |
+| rcord | 0 | +0 | 0 | 2,057 | 2020-06-04 | 🛑 |
+| redfish-agent | 0 | +0 | 0 | 2,668 | 2018-10-02 | 🛑 |
+| repo | 0 | +0 | 0 | 2,563 | 2019-01-15 | 🛑 |
+| roc-helm-charts | 0 | +0 | 0 | 973 | 2023-05-24 | ☑️ |
+| sadis | 0 | +0 | 0 | 369 | 2025-01-17 | ☑️ |
+| sadis-server | 0 | +0 | 0 | 2,147 | 2020-03-06 | 🛑 |
+| sdcore-docs | 0 | +0 | 0 | 844 | 2023-09-30 | ☑️ |
+| sdcore-helm-charts | 0 | +0 | 0 | 971 | 2023-05-26 | ☑️ |
+| sdfabric-docs | 0 | +0 | 0 | 1,254 | 2022-08-16 | 🛑 |
+| sdfabric-helm-charts | 0 | +0 | 0 | 1,147 | 2022-12-01 | 🛑 |
+| sdn-controller | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| seba | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| seba-manifest | 0 | +0 | 0 | 2,752 | 2018-07-10 | 🛑 |
+| service-profile | 0 | +0 | 0 | 3,183 | 2017-05-05 | 🛑 |
+| simpleexampleservice | 0 | +0 | 0 | 2,059 | 2020-06-02 | 🛑 |
+| sjsg | 0 | +0 | 0 | 1,403 | 2022-03-20 | 🛑 |
+| swarm | 0 | +0 | 0 | 3,018 | 2017-10-17 | 🛑 |
+| templateservice | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| tt-workflow-driver | 0 | +0 | 0 | 2,133 | 2020-03-20 | 🛑 |
+| vBBU | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vEE | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vEG | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vHSS | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vMM | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vMME | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vPGWC | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vPGWU | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vSGW | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vSGWU | 0 | +0 | 0 | 3,081 | 2017-08-15 | 🛑 |
+| vSM | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| venb | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| ves-agent | 0 | +0 | 0 | 2,659 | 2018-10-11 | 🛑 |
+| vnaas | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| voltha-adtran-adapter | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| voltha-api-server | 0 | +0 | 0 | 810 | 2023-11-03 | ☑️ |
+| voltha-bal | 0 | +0 | 0 | 3,149 | 2017-06-08 | 🛑 |
+| voltha-eponolt-adapter | 0 | +0 | 0 | 1,857 | 2020-12-21 | 🛑 |
+| voltha-epononu-adapter | 0 | +0 | 0 | 1,857 | 2020-12-21 | 🛑 |
+| voltha-northbound-bbf-adapter | 0 | +0 | 0 | 1,252 | 2022-08-18 | 🛑 |
+| voltha-omci | 0 | +0 | 0 | 2,959 | 2017-12-15 | 🛑 |
+| voltha-onos | 0 | +0 | 0 | 629 | 2024-05-02 | ☑️ |
+| voltha-release | 0 | +0 | 0 | 717 | 2024-02-04 | ☑️ |
+| voltha-test-manifest | 0 | +0 | 0 | 2,092 | 2020-04-30 | 🛑 |
+| vrouter | 0 | +0 | 0 | 2,121 | 2020-04-01 | 🛑 |
+| vsg | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vsg-hw | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vspgwc | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vspgwu | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vtn | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vtn-service | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| vtr | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xRAN | 0 | +0 | 0 | 3,136 | 2017-06-21 | 🛑 |
+| xos | 0 | +0 | 0 | 2,015 | 2020-07-16 | 🛑 |
+| xos-external-app-examples | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xos-gui | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xos-manifest | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xos-rest-gw | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xos-sample-gui-extension | 0 | +0 | 0 | 2,251 | 2019-11-23 | 🛑 |
+| xos-tosca | 0 | +0 | 0 | 2,161 | 2020-02-21 | 🛑 |
+| xran-controller | 0 | +0 | 0 | 2,967 | 2017-12-07 | 🛑 |
+
+**Total:** 253 repositories
+
+## 📝 Gerrit Projects with No Apparent Commits
+
+**WARNING:** All Gerrit projects/repositories should contain at least one commit, due to the initial repository creation automation writing initial template and configuration files. The report generation and parsing logic may need checking/debugging for the projects/repositories below.
+
+| Gerrit Project |
+|------------|
+| bogus-project |
+| onos-robot |
+
+**Total:** 2 Gerrit projects with no apparent commits
+
+## 🔧 Gerrit Project Feature Matrix
+
+| Gerrit Project | Type | Dependabot | Pre-commit | ReadTheDocs | .gitreview | G2G | Status |
+|------------|------|------------|------------|-------------|------------|-----|--------|
+| ci-management | jjb | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ |
+| voltha-openonu-adapter-go | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-go | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-openolt-adapter | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| cord-charts-repo | None | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| voltha-docs | Python | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-go-controller | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-system-tests | Robot Framework | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-helm-charts | Smarty | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| voltha-lib-go | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| voltha-docker-tools | None | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| pod-configs | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| voltha-protos | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| openolt | C | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| device-management-interface | Python | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| helm-repo-tools | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| shared-workflows | None | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| voltctl | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ✅ |
+| cord-tester | Robot Framework | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| omci-lib-go | Go | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| ansible/role/apt_source | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/389ds | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/acme | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/devtools | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/chrony | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/dhcpd | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/dkms | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/bird | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/ds389 | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/docker | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/enodebd | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/golang | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/gerrit | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/edgemonagent | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/keycloak | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/jenkins | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/lbackup | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/lua | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/mariadb | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/node_exporter | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/nodejs | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/netbox | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/nginx | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/netprep | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/nsd | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/onieboot | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/qat | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/rbackup | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/openvpn | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/php | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/postgresql | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/proxmox | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/pxeboot | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/redis | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/rke2 | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ansible/role/sriov | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/strongswan | Shell | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/unifi | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/timesheets | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/unbound | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/users | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ansible/role/usrp | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| CORD-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| Aether-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| .github | None | ❌ | ✅ | ❌ | ✅ | ❌ | ☑️ |
+| Infra-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| Ignite | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ONOS-App-projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| MME2 | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| PublicTest | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| SDCore-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| SDFabric-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| ansible/onf-ansible | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| VOLTHA-Projects | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| ActiveTest | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| acordion | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| PassiveTest | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| alpine-grpc-base | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| addressmanager | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| asfvolt16-onl | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| asfvolt16-driver | C | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| bogus-project | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| att-workflow-driver | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| aaa | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| cbrstools | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cggs | Python | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| bng | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| comac-helm-charts | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| certification | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| chameleon | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| automation-tools | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| composer | JavaScript | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| config | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-omec | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| cord-platform | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-onos-publisher | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-service-boilerplate | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| carrierethernet | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-workflow-airflow | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-workflow-controller | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-workflow-controller-client | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| cord-workflow-probe | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| dhcpl2relay | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| dt-workflow-driver | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| docs | Ruby | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ecord | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| epc-service | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| exampleservice | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| fabric | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| enodebd | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| fabric-crossconnect | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| foo-app | Java/Maven | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| cordctl | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| fpcagent | Java | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| fabric-oftest | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| fwaas | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| go-manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| globalxos | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| goloxi | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| grpc-robot | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| hippie-oss | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| hss_db | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| igmp | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| hypercache | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| freeDiameter-old | C | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| igmpca | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| bbsim | Go | ❌ | ✅ | ❌ | ✅ | ❌ | ☑️ |
+| infra-manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| infra-containers | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| internetemulator | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| fabric-tofino | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ipxe-build | Dockerfile | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| igmpproxy | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| k8sepcservice | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| kafka-robot | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| bbsim-sadis-server | Go | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| kafka-onos | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| kafkaloghandler | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| kolla | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| kolla-ansible | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| lbaas | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| kubernetes-service | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| mcord-configs | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| mcord | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| mac-learning | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| helm-charts | Smarty | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| mcast | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| mgmt-gateway-vm | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| mn-stratum-siab | Dockerfile | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| metro-net | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| metronet-local | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| multifabric | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| multistructlog | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| network-diag-app | Python | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| ntt-workflow-driver | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| ng-xos-lib | JavaScript | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| monitoring | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| olt-service | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| olt | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| olttopology | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| device-management | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| omec-cni | Dockerfile | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| omec-pod-init | Dockerfile | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| onf-docs | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| onfca | Shell | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| onos-classic-helm-utils | Dockerfile | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| onf-scripts | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| onos-robot | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| openairinterface | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| onos-service | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| opencloud | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| maas | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| openolt-api | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| onf-make | Python | ❌ | ✅ | ❌ | ✅ | ❌ | ☑️ |
+| opendm-agent | C++ | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| kafka-topic-exporter | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| nem-ondemand-proxy | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| openolt-test | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| openomci | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| openstack | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| person-detection-app | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| plyxproto | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| pppoel2relay | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| pppoeagent | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| progran | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| pubsafe | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| qa-manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| redfish-agent | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| rcord | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ofagent-go | Go | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| repo | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| sadis | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| sdcore-docs | Python | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| quagga | C | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| roc-helm-charts | Smarty | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| sadis-server | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| sdn-controller | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| sdfabric-docs | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| openolt-scale-tester | Go | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| sdfabric-helm-charts | Smarty | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| sdcore-helm-charts | Smarty | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| seba | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| seba-manifest | Shell | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| platform-install | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| simpleexampleservice | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| swarm | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| sjsg | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| osam | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| templateservice | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| opendevice-manager | Go | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| tt-workflow-driver | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vBBU | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vEE | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vMM | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vHSS | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vEG | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vPGWU | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vMME | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vPGWC | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vSM | None | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vSGWU | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| vSGW | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| service-profile | Shell | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| venb | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| ves-agent | Java/Maven | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| vnaas | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| voltha-adtran-adapter | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| voltha-bal | C | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| voltha-eponolt-adapter | Go | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| voltha-omci | Python | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| voltha-epononu-adapter | Go | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| voltha-onos | Shell | ❌ | ✅ | ❌ | ✅ | ❌ | ☑️ |
+| voltha-api-server | Go | ❌ | ❌ | ❌ | ✅ | ❌ | ☑️ |
+| voltha-release | None | ❌ | ❌ | ❌ | ❌ | ❌ | ☑️ |
+| voltha-test-manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| voltha-northbound-bbf-adapter | Go | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vrouter | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vsg-hw | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vsg | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vspgwc | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vspgwu | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vtn-service | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xRAN | None | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| vtr | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| vtn | Java/Maven | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-manifest | Shell | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-rest-gw | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-external-app-examples | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-sample-gui-extension | JavaScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-tosca | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xos-gui | TypeScript | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+| xran-controller | Java | ❌ | ❌ | ❌ | ❌ | ❌ | 🛑 |
+| xos | Python | ❌ | ❌ | ❌ | ✅ | ❌ | 🛑 |
+
+## 🏁 Deployed CI/CD Jobs
+
+**Total GitHub workflows:** 4
+**Total Jenkins jobs:** 6
+
+| Gerrit Project | GitHub Workflows | Workflow Count | Jenkins Jobs | Job Count |
+|----------------|-------------------|----------------|--------------|-----------|
+| ci-management | <a href="https://github.com/lfbroadband/ci-management/actions/workflows/call-github2gerrit.yaml" target="_blank"><span class="status-unknown workflow-status">call-github2gerrit.yaml</span></a><br><a href="https://github.com/lfbroadband/ci-management/actions/workflows/gerrit-merge.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-merge.yaml</span></a><br><a href="https://github.com/lfbroadband/ci-management/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a> | 3 | <a href="https://jenkins.lfbroadband.org/job/ci-management-ami-packer-merge-ubuntu-18.04-basebuild_1804/" target="_blank"><span class="status-failure jenkins-status">ci-management-ami-packer-merge-ubuntu-18.04-basebuild_1804</span></a><br><a href="https://jenkins.lfbroadband.org/job/ci-management-ami-packer-verify/" target="_blank"><span class="status-warning jenkins-status">ci-management-ami-packer-verify</span></a><br><a href="https://jenkins.lfbroadband.org/job/ci-management-ami-packer-verify-build-ubuntu-18.04-basebuild_1804/" target="_blank"><span class="status-success jenkins-status">ci-management-ami-packer-verify-build-ubuntu-18.04-basebuild_1804</span></a> | 3 |
+| onf-make |  | 0 | <a href="https://jenkins.lfbroadband.org/job/onf-make-unit-test-bbsim/" target="_blank"><span class="status-success jenkins-status">onf-make-unit-test-bbsim</span></a><br><a href="https://jenkins.lfbroadband.org/job/onf-make-voltha-dt-fttb-test-bbsim-master/" target="_blank"><span class="status-success jenkins-status">onf-make-voltha-dt-fttb-test-bbsim-master</span></a><br><a href="https://jenkins.lfbroadband.org/job/onf-make-voltha-sanity-test-multi-runs/" target="_blank"><span class="status-success jenkins-status">onf-make-voltha-sanity-test-multi-runs</span></a> | 3 |
+| shared-workflows | <a href="https://github.com/lfbroadband/shared-workflows/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-unknown workflow-status">gerrit-verify.yaml</span></a> | 1 |  | 0 |
+
+**Total:** 3 repositories with CI/CD jobs
+
+### ⏭️ Unallocated Jenkins jobs
+
+The Jenkins jobs below could not be directly attributed to a specific Gerrit project.
+
+**Note:** this table may change over time, as improvements are made to the matching heuristics.
+
+**Total unallocated Jenkins jobs:** 193
+
+| Jenkins job |
+|-------------|
+| bbsim_scale_test |
+| build_berlin-community-pod-1-gpon-adtran_1T8GEM_DT_voltha_master |
+| build_berlin-community-pod-1-gpon-adtran_1T8GEM_voltha_DT_master_test |
+| build_berlin-community-pod-1-gpon_1T8GEM_DT_voltha_master |
+| build_berlin-community-pod-1-gpon_1T8GEM_voltha_DT_master_test |
+| build_berlin-community-pod-1-gpon_TP_TT_voltha_master |
+| build_berlin-community-pod-1-gpon_TP_voltha_TT_master_test |
+| build_berlin-community-pod-1-multi-olt_1T8GEM_DT_voltha_master |
+| build_berlin-community-pod-1-multi-olt_1T8GEM_voltha_DT_master_test |
+| build_berlin-community-pod-2-gpon-zyxel_1T8GEM_DT_voltha_master |
+| build_berlin-community-pod-2-gpon-zyxel_1T8GEM_voltha_DT_master_test |
+| build_berlin-community-pod-2-xgspon-zyxel_1T8GEM_DT_voltha_master |
+| build_berlin-community-pod-2-xgspon-zyxel_1T8GEM_voltha_DT_master_test |
+| build_berlin-community-pod-2-xgspon-zyxel_TP_TT_voltha_master |
+| build_berlin-community-pod-2-xgspon-zyxel_TP_voltha_TT_master_test |
+| check_infrastructure |
+| docker-publish_bbsim |
+| docker-publish_bbsim-sadis-server |
+| docker-publish_ofagent-go |
+| docker-publish_voltha-docker-tools |
+| docker-publish_voltha-go |
+| docker-publish_voltha-go-controller |
+| docker-publish_voltha-onos |
+| docker-publish_voltha-openolt-adapter |
+| docker-publish_voltha-openonu-adapter-go |
+| github-release_bbsim |
+| github-release_voltctl |
+| helm-lint_voltha-helm-charts |
+| maven-publish_aaa |
+| maven-publish_bng |
+| maven-publish_dhcpl2relay |
+| maven-publish_igmpproxy |
+| maven-publish_kafka-onos |
+| maven-publish_mac-learning |
+| maven-publish_mcast |
+| maven-publish_olt |
+| maven-publish_pppoeagent |
+| maven-publish_sadis |
+| onos-app-release |
+| patchset-voltha-2.14-multiple-olts-openonu-go-test-bbsim |
+| patchset-voltha-2.14-openonu-go-test-bbsim |
+| patchset-voltha-multiple-olts-openonu-go-test-bbsim |
+| patchset-voltha-multiple-olts-pm-data-test-bbsim |
+| patchset-voltha-openonu-go-test-bbsim |
+| patchset-voltha-pm-data-test-bbsim |
+| periodic-software-upgrade-test-bbsim |
+| periodic-software-upgrade-test-bbsim-2.11 |
+| periodic-software-upgrade-test-bbsim-2.14 |
+| periodic-voltha-combined-vgc |
+| periodic-voltha-combined-vgc-multi-olt |
+| periodic-voltha-dt-fttb-test-bbsim-2.14 |
+| periodic-voltha-dt-fttb-test-bbsim-master |
+| periodic-voltha-dt-test-bbsim-2.14 |
+| periodic-voltha-dt-test-bbsim-master |
+| periodic-voltha-etcd-test |
+| periodic-voltha-etcd-test-2.14 |
+| periodic-voltha-memory-leak-test-bbsim |
+| periodic-voltha-memory-leak-test-bbsim-2.14 |
+| periodic-voltha-multi-uni-multiple-olts-test-bbsim |
+| periodic-voltha-multi-uni-multiple-olts-test-bbsim-2.14 |
+| periodic-voltha-multi-uni-test-bbsim |
+| periodic-voltha-multi-uni-test-bbsim-2.14 |
+| periodic-voltha-multiple-olts-openonu-go-test-bbsim |
+| periodic-voltha-multiple-olts-openonu-go-test-bbsim-2.14 |
+| periodic-voltha-multiple-olts-pm-data-test-bbsim |
+| periodic-voltha-multiple-olts-pm-data-test-bbsim-2.14 |
+| periodic-voltha-multiple-olts-test-bbsim |
+| periodic-voltha-multiple-olts-test-bbsim-2.14 |
+| periodic-voltha-openonu-go-test-bbsim |
+| periodic-voltha-openonu-go-test-bbsim-2.14 |
+| periodic-voltha-pm-data-test-bbsim |
+| periodic-voltha-pm-data-test-bbsim-2.14 |
+| periodic-voltha-sanity-test-multi-runs |
+| periodic-voltha-test-DMI |
+| periodic-voltha-test-DMI-2.14 |
+| periodic-voltha-test-bbsim |
+| periodic-voltha-test-bbsim-2.14 |
+| periodic-voltha-tim-multiple-olts-test-bbsim |
+| periodic-voltha-tt-maclearner-sanity-test-bbsim |
+| periodic-voltha-unitag-subscriber-tt-test-bbsim |
+| periodic-voltha-unitag-subscriber-tt-test-bbsim-2.14 |
+| publish-helm-repo_voltha-helm-charts |
+| pypi-publish_device-management-interface |
+| pypi-publish_voltha-protos |
+| sync-dir_voltha-docs |
+| tag-check_voltha-docs |
+| tag-check_voltha-helm-charts |
+| verify_aaa_licensed |
+| verify_aaa_maven-test |
+| verify_bbsim-sadis-server_licensed |
+| verify_bbsim-sadis-server_sanity-test |
+| verify_bbsim-sadis-server_sanity-test-voltha-2.14 |
+| verify_bbsim-sadis-server_unit-test |
+| verify_bbsim_licensed |
+| verify_bbsim_sanity-test |
+| verify_bbsim_sanity-test-voltha-2.14 |
+| verify_bbsim_unit-test |
+| verify_berlin-community-pod-1-gpon-adtran_Default_DT_voltha_master_dmi |
+| verify_bng_licensed |
+| verify_bng_maven-test |
+| verify_device-management-interface_licensed |
+| verify_device-management-interface_unit-test |
+| verify_dhcpl2relay_licensed |
+| verify_dhcpl2relay_maven-test |
+| verify_helm-repo-tools_licensed |
+| verify_helm-repo-tools_shellcheck |
+| verify_igmpproxy_licensed |
+| verify_igmpproxy_maven-test |
+| verify_kafka-onos_licensed |
+| verify_kafka-onos_maven-test |
+| verify_mac-learning_licensed |
+| verify_mac-learning_maven-test |
+| verify_mcast_licensed |
+| verify_mcast_maven-test |
+| verify_ofagent-go_licensed |
+| verify_ofagent-go_sanity-test |
+| verify_ofagent-go_sanity-test-voltha-2.14 |
+| verify_ofagent-go_unit-test |
+| verify_olt_licensed |
+| verify_olt_maven-test |
+| verify_omci-lib-go_licensed |
+| verify_omci-lib-go_unit-test |
+| verify_openolt_licensed |
+| verify_openolt_unit-test |
+| verify_pppoeagent_licensed |
+| verify_pppoeagent_maven-test |
+| verify_sadis_licensed |
+| verify_sadis_maven-test |
+| verify_voltctl_licensed |
+| verify_voltctl_sanity-test |
+| verify_voltctl_unit-test |
+| verify_voltha-docker-tools_licensed |
+| verify_voltha-docker-tools_unit-test |
+| verify_voltha-docs_licensed |
+| verify_voltha-docs_unit-test |
+| verify_voltha-go-controller_licensed |
+| verify_voltha-go-controller_unit-test |
+| verify_voltha-go_licensed |
+| verify_voltha-go_sanity-test |
+| verify_voltha-go_sanity-test-voltha-2.14 |
+| verify_voltha-go_unit-test-lint |
+| verify_voltha-go_unit-test-tests |
+| verify_voltha-helm-charts_licensed |
+| verify_voltha-helm-charts_sanity-test |
+| verify_voltha-helm-charts_sanity-test-voltha-2.14 |
+| verify_voltha-lib-go_licensed |
+| verify_voltha-lib-go_unit-test |
+| verify_voltha-onos_licensed |
+| verify_voltha-onos_sanity-test |
+| verify_voltha-onos_sanity-test-voltha-2.14 |
+| verify_voltha-onos_unit-test |
+| verify_voltha-openolt-adapter_licensed |
+| verify_voltha-openolt-adapter_sanity-test |
+| verify_voltha-openolt-adapter_sanity-test-voltha-2.14 |
+| verify_voltha-openolt-adapter_unit-test-lint |
+| verify_voltha-openolt-adapter_unit-test-tests |
+| verify_voltha-openonu-adapter-go_licensed |
+| verify_voltha-openonu-adapter-go_sanity-test |
+| verify_voltha-openonu-adapter-go_sanity-test-voltha-2.14 |
+| verify_voltha-openonu-adapter-go_unit-test-lint |
+| verify_voltha-openonu-adapter-go_unit-test-tests |
+| verify_voltha-protos_licensed |
+| verify_voltha-protos_unit-test |
+| verify_voltha-system-tests_licensed |
+| verify_voltha-system-tests_sanity-test |
+| verify_voltha-system-tests_sanity-test-py312 |
+| verify_voltha-system-tests_sanity-test-voltha-2.14 |
+| verify_voltha-system-tests_unit-test |
+| version-tag_voltha-docs |
+| version-tag_voltha-helm-charts |
+| version-tag_wildcard |
+| voltha-scale-measurements-2.14-10-stacks-2-16-32-dt-subscribers |
+| voltha-scale-measurements-2.14-10-stacks-2-16-32-tt-subscribers |
+| voltha-scale-measurements-lwc-dt-256 |
+| voltha-scale-measurements-lwc-dt-512 |
+| voltha-scale-measurements-master-1-64-63-dt-subscribers |
+| voltha-scale-measurements-master-1-64-63-tt-subscribers |
+| voltha-scale-measurements-master-10-stacks-2-16-32-att-subscribers |
+| voltha-scale-measurements-master-10-stacks-2-16-32-dt-subscribers |
+| voltha-scale-measurements-master-10-stacks-2-16-32-tt-subscribers |
+| voltha-scale-measurements-master-2-16-32-att-subscribers |
+| voltha-scale-measurements-master-2-16-32-dt-subscribers |
+| voltha-scale-measurements-master-2-16-32-tt-subscribers |
+| voltha-scale-measurements-master-2-16-32-tt-subscribers-maclearner |
+| voltha-scale-measurements-master-2-64-32-dt-subscribers |
+| voltha-scale-measurements-master-experimental |
+| voltha-scale-measurements-master-experimental-multi-stack |
+| voltha-scale-measurements-master-onu-upgrade-2-16-32-att-onus |
+| voltha-scale-measurements-patchset-1-16-32-att-subscribers |
+| voltha-scale-measurements-patchset-1-16-32-dt-subscribers |
+| voltha-scale-measurements-patchset-1-16-32-tt-subscribers |
+| voltha-scale-measurements-voltha-2.14-2-16-32-dt-subscribers |
+| voltha-scale-measurements-voltha-2.14-2-16-32-tt-subscribers |
+
+## 🏚️ Orphaned Jenkins Jobs
+
+**Total Orphaned Jobs:** 22
+
+These Jenkins jobs belong to archived or read-only Gerrit projects; audit them and consider removal.
+
+| Job Name | Gerrit Project |
+|----------|----------------|
+| voltha-scale-measurements-master-onu-upgrade-2-16-32-att-onus | voltha |
+| voltha-scale-measurements-master-experimental | voltha |
+| voltha-scale-measurements-voltha-2.14-2-16-32-dt-subscribers | voltha |
+| voltha-scale-measurements-master-10-stacks-2-16-32-tt-subscribers | voltha |
+| voltha-scale-measurements-master-2-16-32-dt-subscribers | voltha |
+| voltha-scale-measurements-master-1-64-63-dt-subscribers | voltha |
+| voltha-scale-measurements-lwc-dt-256 | voltha |
+| voltha-scale-measurements-lwc-dt-512 | voltha |
+| voltha-scale-measurements-master-10-stacks-2-16-32-att-subscribers | voltha |
+| voltha-scale-measurements-master-experimental-multi-stack | voltha |
+| voltha-scale-measurements-2.14-10-stacks-2-16-32-tt-subscribers | voltha |
+| voltha-scale-measurements-patchset-1-16-32-tt-subscribers | voltha |
+| voltha-scale-measurements-2.14-10-stacks-2-16-32-dt-subscribers | voltha |
+| voltha-scale-measurements-master-2-64-32-dt-subscribers | voltha |
+| voltha-scale-measurements-master-2-16-32-tt-subscribers-maclearner | voltha |
+| voltha-scale-measurements-voltha-2.14-2-16-32-tt-subscribers | voltha |
+| voltha-scale-measurements-patchset-1-16-32-dt-subscribers | voltha |
+| voltha-scale-measurements-master-2-16-32-att-subscribers | voltha |
+| voltha-scale-measurements-master-2-16-32-tt-subscribers | voltha |
+| voltha-scale-measurements-master-1-64-63-tt-subscribers | voltha |
+| voltha-scale-measurements-master-10-stacks-2-16-32-dt-subscribers | voltha |
+| voltha-scale-measurements-patchset-1-16-32-att-subscribers | voltha |
+
+**Recommendation:** review these jobs and remove them if they are no longer needed.
+
+
+Generated with ❤️ by Release Engineering
