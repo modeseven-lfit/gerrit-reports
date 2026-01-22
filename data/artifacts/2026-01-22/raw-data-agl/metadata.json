@@ -1,0 +1,14 @@
+{
+  "project": "AGL",
+  "slug": "agl",
+  "gerrit_server": "gerrit.automotivelinux.org",
+  "jenkins_server": "build.automotivelinux.org",
+  "github_org": "automotive-grade-linux",
+  "generated_at": "2026-01-22T07:21:18Z",
+  "workflow_run_id": "21239685093",
+  "workflow_run_number": "108",
+  "workflow_run_attempt": "1",
+  "git_sha": "a38cbc707cdb64c1057141ed97835df12cd30649",
+  "git_ref": "refs/heads/main",
+  "environment": "production"
+}
