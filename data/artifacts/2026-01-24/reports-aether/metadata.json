@@ -1,0 +1,14 @@
+{
+  "project": "Aether",
+  "slug": "aether",
+  "gerrit_server": "",
+  "jenkins_server": "jenkins.aetherproject.org",
+  "github_org": "opennetworkinglab",
+  "generated_at":     "2026-01-24T10:31:14Z",
+  "workflow_run_id": "21313712148",
+  "workflow_run_number": "122",
+  "workflow_run_attempt": "1",
+  "git_sha": "297bc48d442c99028a8a637e250ed91c9ec1c0f7",
+  "git_ref": "refs/heads/main",
+  "environment": "production"
+}
