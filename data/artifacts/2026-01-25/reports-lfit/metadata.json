@@ -1,0 +1,14 @@
+{
+  "project": "Linux Foundation",
+  "slug": "lfit",
+  "gerrit_server": "gerrit.linuxfoundation.org",
+  "jenkins_server": "",
+  "github_org": "",
+  "generated_at":     "2026-01-25T07:15:55Z",
+  "workflow_run_id": "21328805324",
+  "workflow_run_number": "123",
+  "workflow_run_attempt": "1",
+  "git_sha": "297bc48d442c99028a8a637e250ed91c9ec1c0f7",
+  "git_ref": "refs/heads/main",
+  "environment": "production"
+}

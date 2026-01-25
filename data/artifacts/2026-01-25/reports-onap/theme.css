@@ -1,0 +1,1021 @@
+/*
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: 2025 The Linux Foundation
+*/
+
+/**
+ * Default Theme for Repository Reporting System
+ *
+ * A professional, modern light theme with excellent accessibility
+ * and responsive design.
+ *
+ * Features:
+ * - CSS custom properties for easy customization
+ * - WCAG AA compliant color contrast
+ * - Mobile-first responsive design
+ * - Print-friendly styles
+ * - Semantic HTML5 support
+ */
+
+/* ============================================================================
+   CSS Custom Properties (Variables)
+   ========================================================================== */
+
+:root {
+    /* Color Palette */
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --info-color: #3b82f6;
+
+    /* Background Colors */
+    --background: #ffffff;
+    --surface: #f9fafb;
+    --surface-hover: #f3f4f6;
+    --surface-alt: #e5e7eb;
+
+    /* Text Colors */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-tertiary: #9ca3af;
+    --text-inverse: #ffffff;
+
+    /* Border Colors */
+    --border-color: #e5e7eb;
+    --border-color-dark: #d1d5db;
+    --border-color-light: #f3f4f6;
+
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                   Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code',
+                        'Roboto Mono', Consolas, 'Courier New', monospace;
+    /* Typography */
+    --font-size-base: 16px;
+    --font-size-sm: 0.875rem;
+    --font-size-xs: 0.75rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-h1: 2em;
+    --font-size-h2: 1.5em;
+    --font-size-h3: 1.17em;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1.125rem;
+    --font-size-h6: 1rem;
+    --line-height-base: 1.6;
+    --line-height-tight: 1.4;
+    --line-height-relaxed: 1.8;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+
+    /* Layout */
+    --border-radius: 0.5rem;
+    --border-radius-sm: 0.25rem;
+    --border-radius-lg: 0.75rem;
+    --max-content-width: 1600px;
+    --container-padding: var(--spacing-lg);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 300ms ease;
+}
+
+/* ============================================================================
+   Base Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-primary);
+    background: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================================================
+   Accessibility
+   ========================================================================== */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* ============================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+code, pre {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+}
+
+code {
+    background: var(--surface);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+}
+
+pre {
+    background: var(--surface);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ============================================================================
+   Page Header
+   ========================================================================== */
+
+.page-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.page-header h1 {
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--text-primary);
+}
+
+.page-header .metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.page-header .metadata p {
+    margin: 0;
+}
+
+.page-header .metadata strong {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ============================================================================
+   Report Sections
+   ========================================================================== */
+
+.report-section {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.report-section h2 {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-2xl);
+}
+
+/* ============================================================================
+   Table of Contents
+   ========================================================================== */
+
+.toc {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.toc h2 {
+    color: var(--text-primary);
+    font-size: var(--font-size-xl);
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-item {
+    margin-bottom: var(--spacing-sm);
+}
+
+.toc-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toc-link:hover {
+    background-color: var(--surface-hover);
+    color: var(--primary-hover);
+}
+
+.toc-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ============================================================================
+   Statistics Grid
+   ========================================================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.stat-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-lg) 0;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    font-size: 0.9em;
+}
+
+thead {
+    background: var(--surface);
+}
+
+th {
+    padding: var(--spacing-sm);
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color-dark);
+}
+
+td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+tbody tr:hover {
+    background: var(--surface-hover);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================================================
+   Badges
+   ========================================================================== */
+
+.badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-success {
+    background: var(--success-color);
+    color: var(--text-inverse);
+}
+
+.badge-warning {
+    background: var(--warning-color);
+    color: var(--text-primary);
+}
+
+.badge-error {
+    background: var(--error-color);
+    color: var(--text-inverse);
+}
+
+.badge-info {
+    background: var(--info-color);
+    color: var(--text-inverse);
+}
+
+.badge-default {
+    background: var(--surface-alt);
+    color: var(--text-primary);
+}
+
+/* ============================================================================
+   Page Footer
+   ========================================================================== */
+
+.page-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-3xl);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.page-footer p {
+    margin: var(--spacing-sm) 0;
+}
+
+.page-footer strong {
+    color: var(--text-primary);
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 1.75em;
+        --font-size-h2: 1.35em;
+        --font-size-h3: 1.1em;
+        --container-padding: var(--spacing-md);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header .metadata {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    table {
+        font-size: var(--font-size-sm);
+    }
+
+    th, td {
+        padding: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 14px;
+        --container-padding: var(--spacing-sm);
+    }
+}
+
+/* ============================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+
+    h1 { font-size: 18pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+
+    .no-print,
+    .skip-link,
+    .page-footer {
+        display: none !important;
+    }
+
+    .page-header {
+        border-bottom: 2px solid black;
+        padding-bottom: 10pt;
+        margin-bottom: 20pt;
+    }
+
+    table {
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+    }
+}
+
+/* ============================================================================
+   Utility Classes
+   ========================================================================== */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-success { color: var(--success-color); }
+.text-warning { color: var(--warning-color); }
+.text-error { color: var(--error-color); }
+
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.p-0 { padding: 0; }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* ============================================================================
+   CI/CD Job Status Colors
+   ========================================================================== */
+
+/* Status color variables for consistency */
+:root {
+    --status-success: #10b981;      /* Green - passing */
+    --status-failure: #ef4444;      /* Red - failing */
+    --status-warning: #f59e0b;      /* Orange/Yellow - unstable */
+    --status-disabled: #9ca3af;     /* Gray - disabled */
+    --status-unknown: #6b7280;      /* Gray - never run/unknown */
+    --status-building: #3b82f6;     /* Blue - in progress */
+    --status-aborted: #8b5cf6;      /* Purple - aborted */
+}
+
+/* GitHub Workflows and Jenkins Jobs - base link styles */
+.cicd-jobs-table .github-workflows a,
+.cicd-jobs-table .jenkins-jobs a {
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+    font-weight: var(--font-weight-medium);
+}
+
+.cicd-jobs-table .github-workflows a:hover,
+.cicd-jobs-table .jenkins-jobs a:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+
+/* Success/Passing - Green */
+.cicd-jobs-table .status-success {
+    color: var(--status-success);
+}
+
+/* Failure/Failed - Red */
+.cicd-jobs-table .status-failure {
+    color: var(--status-failure);
+}
+
+/* Warning/Unstable - Orange/Yellow */
+.cicd-jobs-table .status-warning {
+    color: var(--status-warning);
+}
+
+/* Disabled - Gray */
+.cicd-jobs-table .status-disabled {
+    color: var(--status-disabled);
+}
+
+/* Unknown/Never Run - Gray */
+.cicd-jobs-table .status-unknown,
+.cicd-jobs-table .status-no-runs {
+    color: var(--status-unknown);
+}
+
+/* Building/In Progress - Blue */
+.cicd-jobs-table .status-building,
+.cicd-jobs-table .status-in-progress {
+    color: var(--status-building);
+}
+
+/* Aborted - Purple */
+.cicd-jobs-table .status-aborted {
+    color: var(--status-aborted);
+}
+
+/* Ensure visited links maintain their status color */
+.cicd-jobs-table .github-workflows a:visited .status-success { color: var(--status-success); }
+.cicd-jobs-table .github-workflows a:visited .status-failure { color: var(--status-failure); }
+.cicd-jobs-table .github-workflows a:visited .status-warning { color: var(--status-warning); }
+.cicd-jobs-table .github-workflows a:visited .status-disabled { color: var(--status-disabled); }
+.cicd-jobs-table .github-workflows a:visited .status-unknown { color: var(--status-unknown); }
+.cicd-jobs-table .github-workflows a:visited .status-no-runs { color: var(--status-unknown); }
+.cicd-jobs-table .github-workflows a:visited .status-building { color: var(--status-building); }
+.cicd-jobs-table .github-workflows a:visited .status-in-progress { color: var(--status-building); }
+.cicd-jobs-table .github-workflows a:visited .status-aborted { color: var(--status-aborted); }
+
+.cicd-jobs-table .jenkins-jobs a:visited .status-success { color: var(--status-success); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-failure { color: var(--status-failure); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-warning { color: var(--status-warning); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-disabled { color: var(--status-disabled); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-unknown { color: var(--status-unknown); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-no-runs { color: var(--status-unknown); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-building { color: var(--status-building); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-in-progress { color: var(--status-building); }
+.cicd-jobs-table .jenkins-jobs a:visited .status-aborted { color: var(--status-aborted); }
+
+/* Unattributed Jobs Table - Status Colors */
+.unattributed-jobs-table a {
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+    font-weight: var(--font-weight-medium);
+}
+
+.unattributed-jobs-table a:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+
+/* Success/Passing - Green */
+.unattributed-jobs-table .status-success {
+    color: var(--status-success);
+}
+
+/* Failure/Failed - Red */
+.unattributed-jobs-table .status-failure {
+    color: var(--status-failure);
+}
+
+/* Warning/Unstable - Yellow */
+.unattributed-jobs-table .status-warning {
+    color: var(--status-warning);
+}
+
+/* Disabled - Gray */
+.unattributed-jobs-table .status-disabled {
+    color: var(--status-disabled);
+}
+
+/* Unknown/Not Built - Gray */
+.unattributed-jobs-table .status-unknown {
+    color: var(--status-unknown);
+}
+
+/* Building/In Progress - Blue */
+.unattributed-jobs-table .status-building {
+    color: var(--status-building);
+}
+
+/* Aborted - Purple */
+.unattributed-jobs-table .status-aborted {
+    color: var(--status-aborted);
+}
+
+/* Ensure visited links maintain their status color */
+.unattributed-jobs-table a:visited .status-success { color: var(--status-success); }
+.unattributed-jobs-table a:visited .status-failure { color: var(--status-failure); }
+.unattributed-jobs-table a:visited .status-warning { color: var(--status-warning); }
+.unattributed-jobs-table a:visited .status-disabled { color: var(--status-disabled); }
+.unattributed-jobs-table a:visited .status-unknown { color: var(--status-unknown); }
+.unattributed-jobs-table a:visited .status-building { color: var(--status-building); }
+.unattributed-jobs-table a:visited .status-aborted { color: var(--status-aborted); }
+
+/* Print-friendly: use text indicators for status */
+@media print {
+    .status-success::after { content: " [✓]"; }
+    .status-failure::after { content: " [✗]"; }
+    .status-warning::after { content: " [!]"; }
+    .status-disabled::after { content: " [disabled]"; }
+    .status-unknown::after { content: " [?]"; }
+    .status-building::after { content: " [building]"; }
+    .status-aborted::after { content: " [aborted]"; }
+}
+
+/* ============================================================================
+   DataTables Integration Styles
+   ========================================================================== */
+
+/* DataTables wrapper - overall container */
+.dataTable-wrapper {
+    margin: 1.5em 0;
+    font-size: var(--font-size-base);
+}
+
+/* DataTables top section (search and per-page selector) */
+.dataTable-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* DataTables bottom section (info and pagination) */
+.dataTable-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Search input container */
+.dataTable-search {
+    flex: 1 1 auto;
+    min-width: 200px;
+}
+
+.dataTable-search input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    background-color: var(--background);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dataTable-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.dataTable-search input::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* Per-page selector */
+.dataTable-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dataTable-dropdown label {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+}
+
+.dataTable-selector {
+    flex-shrink: 0;
+}
+
+.dataTable-selector select {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    background-color: var(--background);
+    color: var(--text-primary);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dataTable-selector select:hover {
+    border-color: var(--border-color-dark);
+}
+
+.dataTable-selector select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Info text (showing X to Y of Z entries) */
+.dataTable-info {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* Pagination container */
+.dataTable-pagination {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.dataTable-pagination ul {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dataTable-pagination li {
+    display: inline-block;
+}
+
+.dataTable-pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.dataTable-pagination a:hover:not(.active):not(.disabled) {
+    background-color: var(--surface-hover);
+    border-color: var(--border-color-dark);
+}
+
+.dataTable-pagination a.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-inverse);
+    cursor: default;
+}
+
+.dataTable-pagination a.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Sorting indicators */
+.dataTable-sorter {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dataTable-sorter::before,
+.dataTable-sorter::after {
+    content: "";
+    position: absolute;
+    right: 0.5rem;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    opacity: 0.3;
+}
+
+.dataTable-sorter::before {
+    bottom: 50%;
+    margin-bottom: 3px;
+    border-bottom: 4px solid var(--text-secondary);
+}
+
+.dataTable-sorter::after {
+    top: 50%;
+    margin-top: 3px;
+    border-top: 4px solid var(--text-secondary);
+}
+
+.dataTable-sorter:hover::before,
+.dataTable-sorter:hover::after {
+    opacity: 0.6;
+}
+
+.dataTable-ascending .dataTable-sorter::before {
+    opacity: 1;
+    border-bottom-color: var(--primary-color);
+}
+
+.dataTable-descending .dataTable-sorter::after {
+    opacity: 1;
+    border-top-color: var(--primary-color);
+}
+
+/* Empty state */
+.dataTable-empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Loading state */
+.dataTable-loading {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .dataTable-top,
+    .dataTable-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dataTable-search input {
+        max-width: none;
+    }
+
+    .dataTable-dropdown {
+        justify-content: space-between;
+    }
+
+    .dataTable-pagination {
+        justify-content: center;
+    }
+
+    .dataTable-info {
+        text-align: center;
+    }
+}
+
+/* Print styles - hide DataTables controls */
+@media print {
+    .dataTable-top,
+    .dataTable-bottom {
+        display: none !important;
+    }
+
+    .dataTable-wrapper table {
+        page-break-inside: avoid;
+    }
+}
