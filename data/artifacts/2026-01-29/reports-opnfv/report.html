@@ -1,0 +1,2741 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Repository Reporting System">
+    <meta name="theme" content="default">
+    <title>OPNFV - GitHub Project Analysis Report</title><link rel="stylesheet" href="theme.css">    <!-- Simple-DataTables CSS -->
+<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+<style>
+        @media print {
+            .no-print { display: none; }
+            body { font-size: 10pt; }
+        }
+    </style>
+</head>
+<body><a href="#main-content" class="skip-link">Skip to main content</a><header class="page-header">
+        <div class="container">
+            <h1>📊 GitHub Project Analysis Report: OPNFV</h1>
+            <div class="metadata">
+                <p class="generated-at">
+                    <strong>Generated:</strong>
+                    <time datetime="2026-01-29T07:35:45.342657+00:00">2026-01-29 07:35:45 UTC</time>
+                </p>
+                <p class="schema-version">
+                    <strong>Schema Version:</strong> 1.5.0
+                </p>
+            </div>
+        </div>
+    </header><main id="main-content" class="container"><nav id="table-of-contents" class="toc report-section">
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+        <li class="toc-item">
+            <a href="#summary" class="toc-link">Global Summary</a>
+        </li>
+        <li class="toc-item">
+            <a href="#repositories" class="toc-link">Gerrit Projects</a>
+        </li>
+        <li class="toc-item">
+            <a href="#contributors" class="toc-link">Top Contributors</a>
+        </li>
+        <li class="toc-item">
+            <a href="#organizations" class="toc-link">Top Organizations</a>
+        </li>
+        <li class="toc-item">
+            <a href="#features" class="toc-link">Repository Feature Matrix</a>
+        </li>
+        <li class="toc-item">
+            <a href="#workflows" class="toc-link">Deployed CI/CD Jobs</a>
+        </li>
+    </ul>
+</nav>
+<section id="summary" class="report-section summary-section">
+    <h2>📈 Global Summary</h2>
+
+    <p><strong>✅ Current</strong> commits within last 365 days</p>
+    <p><strong>☑️ Active</strong> commits between 365-1095 days</p>
+    <p><strong>🛑 Inactive</strong> no commits in 1095+ days</p>
+
+    <table class="no-search no-pagination">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Count</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Repositories</td>
+                <td>69</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Current Repositories</td>
+                <td>4</td>
+                <td>5.8%</td>
+            </tr>
+            <tr>
+                <td>Active Repositories</td>
+                <td>6</td>
+                <td>8.7%</td>
+            </tr>
+            <tr>
+                <td>Inactive Repositories</td>
+                <td>58</td>
+                <td>84.1%</td>
+            </tr>
+            <tr>
+                <td>No Apparent Commits</td>
+                <td>1</td>
+                <td>1.4%</td>
+            </tr>
+            <tr>
+                <td>Total Commits</td>
+                <td>50.0K</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Total Lines of Code</td>
+                <td>-39.3K</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="organizations" class="report-section organizations-section">
+    <h2>🏢 Top Organizations</h2>
+
+    <p>The data presented in the table below covers the past 365 days.</p>
+
+    <p><strong>Organizations Found:</strong> 143</p>
+
+    <table class="dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Organization</th>
+                <th>Contributors</th>
+                <th>Commits</th>
+                <th>LOC+</th>
+                <th>LOC−</th>
+                <th>LOCΔ</th>
+                <th>LOC±</th>
+                <th>LOC/Commit</th>
+                <th>Repos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>orange.com</td>
+                <td>30</td>
+                <td>132</td>
+                <td>+1236</td>
+                <td>+6163</td>
+                <td>-4927</td>
+                <td>7399</td>
+                <td>-37</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>126.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>163.com</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>6wind.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ac.in</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>acksyn.org</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>advaoptical.com</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>amdocs.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>apache.org</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>arm.com</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>art.pl</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>att.com</td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>bigswitch.com</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>bramwell.net</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>cablelabs.com</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>camptocamp.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>canonical.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>cavium.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>celebdor.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>cengn.ca</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>cgoncalves.pt</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>chenapan.org</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>chinamobile.com</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>cisco.com</td>
+                <td>23</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>cloudbasesolutions.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>co.jp</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>co.uk</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>cojot.name</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>consultron.com</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>coolsvap.net</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="contributors" class="report-section contributors-section">
+    <h2>👥 Top Contributors</h2>
+
+    <p>The data presented in the table below covers the past 365 days.</p>
+
+    <p><strong>Contributors Found:</strong> 787</p>
+
+    <table class="dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Contributor</th>
+                <th>Commits</th>
+                <th>LOC+</th>
+                <th>LOC−</th>
+                <th>LOCΔ</th>
+                <th>LOC±</th>
+                <th>LOC/Commit</th>
+                <th>Repos</th>
+                <th>Org</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Cédric Ollivier</td>
+                <td>132</td>
+                <td>+1236</td>
+                <td>+6163</td>
+                <td>-4927</td>
+                <td>7399</td>
+                <td>-37</td>
+                <td>21</td>
+                <td>orange.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>00184532</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+                <td>zte.com.cn</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ARYAN</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>AakashKT</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>ac.in</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Aaron Smith</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+                <td>redhat.com</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Abdul Halim</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>intel.com</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Abhijit Sinha</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>intel.com</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Adam Hassick</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>unh.edu</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Adam LeBlanc</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>unh.edu</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Adam Young</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>redhat.com</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Ade Lee</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>redhat.com</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Aditya Srivastava</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Aditya Vaja</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Aihua Li</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>huawei.com</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Aimee Ukasick</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>6</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Ajay Kumar</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>orange.com</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Akhila Kishore</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>intel.com</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Al Morton</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>att.com</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Alan Bishop</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>dell.com</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Alan Bishop</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>redhat.com</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Alassane Samba</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>orange.com</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Alejandro Andreu</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>openmailbox.org</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Alex Schultz</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>redhat.com</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Alex Schultz</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>mirantis.com</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Alex Yang</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>6</td>
+                <td>zte.com.cn</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Alexander Komarov</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>intel.com</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Alexandru Avadanii</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+                <td>enea.com</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>Alexandru Nemes</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+                <td>enea.com</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>Alexis Lee</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>hp.com</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>Allison Randal</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>lohutok.net</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="repositories" class="report-section repositories-section">
+    <h2>📊 Repositories</h2>
+
+    <p>All data in this table represents all-time/current repository statistics, not time-bound metrics.</p>
+
+    <table class="dt-enabled">
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Commits</th>
+                <th>LOC</th>
+                <th>Contributors</th>
+                <th>Days Inactive</th>
+                <th>Last Commit Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/opnfvdocs" target="_blank">opnfvdocs</a>
+                </td>
+                <td>10785</td>
+                <td>4639</td>
+                <td>0</td>
+                <td>580</td>
+                <td>2024-06-27</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng" target="_blank">releng</a>
+                </td>
+                <td>8549</td>
+                <td>18244</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2026-01-26</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/apex-tripleo-heat-templates" target="_blank">apex-tripleo-heat-templates</a>
+                </td>
+                <td>5611</td>
+                <td>77667</td>
+                <td>0</td>
+                <td>2847</td>
+                <td>2018-04-13</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/functest" target="_blank">functest</a>
+                </td>
+                <td>4478</td>
+                <td>50130</td>
+                <td>1</td>
+                <td>106</td>
+                <td>2025-10-14</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/functest-xtesting" target="_blank">functest-xtesting</a>
+                </td>
+                <td>3454</td>
+                <td>7255</td>
+                <td>1</td>
+                <td>293</td>
+                <td>2025-04-10</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/fuel" target="_blank">fuel</a>
+                </td>
+                <td>1951</td>
+                <td>18803</td>
+                <td>0</td>
+                <td>2050</td>
+                <td>2020-06-18</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/apex-puppet-tripleo" target="_blank">apex-puppet-tripleo</a>
+                </td>
+                <td>1580</td>
+                <td>33848</td>
+                <td>0</td>
+                <td>2846</td>
+                <td>2018-04-14</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/apex" target="_blank">apex</a>
+                </td>
+                <td>1413</td>
+                <td>22335</td>
+                <td>0</td>
+                <td>2465</td>
+                <td>2019-04-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/qtip" target="_blank">qtip</a>
+                </td>
+                <td>1151</td>
+                <td>126344</td>
+                <td>0</td>
+                <td>2802</td>
+                <td>2018-05-28</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng-xci" target="_blank">releng-xci</a>
+                </td>
+                <td>928</td>
+                <td>11929</td>
+                <td>0</td>
+                <td>2339</td>
+                <td>2019-09-03</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/vineperf" target="_blank">vineperf</a>
+                </td>
+                <td>901</td>
+                <td>111962</td>
+                <td>0</td>
+                <td>1121</td>
+                <td>2023-01-03</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng-testresults" target="_blank">releng-testresults</a>
+                </td>
+                <td>867</td>
+                <td>150372</td>
+                <td>0</td>
+                <td>1765</td>
+                <td>2021-03-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/moon" target="_blank">moon</a>
+                </td>
+                <td>792</td>
+                <td>308818</td>
+                <td>0</td>
+                <td>2065</td>
+                <td>2020-06-03</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/dovetail" target="_blank">dovetail</a>
+                </td>
+                <td>721</td>
+                <td>30624</td>
+                <td>0</td>
+                <td>2185</td>
+                <td>2020-02-04</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/samplevnf" target="_blank">samplevnf</a>
+                </td>
+                <td>571</td>
+                <td>207226</td>
+                <td>0</td>
+                <td>429</td>
+                <td>2024-11-25</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/barometer" target="_blank">barometer</a>
+                </td>
+                <td>563</td>
+                <td>259270</td>
+                <td>0</td>
+                <td>1273</td>
+                <td>2022-08-04</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/bottlenecks" target="_blank">bottlenecks</a>
+                </td>
+                <td>523</td>
+                <td>49757</td>
+                <td>0</td>
+                <td>2281</td>
+                <td>2019-11-01</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/laas" target="_blank">laas</a>
+                </td>
+                <td>484</td>
+                <td>55</td>
+                <td>0</td>
+                <td>826</td>
+                <td>2023-10-26</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/pharos" target="_blank">pharos</a>
+                </td>
+                <td>465</td>
+                <td>19228</td>
+                <td>0</td>
+                <td>2199</td>
+                <td>2020-01-21</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/doctor" target="_blank">doctor</a>
+                </td>
+                <td>447</td>
+                <td>12854</td>
+                <td>0</td>
+                <td>1933</td>
+                <td>2020-10-13</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/functest-kubernetes" target="_blank">functest-kubernetes</a>
+                </td>
+                <td>419</td>
+                <td>5234</td>
+                <td>1</td>
+                <td>84</td>
+                <td>2025-11-05</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/nfvbench" target="_blank">nfvbench</a>
+                </td>
+                <td>328</td>
+                <td>103927</td>
+                <td>0</td>
+                <td>1118</td>
+                <td>2023-01-06</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/storperf" target="_blank">storperf</a>
+                </td>
+                <td>313</td>
+                <td>32829</td>
+                <td>0</td>
+                <td>2185</td>
+                <td>2020-02-04</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/parser" target="_blank">parser</a>
+                </td>
+                <td>308</td>
+                <td>71548</td>
+                <td>0</td>
+                <td>2393</td>
+                <td>2019-07-11</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/ipv6" target="_blank">ipv6</a>
+                </td>
+                <td>235</td>
+                <td>8805</td>
+                <td>0</td>
+                <td>2406</td>
+                <td>2019-06-28</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/models" target="_blank">models</a>
+                </td>
+                <td>227</td>
+                <td>13252</td>
+                <td>0</td>
+                <td>2739</td>
+                <td>2018-07-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/apex-os-net-config" target="_blank">apex-os-net-config</a>
+                </td>
+                <td>225</td>
+                <td>10456</td>
+                <td>0</td>
+                <td>3039</td>
+                <td>2017-10-03</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/calipso" target="_blank">calipso</a>
+                </td>
+                <td>206</td>
+                <td>46366</td>
+                <td>0</td>
+                <td>2640</td>
+                <td>2018-11-06</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/container4nfv" target="_blank">container4nfv</a>
+                </td>
+                <td>204</td>
+                <td>11183</td>
+                <td>0</td>
+                <td>2234</td>
+                <td>2019-12-17</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/clover" target="_blank">clover</a>
+                </td>
+                <td>188</td>
+                <td>40502</td>
+                <td>0</td>
+                <td>2305</td>
+                <td>2019-10-07</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/airship" target="_blank">airship</a>
+                </td>
+                <td>116</td>
+                <td>30228</td>
+                <td>0</td>
+                <td>1667</td>
+                <td>2021-07-06</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/kuberef" target="_blank">kuberef</a>
+                </td>
+                <td>114</td>
+                <td>5860</td>
+                <td>0</td>
+                <td>1080</td>
+                <td>2023-02-13</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/dovetail-webportal" target="_blank">dovetail-webportal</a>
+                </td>
+                <td>105</td>
+                <td>36012</td>
+                <td>0</td>
+                <td>1927</td>
+                <td>2020-10-20</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng-anteater" target="_blank">releng-anteater</a>
+                </td>
+                <td>99</td>
+                <td>3131</td>
+                <td>0</td>
+                <td>2700</td>
+                <td>2018-09-07</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/domino" target="_blank">domino</a>
+                </td>
+                <td>94</td>
+                <td>11791</td>
+                <td>0</td>
+                <td>2917</td>
+                <td>2018-02-02</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/fds" target="_blank">fds</a>
+                </td>
+                <td>87</td>
+                <td>15730</td>
+                <td>0</td>
+                <td>2689</td>
+                <td>2018-09-18</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/ovsnfv" target="_blank">ovsnfv</a>
+                </td>
+                <td>86</td>
+                <td>3878</td>
+                <td>0</td>
+                <td>3075</td>
+                <td>2017-08-28</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/stor4nfv" target="_blank">stor4nfv</a>
+                </td>
+                <td>56</td>
+                <td>4729</td>
+                <td>0</td>
+                <td>2459</td>
+                <td>2019-05-07</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng-utils" target="_blank">releng-utils</a>
+                </td>
+                <td>46</td>
+                <td>1868</td>
+                <td>0</td>
+                <td>2956</td>
+                <td>2017-12-25</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/opera" target="_blank">opera</a>
+                </td>
+                <td>41</td>
+                <td>2100</td>
+                <td>0</td>
+                <td>2917</td>
+                <td>2018-02-02</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/releng-xci-scenarios" target="_blank">releng-xci-scenarios</a>
+                </td>
+                <td>34</td>
+                <td>2956</td>
+                <td>0</td>
+                <td>2342</td>
+                <td>2019-08-31</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cirv-sdv" target="_blank">cirv-sdv</a>
+                </td>
+                <td>32</td>
+                <td>17724</td>
+                <td>0</td>
+                <td>1508</td>
+                <td>2021-12-13</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/laas-reflab" target="_blank">laas-reflab</a>
+                </td>
+                <td>30</td>
+                <td>12208</td>
+                <td>0</td>
+                <td>2302</td>
+                <td>2019-10-10</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cirv" target="_blank">cirv</a>
+                </td>
+                <td>23</td>
+                <td>156</td>
+                <td>0</td>
+                <td>1630</td>
+                <td>2021-08-12</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/thoth" target="_blank">thoth</a>
+                </td>
+                <td>22</td>
+                <td>14007</td>
+                <td>0</td>
+                <td>980</td>
+                <td>2023-05-24</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/edgecloud" target="_blank">edgecloud</a>
+                </td>
+                <td>15</td>
+                <td>1096</td>
+                <td>0</td>
+                <td>2252</td>
+                <td>2019-11-29</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/sandbox" target="_blank">sandbox</a>
+                </td>
+                <td>15</td>
+                <td>401</td>
+                <td>0</td>
+                <td>2945</td>
+                <td>2018-01-05</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/enfv" target="_blank">enfv</a>
+                </td>
+                <td>14</td>
+                <td>327</td>
+                <td>0</td>
+                <td>3583</td>
+                <td>2016-04-07</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/securityscanning" target="_blank">securityscanning</a>
+                </td>
+                <td>14</td>
+                <td>702</td>
+                <td>0</td>
+                <td>3135</td>
+                <td>2017-06-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cirv-hdv" target="_blank">cirv-hdv</a>
+                </td>
+                <td>13</td>
+                <td>7000</td>
+                <td>0</td>
+                <td>1898</td>
+                <td>2020-11-18</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cran" target="_blank">cran</a>
+                </td>
+                <td>12</td>
+                <td>18406</td>
+                <td>0</td>
+                <td>2458</td>
+                <td>2019-05-07</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/orchestra" target="_blank">orchestra</a>
+                </td>
+                <td>11</td>
+                <td>2277</td>
+                <td>0</td>
+                <td>2689</td>
+                <td>2018-09-18</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/conductor" target="_blank">conductor</a>
+                </td>
+                <td>8</td>
+                <td>263</td>
+                <td>0</td>
+                <td>3676</td>
+                <td>2016-01-06</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/test" target="_blank">test</a>
+                </td>
+                <td>8</td>
+                <td>48</td>
+                <td>0</td>
+                <td>2451</td>
+                <td>2019-05-14</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/puppet-barometer" target="_blank">puppet-barometer</a>
+                </td>
+                <td>6</td>
+                <td>4759</td>
+                <td>0</td>
+                <td>2739</td>
+                <td>2018-07-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/sandbox-zuul-config" target="_blank">sandbox-zuul-config</a>
+                </td>
+                <td>5</td>
+                <td>73</td>
+                <td>0</td>
+                <td>2836</td>
+                <td>2018-04-24</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/sandbox-zuul-untrusted" target="_blank">sandbox-zuul-untrusted</a>
+                </td>
+                <td>5</td>
+                <td>6</td>
+                <td>0</td>
+                <td>2836</td>
+                <td>2018-04-24</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/test/test1" target="_blank">test/test1</a>
+                </td>
+                <td>5</td>
+                <td>7</td>
+                <td>0</td>
+                <td>2253</td>
+                <td>2019-11-28</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/infra" target="_blank">infra</a>
+                </td>
+                <td>4</td>
+                <td>5869</td>
+                <td>0</td>
+                <td>2980</td>
+                <td>2017-12-01</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/.github" target="_blank">.github</a>
+                </td>
+                <td>3</td>
+                <td>334</td>
+                <td>0</td>
+                <td>869</td>
+                <td>2023-09-12</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/rocket" target="_blank">rocket</a>
+                </td>
+                <td>3</td>
+                <td>244</td>
+                <td>0</td>
+                <td>2238</td>
+                <td>2019-12-13</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/opnfvtsc" target="_blank">opnfvtsc</a>
+                </td>
+                <td>2</td>
+                <td>17</td>
+                <td>0</td>
+                <td>2834</td>
+                <td>2018-04-26</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/policytest" target="_blank">policytest</a>
+                </td>
+                <td>2</td>
+                <td>35</td>
+                <td>0</td>
+                <td>3786</td>
+                <td>2015-09-17</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/test2" target="_blank">test2</a>
+                </td>
+                <td>2</td>
+                <td>5</td>
+                <td>0</td>
+                <td>2560</td>
+                <td>2019-01-25</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cirv-rapid" target="_blank">cirv-rapid</a>
+                </td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2122</td>
+                <td>2020-04-08</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/cirv-spirent" target="_blank">cirv-spirent</a>
+                </td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2232</td>
+                <td>2019-12-20</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/functest-requirements" target="_blank">functest-requirements</a>
+                </td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2963</td>
+                <td>2017-12-18</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.opnfv.org/spark-model-runner" target="_blank">spark-model-runner</a>
+                </td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2372</td>
+                <td>2019-08-01</td>
+                <td>🛑</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Total:</strong> 68 repositories</p>
+
+</section>
+<section id="features" class="report-section features-section">
+    <h2>🔧 Gerrit Project Feature Matrix</h2>
+
+    <table class="dt-enabled dt-no-search dt-no-pagination feature-matrix-table">
+        <thead>
+            <tr>
+                <th>Gerrit Project</th>
+                <th>Primary Type</th>
+                <th>Other Types</th>
+                <th>Dependabot</th>
+                <th>Pre-commit</th>
+                <th>ReadTheDocs</th>
+                <th>.gitreview</th>
+                <th>G2G</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>test/test</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>test/test1</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>apex-os-net-config</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>.github</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>cirv</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>apex</td>
+                <td>Python</td>
+                <td>Shell<br>D</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>cirv-rapid</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>cirv-hdv</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>cirv-spirent</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>calipso</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>apex-puppet-tripleo</td>
+                <td>Ruby</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>conductor</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>bottlenecks</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>airship</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>apex-tripleo-heat-templates</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>cirv-sdv</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>domino</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>doctor</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>edgecloud</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>enfv</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>barometer</td>
+                <td>Go</td>
+                <td>Python<br>Shell<br>C<br>Ruby</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>dovetail</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>container4nfv</td>
+                <td>Shell</td>
+                <td>Python<br>Go</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>cran</td>
+                <td>Python</td>
+                <td>Shell<br>C</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>dovetail-webportal</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>D<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>functest-requirements</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>clover</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>Go<br>C<br>Scala<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>functest-kubernetes</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>D<br>HTML</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>fds</td>
+                <td>Python</td>
+                <td>Shell<br>Robot Framework</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>ipv6</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>laas</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>infra</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>functest-xtesting</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>Robot Framework<br>D<br>HTML</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>laas-reflab</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>kuberef</td>
+                <td>Shell</td>
+                <td>Python<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>models</td>
+                <td>Shell</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>opera</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>opnfvtsc</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>nfvbench</td>
+                <td>Python</td>
+                <td>Shell<br>D</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>orchestra</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>functest</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>D<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>policytest</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>fuel</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>ovsnfv</td>
+                <td>Shell</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>opnfvdocs</td>
+                <td>HTML</td>
+                <td>Python<br>Shell<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>puppet-barometer</td>
+                <td>Ruby</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>releng-anteater</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>releng-utils</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>pharos</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>rocket</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>releng-xci-scenarios</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>releng</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>releng-xci</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>sandbox</td>
+                <td>Shell</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>sandbox-zuul-config</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>sandbox-zuul-untrusted</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>spark-model-runner</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>securityscanning</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>samplevnf</td>
+                <td>C</td>
+                <td>JavaScript<br>Python<br>Shell<br>C++<br>D<br>CSS<br>Lua</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>parser</td>
+                <td>Python</td>
+                <td>Shell<br>Java</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>test2</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>qtip</td>
+                <td>Python</td>
+                <td>Shell</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>storperf</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>D<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>releng-testresults</td>
+                <td>JavaScript</td>
+                <td>TypeScript<br>Python<br>Shell<br>SCSS<br>HTML<br>CSS</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>moon</td>
+                <td>Python</td>
+                <td>JavaScript<br>Shell<br>Groovy<br>D<br>SCSS<br>HTML<br>CSS<br>PLpgSQL</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>stor4nfv</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>thoth</td>
+                <td>Python</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>☑️</td>
+            </tr>
+            <tr>
+                <td>vineperf</td>
+                <td>Python</td>
+                <td>Shell<br>C<br>Lua</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="workflows" class="report-section workflows-section">
+    <h2>🏁 Deployed CI/CD Jobs</h2>
+
+    <p><strong>Total GitHub workflows:</strong> 2</p>
+
+    <table class="data-table cicd-jobs-table dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th scope="col" class="gerrit-project">Gerrit Project</th>
+                <th scope="col" class="github-workflows">GitHub Workflows</th>
+                <th scope="col" class="workflow-count">Workflows</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="gerrit-project">.github</td>
+                <td class="github-workflows">
+<a href="https://github.com/opnfv/.github/actions/workflows/gerrit-required-verify.yaml" target="_blank"><span class="status-success workflow-status">gerrit-required-verify.yaml</span></a><br><a href="https://github.com/opnfv/.github/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-no-runs workflow-status">gerrit-verify.yaml</span></a>                </td>
+                <td class="workflow-count">2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="total-count">
+        <strong>Total:</strong> 1 repositories with CI/CD jobs
+    </p>
+
+</section>
+        <section id="info-yaml-committers" class="report-section">
+            <h2>📋 Committer INFO.yaml Report</h2>
+
+            <p>This report shows project information from INFO.yaml files, including lifecycle state, project leads, and committer activity status.</p>
+
+
+<table class="info-yaml-table dt-enabled">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Created</th>
+                            <th>Lifecycle/State</th>
+                            <th>Project Lead</th>
+                            <th>Committers</th>
+                            <th>Committers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/AIRSHIP" target="_blank">Airship-based Infrastructure Deployment and Lifecycle Management (airship)</a></td>
+                            <td>2019-07-02-12</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">James Gu</span></td>
+                            <td>9</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Greg Oberfield</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Kaspars Skels</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Bin Yang</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Parker Berberian</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Cooper</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Bin Hu</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Prakash Ramchandran</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Sridhar Rao</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.anuket.io/projects/barometer" target="_blank">Barometer</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><span style="color: gray;" title="Unknown activity status">Emma Foley</span></td>
+                            <td>4</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Al Morton</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Matthias Runge</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/FUNCTEST" target="_blank">Base System Functionality Testing Project (functest)</a></td>
+                            <td>January 20, 2015</td>
+                            <td>Mature</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Cédric Ollivier</span></td>
+                            <td>1</td>
+                            <td>None</td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/CRAN" target="_blank">C-RAN</a></td>
+                            <td>2018-07-17</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Weichen Ni</span></td>
+                            <td>4</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Ulas Kozat</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Xiaohua Zhang</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Li Baoqian</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/CIRV" target="_blank">Common Infrastructure Realization & Validation (CIRV)</a></td>
+                            <td>2019-09-17</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Chen Liang</span></td>
+                            <td>6</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Cooper</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Sridhar Rao</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Lincoln Lavoie</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Fu Qiao</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.anuket.io/projects/CIRV" target="_blank">Common Infrastructure Realization & Validation (CIRV)</a></td>
+                            <td>2019-09-17</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Parth Yadav</span></td>
+                            <td>6</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Cooper</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Sridhar Rao</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Lincoln Lavoie</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Fu Qiao</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Chen Liang</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/[container4nfv]" target="_blank">Container4NFV</a></td>
+                            <td>Dec 13, 2016</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Xuan Jia</span></td>
+                            <td>8</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Jack Chan</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Gergely Csatari</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Jun Li</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Ruijing Guo</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Zijin Tao</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Lu Bin</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/DOCTOR" target="_blank">Fault Management project (doctor)</a></td>
+                            <td>December 2, 2014</td>
+                            <td>Mature</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Tomi Juvonen</span></td>
+                            <td>2</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">wenjuan dong</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/kuberef" target="_blank">kuberef</a></td>
+                            <td>2020-07-08</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Dan Xu</span></td>
+                            <td>5</td>
+                            <td><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Trevor Cooper</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Georg Kunz</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Michael Pedersen</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Rihab Banday</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">L2/L3 forwarding performance toolkit for NFVi (NFVbench)</span></td>
+                            <td>May 2nd 2017</td>
+                            <td></td>
+                            <td><span style="color: gray;" title="Unknown activity status">Alec Hothan</span></td>
+                            <td>4</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Yichen Wang</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Francois-Regis Menguy</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Gwenael Lambrouin</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/laas" target="_blank">Lab as a Service</a></td>
+                            <td>2019.06.25</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Sawyer Bergeron</span></td>
+                            <td>11</td>
+                            <td><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Trevor Bramwell</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Nikos Karandreas</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Panagiotis Karalis</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Jeremy Plsek</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Eric Ball</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Lincoln Lavoie</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Mark Beierl</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">latha P</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Justin Choquette</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Raven Hodgdon</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/DOCS" target="_blank">OPNFV documentation project (opnfvdocs)</a></td>
+                            <td>March 31, 2015</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Beth Cohen</span></td>
+                            <td>5</td>
+                            <td><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Scot Steele</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Gergely Csatari</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Al Morton</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Georg Kunz</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/dovetail" target="_blank">OPNFV qualification testing (dovetail)</a></td>
+                            <td>September 1st, 2015</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Kanagaraj Manickam</span></td>
+                            <td>7</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Cooper</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Qiao Fu</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Lincoln Lavoie</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Panagiotis Karalis</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Georg Kunz</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Dan Xu</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/OVN4NFV" target="_blank">OVN for NFV (OVN4NFV)</a></td>
+                            <td>Feb 7th 2017</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Trinath Somanchi</span></td>
+                            <td>3</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Trevor Bramwell</span><br><span style="color: gray;" title="Unknown activity status">Ritu Sood</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/[SAMPLEVNF]" target="_blank">Sample Virtual Network Function (SAMPLEVNF)</a></td>
+                            <td>27/03/2017</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Luc Provoost</span></td>
+                            <td>5</td>
+                            <td><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Al Morton</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Trevor Cooper</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Xavier Simonart</span><br><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Patrice Buriez</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/RELENG" target="_blank">test</a></td>
+                            <td></td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Trevor Bramwell</span></td>
+                            <td>3</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Aric Gardner</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Jessica Wagantall</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/PHAROS" target="_blank">Testbed infrastructure (Pharos)</a></td>
+                            <td>January 8, 2015</td>
+                            <td>Mature</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Jack Morgan</span></td>
+                            <td>11</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Wenjing Chu</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Morgan Richomme</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Cooper</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Jose Lausuch</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Fatih Degirmenci</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">julien zhang</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Aric Gardner</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Trevor Bramwell</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Alexandru Avadanii</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Guillermo Herrero</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.anuket.io/projects/thoth" target="_blank">thoth</a></td>
+                            <td>2021-08-03</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Sridhar K. N. Rao</span></td>
+                            <td>2</td>
+                            <td><span style="color: orange;" title="☑️ Active - commits between 365-1095 days">Girish L</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://jira.opnfv.org/projects/RELENG" target="_blank">Unknown</a></td>
+                            <td>Unknown</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Unknown</span></td>
+                            <td>4</td>
+                            <td><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Fatih Degirmenci</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Markos Chandras</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Manuel Buil</span><br><span style="color: red;" title="🛑 Inactive - no commits in 1095+ days">Panagiotis Karalis</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+
+        <section id="info-yaml-lifecycle" class="report-section">
+            <h2>📊 INFO.yaml Lifecycle State Summary</h2>
+
+            <table class="lifecycle-summary-table">
+                <thead>
+                    <tr>
+                        <th>Lifecycle State</th>
+                        <th>Gerrit Project Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Incubation</td>
+                        <td>14</td>
+                        <td>73.7%</td>
+                    </tr>
+                    <tr>
+                        <td>Mature</td>
+                        <td>3</td>
+                        <td>15.8%</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2</td>
+                        <td>10.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="total-count">
+                <strong>Total Projects:</strong> 19
+            </p>
+        </section>
+
+    </main><footer class="page-footer">
+        <div class="container">
+            <p class="attribution">Generated with ❤️ by <strong>Release Engineering</strong></p>
+            <p class="timestamp">
+                <time datetime="2026-01-29T07:35:45.342657+00:00">2026-01-29 07:35:45 UTC</time>
+            </p>
+        </div>
+    </footer><!-- Simple-DataTables JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+<script>
+// DataTables initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuration from YAML
+    const config = {
+        minRows: 3,
+        searchable: true,
+        sortable: true,
+        pagination: true,
+        perPage: 20,
+        perPageSelect: [20, 50, 100, 200],
+        labels: {
+            placeholder: "Search...",
+            perPage: "entries per page",
+            noRows: "No entries found",
+            info: "Showing {start} to {end} of {rows} entries"
+        }
+    };
+
+    // Initialize all tables with dt-enabled class
+    document.querySelectorAll('table.dt-enabled').forEach(function(table) {
+        const rows = table.querySelectorAll('tbody tr');
+
+        // Skip tables that are too small to benefit from DataTables
+        if (rows.length < config.minRows) {
+            return;
+        }
+
+        // Check for per-table feature overrides via CSS classes
+        const hasNoSearch = table.classList.contains('dt-no-search');
+        const hasNoPagination = table.classList.contains('dt-no-pagination');
+        const hasNoSort = table.classList.contains('dt-no-sort');
+
+        // Build table-specific configuration
+        const tableConfig = {
+            searchable: hasNoSearch ? false : config.searchable,
+            sortable: hasNoSort ? false : config.sortable,
+            paging: hasNoPagination ? false : config.pagination,
+            perPage: config.perPage,
+            perPageSelect: config.perPageSelect,
+            labels: config.labels,
+            classes: {
+                active: "active",
+                disabled: "disabled"
+            }
+        };
+
+        // Initialize DataTable
+        try {
+            new simpleDatatables.DataTable(table, tableConfig);
+        } catch (error) {
+            console.error('Failed to initialize DataTable:', error);
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

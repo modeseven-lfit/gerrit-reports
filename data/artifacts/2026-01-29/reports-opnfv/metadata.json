@@ -1,0 +1,14 @@
+{
+  "project": "OPNFV",
+  "slug": "opnfv",
+  "gerrit_server": "gerrit.opnfv.org",
+  "jenkins_server": "",
+  "github_org": "",
+  "generated_at":     "2026-01-29T07:34:57Z",
+  "workflow_run_id": "21469621933",
+  "workflow_run_number": "134",
+  "workflow_run_attempt": "1",
+  "git_sha": "85e6c811b061db4ffe7878bc750f742ec4955b08",
+  "git_ref": "refs/heads/main",
+  "environment": "production"
+}
