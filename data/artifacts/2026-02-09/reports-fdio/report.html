@@ -1,0 +1,1378 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Repository Reporting System">
+    <meta name="theme" content="default">
+    <title>FDio - GitHub Project Analysis Report</title><link rel="stylesheet" href="theme.css">    <!-- Simple-DataTables CSS -->
+<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+<style>
+        @media print {
+            .no-print { display: none; }
+            body { font-size: 10pt; }
+        }
+    </style>
+</head>
+<body><a href="#main-content" class="skip-link">Skip to main content</a><header class="page-header">
+        <div class="container">
+            <h1>📊 GitHub Project Analysis Report: FDio</h1>
+            <div class="metadata">
+                <p class="generated-at">
+                    <strong>Generated:</strong>
+                    <time datetime="2026-02-09T19:29:01.869144+00:00">2026-02-09 19:29:01 UTC</time>
+                </p>
+                <p class="schema-version">
+                    <strong>Schema Version:</strong> 1.5.0
+                </p>
+            </div>
+        </div>
+    </header><main id="main-content" class="container"><nav id="table-of-contents" class="toc report-section">
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+        <li class="toc-item">
+            <a href="#summary" class="toc-link">Global Summary</a>
+        </li>
+        <li class="toc-item">
+            <a href="#repositories" class="toc-link">Gerrit Projects</a>
+        </li>
+        <li class="toc-item">
+            <a href="#contributors" class="toc-link">Top Contributors</a>
+        </li>
+        <li class="toc-item">
+            <a href="#organizations" class="toc-link">Top Organizations</a>
+        </li>
+        <li class="toc-item">
+            <a href="#features" class="toc-link">Repository Feature Matrix</a>
+        </li>
+        <li class="toc-item">
+            <a href="#workflows" class="toc-link">Deployed CI/CD Jobs</a>
+        </li>
+        <li class="toc-item">
+            <a href="#unattributed-jobs" class="toc-link">Unattributed Jenkins Jobs</a>
+        </li>
+    </ul>
+</nav>
+<section id="summary" class="report-section summary-section">
+    <h2>📈 Global Summary</h2>
+
+    <p><strong>✅ Current</strong> commits within last 365 days</p>
+    <p><strong>☑️ Active</strong> commits between 365-1095 days</p>
+    <p><strong>🛑 Inactive</strong> no commits in 1095+ days</p>
+
+    <table class="no-search no-pagination">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Count</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Repositories</td>
+                <td>7</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Current Repositories</td>
+                <td>4</td>
+                <td>57.1%</td>
+            </tr>
+            <tr>
+                <td>Active Repositories</td>
+                <td>0</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>Inactive Repositories</td>
+                <td>3</td>
+                <td>42.9%</td>
+            </tr>
+            <tr>
+                <td>No Apparent Commits</td>
+                <td>0</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>Total Commits</td>
+                <td>24.7K</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Total Lines of Code</td>
+                <td>136.1K</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="organizations" class="report-section organizations-section">
+    <h2>🏢 Top Organizations</h2>
+
+    <p>The data presented in the table below covers the past 365 days.</p>
+
+    <p><strong>Organizations Found:</strong> 155</p>
+
+    <table class="dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Organization</th>
+                <th>Contributors</th>
+                <th>Commits</th>
+                <th>LOC+</th>
+                <th>LOC−</th>
+                <th>LOCΔ</th>
+                <th>LOC±</th>
+                <th>LOC/Commit</th>
+                <th>Repos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>cisco.com</td>
+                <td>157</td>
+                <td>1002</td>
+                <td>+119277</td>
+                <td>+112958</td>
+                <td>+6319</td>
+                <td>232235</td>
+                <td>+6</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>gmail.com</td>
+                <td>115</td>
+                <td>234</td>
+                <td>+17989</td>
+                <td>+6271</td>
+                <td>+11718</td>
+                <td>24260</td>
+                <td>+50</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>icloud.com</td>
+                <td>1</td>
+                <td>160</td>
+                <td>+49014</td>
+                <td>+42943</td>
+                <td>+6071</td>
+                <td>91957</td>
+                <td>+37</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>marvell.com</td>
+                <td>14</td>
+                <td>23</td>
+                <td>+1270</td>
+                <td>+176</td>
+                <td>+1094</td>
+                <td>1446</td>
+                <td>+47</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>hawari.fr</td>
+                <td>1</td>
+                <td>20</td>
+                <td>+16355</td>
+                <td>+1207</td>
+                <td>+15148</td>
+                <td>17562</td>
+                <td>+757</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>linuxfoundation.org</td>
+                <td>15</td>
+                <td>13</td>
+                <td>+206</td>
+                <td>+257</td>
+                <td>-51</td>
+                <td>463</td>
+                <td>-3</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>intel.com</td>
+                <td>59</td>
+                <td>9</td>
+                <td>+60</td>
+                <td>+44</td>
+                <td>+16</td>
+                <td>104</td>
+                <td>+1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>barachs.net</td>
+                <td>2</td>
+                <td>8</td>
+                <td>+492</td>
+                <td>+34</td>
+                <td>+458</td>
+                <td>526</td>
+                <td>+57</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>netgate.com</td>
+                <td>14</td>
+                <td>7</td>
+                <td>+478</td>
+                <td>+99</td>
+                <td>+379</td>
+                <td>577</td>
+                <td>+54</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>travelping.com</td>
+                <td>4</td>
+                <td>7</td>
+                <td>+124</td>
+                <td>+51</td>
+                <td>+73</td>
+                <td>175</td>
+                <td>+10</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>employees.org</td>
+                <td>1</td>
+                <td>4</td>
+                <td>+14100</td>
+                <td>+72</td>
+                <td>+14028</td>
+                <td>14172</td>
+                <td>+3507</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>mts.ru</td>
+                <td>2</td>
+                <td>4</td>
+                <td>+299</td>
+                <td>+110</td>
+                <td>+189</td>
+                <td>409</td>
+                <td>+47</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>46labs.com</td>
+                <td>2</td>
+                <td>3</td>
+                <td>+56</td>
+                <td>+1</td>
+                <td>+55</td>
+                <td>57</td>
+                <td>+18</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>googlemail.com</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+196</td>
+                <td>0</td>
+                <td>+196</td>
+                <td>196</td>
+                <td>+65</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>lunn.ch</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+25</td>
+                <td>+14</td>
+                <td>+11</td>
+                <td>39</td>
+                <td>+3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>arm.com</td>
+                <td>17</td>
+                <td>2</td>
+                <td>+44</td>
+                <td>+3</td>
+                <td>+41</td>
+                <td>47</td>
+                <td>+20</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>chinatelecom.cn</td>
+                <td>4</td>
+                <td>2</td>
+                <td>+18</td>
+                <td>+14</td>
+                <td>+4</td>
+                <td>32</td>
+                <td>+2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>hotmail.se</td>
+                <td>1</td>
+                <td>2</td>
+                <td>+951</td>
+                <td>+342</td>
+                <td>+609</td>
+                <td>1293</td>
+                <td>+304</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>inmon.com</td>
+                <td>1</td>
+                <td>2</td>
+                <td>+2504</td>
+                <td>+880</td>
+                <td>+1624</td>
+                <td>3384</td>
+                <td>+812</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>ipng.nl</td>
+                <td>1</td>
+                <td>2</td>
+                <td>+1158</td>
+                <td>+20</td>
+                <td>+1138</td>
+                <td>1178</td>
+                <td>+569</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>labn.net</td>
+                <td>4</td>
+                <td>2</td>
+                <td>+60</td>
+                <td>+6</td>
+                <td>+54</td>
+                <td>66</td>
+                <td>+27</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>sina.com</td>
+                <td>1</td>
+                <td>2</td>
+                <td>+7</td>
+                <td>+11</td>
+                <td>-4</td>
+                <td>18</td>
+                <td>-2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>yandex-team.ru</td>
+                <td>4</td>
+                <td>2</td>
+                <td>+30</td>
+                <td>+5</td>
+                <td>+25</td>
+                <td>35</td>
+                <td>+12</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>163.com</td>
+                <td>8</td>
+                <td>1</td>
+                <td>+8</td>
+                <td>+8</td>
+                <td>0</td>
+                <td>16</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>amd.com</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+2</td>
+                <td>+2</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>andrews-macbook-pro.local</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+1</td>
+                <td>+1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>baicells.com</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+5</td>
+                <td>+3</td>
+                <td>+2</td>
+                <td>8</td>
+                <td>+2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>insidepacket.com</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+5</td>
+                <td>0</td>
+                <td>+5</td>
+                <td>5</td>
+                <td>+5</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>mcconnachie.ca</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+1</td>
+                <td>+1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>protonmail.ch</td>
+                <td>1</td>
+                <td>1</td>
+                <td>+3</td>
+                <td>+567</td>
+                <td>-564</td>
+                <td>570</td>
+                <td>-564</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="contributors" class="report-section contributors-section">
+    <h2>👥 Top Contributors</h2>
+
+    <p>The data presented in the table below covers the past 365 days.</p>
+
+    <p><strong>Contributors Found:</strong> 657</p>
+
+    <table class="dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Contributor</th>
+                <th>Commits</th>
+                <th>LOC+</th>
+                <th>LOC−</th>
+                <th>LOCΔ</th>
+                <th>LOC±</th>
+                <th>LOC/Commit</th>
+                <th>Repos</th>
+                <th>Org</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Florin Coras</td>
+                <td>213</td>
+                <td>+10912</td>
+                <td>+4443</td>
+                <td>+6469</td>
+                <td>15355</td>
+                <td>+30</td>
+                <td>3</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Matus Fabian</td>
+                <td>204</td>
+                <td>+28753</td>
+                <td>+5638</td>
+                <td>+23115</td>
+                <td>34391</td>
+                <td>+113</td>
+                <td>2</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dave Wallace</td>
+                <td>193</td>
+                <td>+15141</td>
+                <td>+5862</td>
+                <td>+9279</td>
+                <td>21003</td>
+                <td>+48</td>
+                <td>5</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Peter Mikus</td>
+                <td>160</td>
+                <td>+49014</td>
+                <td>+42943</td>
+                <td>+6071</td>
+                <td>91957</td>
+                <td>+37</td>
+                <td>4</td>
+                <td>icloud.com</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Damjan Marion</td>
+                <td>123</td>
+                <td>+25060</td>
+                <td>+62987</td>
+                <td>-37927</td>
+                <td>88047</td>
+                <td>-308</td>
+                <td>2</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Tibor Frank</td>
+                <td>121</td>
+                <td>+7955</td>
+                <td>+9120</td>
+                <td>-1165</td>
+                <td>17075</td>
+                <td>-9</td>
+                <td>3</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Adrian Villin</td>
+                <td>94</td>
+                <td>+14597</td>
+                <td>+7786</td>
+                <td>+6811</td>
+                <td>22383</td>
+                <td>+72</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Vratko Polak</td>
+                <td>75</td>
+                <td>+18741</td>
+                <td>+18048</td>
+                <td>+693</td>
+                <td>36789</td>
+                <td>+9</td>
+                <td>4</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Semir Sionek</td>
+                <td>48</td>
+                <td>+2021</td>
+                <td>+504</td>
+                <td>+1517</td>
+                <td>2525</td>
+                <td>+31</td>
+                <td>2</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Mohsin KAZMI</td>
+                <td>28</td>
+                <td>+3285</td>
+                <td>+430</td>
+                <td>+2855</td>
+                <td>3715</td>
+                <td>+101</td>
+                <td>2</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Mohammed Hawari</td>
+                <td>20</td>
+                <td>+16355</td>
+                <td>+1207</td>
+                <td>+15148</td>
+                <td>17562</td>
+                <td>+757</td>
+                <td>1</td>
+                <td>hawari.fr</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Benoît Ganne</td>
+                <td>17</td>
+                <td>+344</td>
+                <td>+385</td>
+                <td>-41</td>
+                <td>729</td>
+                <td>-2</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Naveen Joy</td>
+                <td>17</td>
+                <td>+1611</td>
+                <td>+2000</td>
+                <td>-389</td>
+                <td>3611</td>
+                <td>-22</td>
+                <td>3</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Andrew Yourtchenko</td>
+                <td>13</td>
+                <td>+1445</td>
+                <td>+16</td>
+                <td>+1429</td>
+                <td>1461</td>
+                <td>+109</td>
+                <td>2</td>
+                <td>gmail.com</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Hadi Rayan Al-Sandid</td>
+                <td>13</td>
+                <td>+968</td>
+                <td>+46</td>
+                <td>+922</td>
+                <td>1014</td>
+                <td>+70</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Steven</td>
+                <td>13</td>
+                <td>+895</td>
+                <td>+776</td>
+                <td>+119</td>
+                <td>1671</td>
+                <td>+9</td>
+                <td>3</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Ivan Ivanets</td>
+                <td>12</td>
+                <td>+2252</td>
+                <td>+710</td>
+                <td>+1542</td>
+                <td>2962</td>
+                <td>+128</td>
+                <td>2</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Vanessa Rene Valderrama</td>
+                <td>12</td>
+                <td>+205</td>
+                <td>+256</td>
+                <td>-51</td>
+                <td>461</td>
+                <td>-4</td>
+                <td>6</td>
+                <td>linuxfoundation.org</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Monendra Singh Kushwaha</td>
+                <td>9</td>
+                <td>+525</td>
+                <td>+43</td>
+                <td>+482</td>
+                <td>568</td>
+                <td>+53</td>
+                <td>1</td>
+                <td>marvell.com</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Dave Barach</td>
+                <td>8</td>
+                <td>+492</td>
+                <td>+34</td>
+                <td>+458</td>
+                <td>526</td>
+                <td>+57</td>
+                <td>2</td>
+                <td>barachs.net</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Kishor Dhanawade</td>
+                <td>8</td>
+                <td>+252</td>
+                <td>+28</td>
+                <td>+224</td>
+                <td>280</td>
+                <td>+28</td>
+                <td>3</td>
+                <td>marvell.com</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Vladimir Zhigulin</td>
+                <td>7</td>
+                <td>+124</td>
+                <td>+51</td>
+                <td>+73</td>
+                <td>175</td>
+                <td>+10</td>
+                <td>1</td>
+                <td>travelping.com</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Aritra Basu</td>
+                <td>6</td>
+                <td>+1334</td>
+                <td>+20</td>
+                <td>+1314</td>
+                <td>1354</td>
+                <td>+219</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Jeff Shaw</td>
+                <td>6</td>
+                <td>+52</td>
+                <td>+29</td>
+                <td>+23</td>
+                <td>81</td>
+                <td>+3</td>
+                <td>2</td>
+                <td>intel.com</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Yoann Desmouceaux</td>
+                <td>5</td>
+                <td>+118</td>
+                <td>+46</td>
+                <td>+72</td>
+                <td>164</td>
+                <td>+14</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Ivan Shvedunov</td>
+                <td>4</td>
+                <td>+469</td>
+                <td>+61</td>
+                <td>+408</td>
+                <td>530</td>
+                <td>+102</td>
+                <td>1</td>
+                <td>netgate.com</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Jerome Tollet</td>
+                <td>4</td>
+                <td>+106</td>
+                <td>+7</td>
+                <td>+99</td>
+                <td>113</td>
+                <td>+24</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>Nicolas PLANEL</td>
+                <td>4</td>
+                <td>+159</td>
+                <td>+5</td>
+                <td>+154</td>
+                <td>164</td>
+                <td>+38</td>
+                <td>1</td>
+                <td>cisco.com</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>Ole Troan</td>
+                <td>4</td>
+                <td>+14100</td>
+                <td>+72</td>
+                <td>+14028</td>
+                <td>14172</td>
+                <td>+3507</td>
+                <td>1</td>
+                <td>employees.org</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>Varun Rapelly</td>
+                <td>4</td>
+                <td>+383</td>
+                <td>+95</td>
+                <td>+288</td>
+                <td>478</td>
+                <td>+72</td>
+                <td>1</td>
+                <td>marvell.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="repositories" class="report-section repositories-section">
+    <h2>📊 Repositories</h2>
+
+    <p>All data in this table represents all-time/current repository statistics, not time-bound metrics.</p>
+
+    <table class="dt-enabled">
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Commits</th>
+                <th>LOC</th>
+                <th>Contributors</th>
+                <th>Days Inactive</th>
+                <th>Last Commit Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/vpp" target="_blank">vpp</a>
+                </td>
+                <td>15323</td>
+                <td>1456154</td>
+                <td>77</td>
+                <td>0</td>
+                <td>2026-02-09</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/csit" target="_blank">csit</a>
+                </td>
+                <td>6389</td>
+                <td>368173</td>
+                <td>6</td>
+                <td>0</td>
+                <td>2026-02-09</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/ci-management" target="_blank">ci-management</a>
+                </td>
+                <td>2858</td>
+                <td>11517</td>
+                <td>11</td>
+                <td>48</td>
+                <td>2025-12-22</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/vppsb" target="_blank">vppsb</a>
+                </td>
+                <td>88</td>
+                <td>100842</td>
+                <td>0</td>
+                <td>2453</td>
+                <td>2019-05-24</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/.github" target="_blank">.github</a>
+                </td>
+                <td>19</td>
+                <td>4117</td>
+                <td>2</td>
+                <td>9</td>
+                <td>2026-01-30</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/main_test" target="_blank">main_test</a>
+                </td>
+                <td>8</td>
+                <td>375</td>
+                <td>0</td>
+                <td>1928</td>
+                <td>2020-10-30</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="https://github.com/gerrit.fd.io/test_injector" target="_blank">test_injector</a>
+                </td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3449</td>
+                <td>2016-08-30</td>
+                <td>🛑</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Total:</strong> 7 repositories</p>
+
+</section>
+<section id="features" class="report-section features-section">
+    <h2>🔧 Gerrit Project Feature Matrix</h2>
+
+    <table class="dt-enabled dt-no-search dt-no-pagination feature-matrix-table">
+        <thead>
+            <tr>
+                <th>Gerrit Project</th>
+                <th>Primary Type</th>
+                <th>Other Types</th>
+                <th>Dependabot</th>
+                <th>Pre-commit</th>
+                <th>ReadTheDocs</th>
+                <th>.gitreview</th>
+                <th>G2G</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>main_test</td>
+                <td>Shell</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>test_injector</td>
+                <td>N/A</td>
+                <td></td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>vppsb</td>
+                <td>C</td>
+                <td>JavaScript<br>Shell<br>HTML<br>CSS<br>Lua</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>🛑</td>
+            </tr>
+            <tr>
+                <td>.github</td>
+                <td>Shell</td>
+                <td>Python</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>ci-management</td>
+                <td>jjb</td>
+                <td></td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>csit</td>
+                <td>Robot Framework</td>
+                <td>Python<br>Shell<br>SCSS<br>HTML<br>HCL</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>vpp</td>
+                <td>C</td>
+                <td>Python<br>Shell<br>Go<br>C++<br>HTML<br>CSS<br>Lua</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+<section id="workflows" class="report-section workflows-section">
+    <h2>🏁 Deployed CI/CD Jobs</h2>
+
+    <p><strong>Total GitHub workflows:</strong> 36</p>
+    <p><strong>Total Jenkins jobs:</strong> 16</p>
+
+    <table class="data-table cicd-jobs-table dt-enabled dt-no-pagination">
+        <thead>
+            <tr>
+                <th scope="col" class="gerrit-project">Gerrit Project</th>
+                <th scope="col" class="github-workflows">GitHub Workflows</th>
+                <th scope="col" class="workflow-count">Workflows</th>
+                <th scope="col" class="jenkins-jobs">Jenkins Jobs</th>
+                <th scope="col" class="job-count">Jobs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="gerrit-project">.github</td>
+                <td class="github-workflows">
+<a href="https://github.com/fdio/.github/actions/workflows/gerrit-required-verify-non-voting.yaml" target="_blank"><span class="status-success workflow-status">gerrit-required-verify-non-voting.yaml</span></a><br><a href="https://github.com/fdio/.github/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-success workflow-status">gerrit-verify.yaml</span></a>                </td>
+                <td class="workflow-count">2</td>
+                <td class="jenkins-jobs">
+                </td>
+                <td class="job-count">0</td>
+            </tr>
+            <tr>
+                <td class="gerrit-project">ci-management</td>
+                <td class="github-workflows">
+<a href="https://github.com/fdio/ci-management/actions/workflows/gerrit-verify.yaml" target="_blank"><span class="status-success workflow-status">gerrit-verify.yaml</span></a>                </td>
+                <td class="workflow-count">1</td>
+                <td class="jenkins-jobs">
+<a href="https://jenkins.fd.io/job/ci-management-info-yaml-verify/" target="_blank"><span class="status-success jenkins-status">ci-management-info-yaml-verify</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jenkins-cfg-merge/" target="_blank"><span class="status-success jenkins-status">ci-management-jenkins-cfg-merge</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jenkins-cfg-verify/" target="_blank"><span class="status-success jenkins-status">ci-management-jenkins-cfg-verify</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jenkins-sandbox-cleanup/" target="_blank"><span class="status-failure jenkins-status">ci-management-jenkins-sandbox-cleanup</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jjb-deploy-job/" target="_blank"><span class="status-unknown jenkins-status">ci-management-jjb-deploy-job</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jjb-merge/" target="_blank"><span class="status-success jenkins-status">ci-management-jjb-merge</span></a><br><a href="https://jenkins.fd.io/job/ci-management-jjb-verify/" target="_blank"><span class="status-success jenkins-status">ci-management-jjb-verify</span></a><br><a href="https://jenkins.fd.io/job/ci-management-packer-merge-centos-7-builder/" target="_blank"><span class="status-success jenkins-status">ci-management-packer-merge-centos-7-builder</span></a><br><a href="https://jenkins.fd.io/job/ci-management-packer-merge-centos-8-builder/" target="_blank"><span class="status-unknown jenkins-status">ci-management-packer-merge-centos-8-builder</span></a><br><a href="https://jenkins.fd.io/job/ci-management-packer-verify/" target="_blank"><span class="status-success jenkins-status">ci-management-packer-verify</span></a><br><a href="https://jenkins.fd.io/job/ci-management-packer-verify-build-centos-7-builder/" target="_blank"><span class="status-unknown jenkins-status">ci-management-packer-verify-build-centos-7-builder</span></a><br><a href="https://jenkins.fd.io/job/ci-management-packer-verify-build-centos-8-builder/" target="_blank"><span class="status-unknown jenkins-status">ci-management-packer-verify-build-centos-8-builder</span></a>                </td>
+                <td class="job-count">12</td>
+            </tr>
+            <tr>
+                <td class="gerrit-project">csit</td>
+                <td class="github-workflows">
+<a href="https://github.com/fdio/csit/actions/workflows/csit-cdash-version.yml" target="_blank"><span class="status-success workflow-status">csit-cdash-version.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-dpdk-perf-mrr-weekly.yml" target="_blank"><span class="status-success workflow-status">csit-dpdk-perf-mrr-weekly.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-hfr.yaml" target="_blank"><span class="status-success workflow-status">csit-hfr.yaml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-perf-report.yml" target="_blank"><span class="status-failure workflow-status">csit-perf-report.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-trex-perf-ndrpdr-weekly.yml" target="_blank"><span class="status-success workflow-status">csit-trex-perf-ndrpdr-weekly.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-verify-tox.yaml" target="_blank"><span class="status-no-runs workflow-status">csit-verify-tox.yaml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-vpp-perf-hoststack-daily.yml" target="_blank"><span class="status-failure workflow-status">csit-vpp-perf-hoststack-daily.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-vpp-perf-mrr-daily.yml" target="_blank"><span class="status-no-runs workflow-status">csit-vpp-perf-mrr-daily.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-vpp-perf-mrr-weekly.yml" target="_blank"><span class="status-success workflow-status">csit-vpp-perf-mrr-weekly.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-vpp-perf-ndrpdr-weekly.yml" target="_blank"><span class="status-failure workflow-status">csit-vpp-perf-ndrpdr-weekly.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/csit-vpp-perf-soak-weekly.yml" target="_blank"><span class="status-failure workflow-status">csit-vpp-perf-soak-weekly.yml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/dependabot-updates" target="_blank"><span class="status-success workflow-status">dependabot-updates</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/gerrit-comment-handler.yaml" target="_blank"><span class="status-failure workflow-status">gerrit-comment-handler.yaml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/github2gerrit.yaml" target="_blank"><span class="status-failure workflow-status">github2gerrit.yaml</span></a><br><a href="https://github.com/fdio/csit/actions/workflows/vpp-csit-bisect.yml" target="_blank"><span class="status-success workflow-status">vpp-csit-bisect.yml</span></a>                </td>
+                <td class="workflow-count">15</td>
+                <td class="jenkins-jobs">
+<a href="https://jenkins.fd.io/job/csit-info-yaml-verify/" target="_blank"><span class="status-success jenkins-status">csit-info-yaml-verify</span></a><br><a href="https://jenkins.fd.io/job/csit-sonar/" target="_blank"><span class="status-failure jenkins-status">csit-sonar</span></a><br><a href="https://jenkins.fd.io/job/csit-verify-tox-master-ubuntu2404-x86_64/" target="_blank"><span class="status-success jenkins-status">csit-verify-tox-master-ubuntu2404-x86_64</span></a>                </td>
+                <td class="job-count">3</td>
+            </tr>
+            <tr>
+                <td class="gerrit-project">vpp</td>
+                <td class="github-workflows">
+<a href="https://github.com/fdio/vpp/actions/workflows/dependabot-updates" target="_blank"><span class="status-success workflow-status">dependabot-updates</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/gerrit-comment-handler.yml" target="_blank"><span class="status-failure workflow-status">gerrit-comment-handler.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/gerrit-merge.yml" target="_blank"><span class="status-failure workflow-status">gerrit-merge.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/gerrit-verify.yml" target="_blank"><span class="status-success workflow-status">gerrit-verify.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/github2gerrit.yaml" target="_blank"><span class="status-failure workflow-status">github2gerrit.yaml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/periodic-vpp-verify-cov.yml" target="_blank"><span class="status-success workflow-status">periodic-vpp-verify-cov.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/periodic-vpp-verify-dpdk-rdma-ver.yml" target="_blank"><span class="status-success workflow-status">periodic-vpp-verify-dpdk-rdma-ver.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/periodic-vpp-verify-hst.yml" target="_blank"><span class="status-success workflow-status">periodic-vpp-verify-hst.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/update-graph" target="_blank"><span class="status-success workflow-status">update-graph</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-csit-verify-api.yml" target="_blank"><span class="status-success workflow-status">vpp-csit-verify-api.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-merge-docs.yml" target="_blank"><span class="status-failure workflow-status">vpp-merge-docs.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-merge-maketest.yml" target="_blank"><span class="status-no-runs workflow-status">vpp-merge-maketest.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-arm-drivers.yml" target="_blank"><span class="status-success workflow-status">vpp-verify-arm-drivers.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-checkstyle.yml" target="_blank"><span class="status-no-runs workflow-status">vpp-verify-checkstyle.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-docs.yml" target="_blank"><span class="status-success workflow-status">vpp-verify-docs.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-gcc.yml" target="_blank"><span class="status-no-runs workflow-status">vpp-verify-gcc.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-hst.yml" target="_blank"><span class="status-failure workflow-status">vpp-verify-hst.yml</span></a><br><a href="https://github.com/fdio/vpp/actions/workflows/vpp-verify-maketest.yml" target="_blank"><span class="status-failure workflow-status">vpp-verify-maketest.yml</span></a>                </td>
+                <td class="workflow-count">18</td>
+                <td class="jenkins-jobs">
+<a href="https://jenkins.fd.io/job/vpp-cov-verify-master-ubuntu2404-x86_64/" target="_blank"><span class="status-warning jenkins-status">vpp-cov-verify-master-ubuntu2404-x86_64</span></a>                </td>
+                <td class="job-count">1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="total-count">
+        <strong>Total:</strong> 4 repositories with CI/CD jobs
+    </p>
+
+</section>
+<section id="unattributed-jobs" class="report-section unattributed-jobs-section">
+    <h2>Unattributed Jenkins Jobs</h2>
+
+
+    <p class="section-description">These jobs could not be matched to any repository. They may be infrastructure jobs, release jobs, build pipelines, or jobs that use naming conventions different from the repository names. Consider reviewing the job names and repository naming patterns to improve attribution.</p>
+
+    <p class="total-count">
+        <strong>Total:</strong> 1 unattributed jobs
+    </p>
+
+    <div class="section-content">
+        <h3>Job Details</h3>
+        <div class="table-wrapper">
+            <table class="data-table unattributed-jobs-table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="job-name">Job Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr>
+                        <td class="job-name"><a href="https://jenkins.fd.io/job/test_job/" target="_blank"><span class="status-success jenkins-status">test_job</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+        <section id="info-yaml-committers" class="report-section">
+            <h2>📋 Committer INFO.yaml Report</h2>
+
+            <p>This report shows project information from INFO.yaml files, including lifecycle state, project leads, and committer activity status.</p>
+
+
+<table class="info-yaml-table dt-enabled">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Created</th>
+                            <th>Lifecycle/State</th>
+                            <th>Project Lead</th>
+                            <th>Committers</th>
+                            <th>Committers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">.github</span></td>
+                            <td>2024-03-07</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Vanessa Valderrama</span></td>
+                            <td>11</td>
+                            <td><span style="color: green;" title="✅ Current - commits within last 365 days">Andrew Grimberg</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Anil Anil Belur</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Eric Ball</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Jessica Wagantall</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Kevin Sandi</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Matt Watkins</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Dave Wallace</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Ed Warnicke</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Peter Mikus</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Vratko Polak</span></td>
+                        </tr>
+<tr>
+                            <td><a href="https://support.linuxfoundation.org" target="_blank">ci-management</a></td>
+                            <td>2015-11-19</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Andrew Grimberg</span></td>
+                            <td>7</td>
+                            <td><span style="color: green;" title="✅ Current - commits within last 365 days">Dave Wallace</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Ed Warnicke</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Peter Mikus</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Vanessa Rene Valderrama</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Vratko Polak</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Eric Ball</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">cicn</span></td>
+                            <td>2017-02-02</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Luca Muscariello</span></td>
+                            <td>7</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Alberto Compagno</span><br><span style="color: gray;" title="Unknown activity status">Jim Gibson</span><br><span style="color: gray;" title="Unknown activity status">Jordan Augé</span><br><span style="color: gray;" title="Unknown activity status">Mauro Sardara</span><br><span style="color: gray;" title="Unknown activity status"> Michele Papalini</span><br><span style="color: gray;" title="Unknown activity status"> Angelo Mantellini</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">csit</span></td>
+                            <td>2016-01-05</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Maciek Konstantynowicz</span></td>
+                            <td>6</td>
+                            <td><span style="color: green;" title="✅ Current - commits within last 365 days">Dave Wallace</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Juraj Linkeš</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Peter Mikus</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Tibor Frank</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Vratko Polak</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">govpp</span></td>
+                            <td>2017-4-27</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Ondrej Fabry</span></td>
+                            <td>5</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Jan Medved</span><br><span style="color: gray;" title="Unknown activity status">Rastislav Szabo</span><br><span style="color: gray;" title="Unknown activity status">Vladimir Lavor</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">hicn</span></td>
+                            <td>2019-01-15</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Luca Muscariello</span></td>
+                            <td>8</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Alberto Compagno</span><br><span style="color: gray;" title="Unknown activity status">Jordan Augé</span><br><span style="color: gray;" title="Unknown activity status">Michele Papalini</span><br><span style="color: gray;" title="Unknown activity status">Mauro Sardara</span><br><span style="color: gray;" title="Unknown activity status">Jacques Samain</span><br><span style="color: gray;" title="Unknown activity status">Angelo Mantellini</span><br><span style="color: gray;" title="Unknown activity status">Olivier Roques</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">honeycomb</span></td>
+                            <td>2016-12-18</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Marek Gradzki</span></td>
+                            <td>7</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Dave Wallace</span><br><span style="color: gray;" title="Unknown activity status">Ed Warnicke</span><br><span style="color: gray;" title="Unknown activity status">Juraj Sloboda</span><br><span style="color: gray;" title="Unknown activity status">MaroÅ¡ MarÅ¡alek</span><br><span style="color: gray;" title="Unknown activity status">Robert Varga</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">tldk</span></td>
+                            <td>2016-05-19</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Konstantin Ananyev</span></td>
+                            <td>4</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Mohammad Abdul Awal</span><br><span style="color: gray;" title="Unknown activity status">Ed Warnicke</span><br><span style="color: gray;" title="Unknown activity status">Keith Wiles</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">udpi</span></td>
+                            <td>2019-29-08</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Hongjun Ni</span></td>
+                            <td>20</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Xiang Wang</span><br><span style="color: gray;" title="Unknown activity status">Yang Hong</span><br><span style="color: gray;" title="Unknown activity status">Harry Chang</span><br><span style="color: gray;" title="Unknown activity status">Jian Gu</span><br><span style="color: gray;" title="Unknown activity status">Jianghua Shan</span><br><span style="color: gray;" title="Unknown activity status">Yang Zhang</span><br><span style="color: gray;" title="Unknown activity status">Xingfu Li</span><br><span style="color: gray;" title="Unknown activity status">Xiaofan Li</span><br><span style="color: gray;" title="Unknown activity status">Yuying Xia</span><br><span style="color: gray;" title="Unknown activity status">Chenggang Fan</span><br><span style="color: gray;" title="Unknown activity status">Feng Gao</span><br><span style="color: gray;" title="Unknown activity status">Zhong Liu</span><br><span style="color: gray;" title="Unknown activity status">Yong Zhao</span><br><span style="color: gray;" title="Unknown activity status">Haiquan Chen</span><br><span style="color: gray;" title="Unknown activity status">Jim Thompson</span><br><span style="color: gray;" title="Unknown activity status">Pengjie Li</span><br><span style="color: gray;" title="Unknown activity status">Zhao Zhang</span><br><span style="color: gray;" title="Unknown activity status">Zhangpeng Xie</span><br><span style="color: gray;" title="Unknown activity status">Drenfong Wang</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">vpp</span></td>
+                            <td>2015-12-08</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Damjan Marion</span></td>
+                            <td>15</td>
+                            <td><span style="color: green;" title="✅ Current - commits within last 365 days">Dave Barach</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Florin Coras</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Benoit Ganne</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">John Lo</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Chris Luke</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Neale Ranns</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Matthew Smith</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Ole Trøan</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Paul Vinciguerra</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Dave Wallace</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Ed Warnicke</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Andrew Yourtchenko</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Fan Zhang</span><br><span style="color: green;" title="✅ Current - commits within last 365 days">Mohammed HAWARI</span></td>
+                        </tr>
+<tr>
+                            <td><span style="color: red;" title="⚠️ Broken project issue-tracker link: Connection failed (after 3 attempts)">vsap</span></td>
+                            <td>2019-12-10</td>
+                            <td>Incubation</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Ping Yu</span></td>
+                            <td>8</td>
+                            <td><span style="color: gray;" title="Unknown activity status">Florin Coras</span><br><span style="color: gray;" title="Unknown activity status">Stephen Belair</span><br><span style="color: gray;" title="Unknown activity status">Jian Li</span><br><span style="color: gray;" title="Unknown activity status">Yuwei Zhang</span><br><span style="color: gray;" title="Unknown activity status">Shujun Zhuang</span><br><span style="color: gray;" title="Unknown activity status">Hongjun Ni</span><br><span style="color: gray;" title="Unknown activity status">Wei Xu</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+
+        <section id="info-yaml-lifecycle" class="report-section">
+            <h2>📊 INFO.yaml Lifecycle State Summary</h2>
+
+            <table class="lifecycle-summary-table">
+                <thead>
+                    <tr>
+                        <th>Lifecycle State</th>
+                        <th>Gerrit Project Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Incubation</td>
+                        <td>11</td>
+                        <td>100.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="total-count">
+                <strong>Total Projects:</strong> 11
+            </p>
+        </section>
+
+    </main><footer class="page-footer">
+        <div class="container">
+            <p class="attribution">Generated with ❤️ by <strong>Release Engineering</strong></p>
+            <p class="timestamp">
+                <time datetime="2026-02-09T19:29:01.869144+00:00">2026-02-09 19:29:01 UTC</time>
+            </p>
+        </div>
+    </footer><!-- Simple-DataTables JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+<script>
+// DataTables initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuration from YAML
+    const config = {
+        minRows: 3,
+        searchable: true,
+        sortable: true,
+        pagination: true,
+        perPage: 20,
+        perPageSelect: [20, 50, 100, 200],
+        labels: {
+            placeholder: "Search...",
+            perPage: "entries per page",
+            noRows: "No entries found",
+            info: "Showing {start} to {end} of {rows} entries"
+        }
+    };
+
+    // Initialize all tables with dt-enabled class
+    document.querySelectorAll('table.dt-enabled').forEach(function(table) {
+        const rows = table.querySelectorAll('tbody tr');
+
+        // Skip tables that are too small to benefit from DataTables
+        if (rows.length < config.minRows) {
+            return;
+        }
+
+        // Check for per-table feature overrides via CSS classes
+        const hasNoSearch = table.classList.contains('dt-no-search');
+        const hasNoPagination = table.classList.contains('dt-no-pagination');
+        const hasNoSort = table.classList.contains('dt-no-sort');
+
+        // Build table-specific configuration
+        const tableConfig = {
+            searchable: hasNoSearch ? false : config.searchable,
+            sortable: hasNoSort ? false : config.sortable,
+            paging: hasNoPagination ? false : config.pagination,
+            perPage: config.perPage,
+            perPageSelect: config.perPageSelect,
+            labels: config.labels,
+            classes: {
+                active: "active",
+                disabled: "disabled"
+            }
+        };
+
+        // Initialize DataTable
+        try {
+            new simpleDatatables.DataTable(table, tableConfig);
+        } catch (error) {
+            console.error('Failed to initialize DataTable:', error);
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>
