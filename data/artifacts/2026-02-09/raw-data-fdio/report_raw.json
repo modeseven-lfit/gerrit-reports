@@ -1,0 +1,1584 @@
+{
+  "schema_version": "1.5.0",
+  "generated_at": "2026-02-09T14:21:11.472419+00:00",
+  "project": "FDio",
+  "config_digest": "b5bbfb5f4003e3107205f3b020ae9b725831b56a5cec86d8673e5b9a5dbf5fe7",
+  "script_version": "0.1.dev1+gc18712a77",
+  "time_windows": {
+    "last_30": {
+      "days": 30,
+      "start": "2026-01-10T14:21:11.472561+00:00",
+      "end": "2026-02-09T14:21:11.472561+00:00",
+      "start_timestamp": 1768054871.472561,
+      "end_timestamp": 1770646871.472561
+    },
+    "last_90": {
+      "days": 90,
+      "start": "2025-11-11T14:21:11.472561+00:00",
+      "end": "2026-02-09T14:21:11.472561+00:00",
+      "start_timestamp": 1762870871.472561,
+      "end_timestamp": 1770646871.472561
+    },
+    "last_365": {
+      "days": 365,
+      "start": "2025-02-09T14:21:11.472561+00:00",
+      "end": "2026-02-09T14:21:11.472561+00:00",
+      "start_timestamp": 1739110871.472561,
+      "end_timestamp": 1770646871.472561
+    },
+    "last_3_years": {
+      "days": 1095,
+      "start": "2023-02-10T14:21:11.472561+00:00",
+      "end": "2026-02-09T14:21:11.472561+00:00",
+      "start_timestamp": 1676038871.472561,
+      "end_timestamp": 1770646871.472561
+    }
+  },
+  "repositories": [],
+  "authors": [],
+  "organizations": [],
+  "summaries": {
+    "reporting_period": {
+      "window_name": "last_365",
+      "days": 365
+    },
+    "counts": {
+      "total_repositories": 0,
+      "current_repositories": 0,
+      "active_repositories": 0,
+      "inactive_repositories": 0,
+      "no_commit_repositories": 0,
+      "total_commits": 0,
+      "total_lines_added": 0,
+      "total_authors": 0,
+      "total_organizations": 0
+    },
+    "activity_status_distribution": {
+      "current": [],
+      "active": [],
+      "inactive": []
+    },
+    "top_current_repositories": [],
+    "top_active_repositories": [],
+    "least_active_repositories": [],
+    "all_repositories": [],
+    "no_commit_repositories": [],
+    "top_contributors_commits": [],
+    "top_contributors_loc": [],
+    "top_organizations": []
+  },
+  "errors": [],
+  "jenkins_metadata": {
+    "host": "jenkins.fd.io",
+    "requires_auth": false
+  },
+  "info_yaml": {
+    "projects": [
+      {
+        "project_name": "ci-management",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "ci-management",
+        "full_path": "gerrit.fd.io/ci-management",
+        "creation_date": "2015-11-19",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Andrew Grimberg",
+          "email": "agrimberg@linuxfoundation.org",
+          "company": "Linux Foundation",
+          "id": "agrimberg",
+          "timezone": "America/Los_Angeles"
+        },
+        "committers": [
+          {
+            "name": "Andrew Grimberg",
+            "email": "agrimberg@linuxfoundation.org",
+            "company": "Linux Foundation",
+            "id": "agrimberg",
+            "timezone": "America/Los_Angeles",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Wallace",
+            "email": "dwallacelf@gmail.com",
+            "company": "cisco",
+            "id": "dwallacelf",
+            "timezone": "America/New_York",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ed Warnicke",
+            "email": "hagbard@gmail.com",
+            "company": "cisco",
+            "id": "hagbard",
+            "timezone": "America/Chicago",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Peter Mikus",
+            "email": "pmikus@cisco.com",
+            "company": "cisco",
+            "id": "pmikus",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Vanessa Rene Valderrama",
+            "email": "vvalderrama@linuxfoundation.org",
+            "company": "linuxfoundation",
+            "id": "valderrv",
+            "timezone": "America/Chicago",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Vratko Polak",
+            "email": "vrpolak@cisco.com",
+            "company": "cisco",
+            "id": "vrpolak",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Eric Ball",
+            "email": "eball@linuxfoundation.org",
+            "company": "linuxfoundation",
+            "id": "eball",
+            "timezone": "America/Los_Angeles",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "Jira Service Desk",
+          "url": "https://support.linuxfoundation.org",
+          "key": "",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "ci-management"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/ci-management/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "govpp",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "govpp",
+        "full_path": "gerrit.fd.io/govpp",
+        "creation_date": "2017-4-27",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Ondrej Fabry",
+          "email": "ofabry@cisco.com",
+          "company": "",
+          "id": "ondrej-fabry",
+          "timezone": ""
+        },
+        "committers": [
+          {
+            "name": "Ondrej Fabry",
+            "email": "ofabry@cisco.com",
+            "company": "",
+            "id": "ondrej-fabry",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ondrej Fabry",
+            "email": "ofabry@cisco.com",
+            "company": "cisco",
+            "id": "ondrej-fabry",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jan Medved",
+            "email": "jmedved@cisco.com",
+            "company": "cisco",
+            "id": "jmedved",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Rastislav Szabo",
+            "email": "raszabo@cisco.com",
+            "company": "cisco",
+            "id": "raszabo",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Vladimir Lavor",
+            "email": "vlavor@cisco.com",
+            "company": "cisco",
+            "id": "vlavor",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/projects/GOVPP",
+          "key": "GOVPP",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "govpp"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/govpp/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": ".github",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": ".github",
+        "full_path": "gerrit.fd.io/.github",
+        "creation_date": "2024-03-07",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Vanessa Valderrama",
+          "email": "vvalderrama@linuxfoundation.org",
+          "company": "The Linux Foundation",
+          "id": "valderrv",
+          "timezone": "America/Chicago"
+        },
+        "committers": [
+          {
+            "name": "Vanessa Valderrama",
+            "email": "vvalderrama@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "valderrv",
+            "timezone": "America/Chicago",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Andrew Grimberg",
+            "email": "agrimberg@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "agrimberg",
+            "timezone": "America/Los_Angeles",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Anil Anil Belur",
+            "email": "abelur@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "askb",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Eric Ball",
+            "email": "eball@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "eball",
+            "timezone": "America/Los_Angeles",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jessica Wagantall",
+            "email": "jwagantall@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "jwagantall",
+            "timezone": "America/Los_Angeles",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Kevin Sandi",
+            "email": "ksandi@contractor.linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "kevin.sandi",
+            "timezone": "America/Costa_Rica",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Matt Watkins",
+            "email": "mwatkins@linuxfoundation.org",
+            "company": "The Linux Foundation",
+            "id": "modeSevenindustrialsolutions",
+            "timezone": "Europe/London",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Wallace",
+            "email": "dwallacelf@gmail.com",
+            "company": "cisco",
+            "id": "dwallacelf",
+            "timezone": "America/New_York",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ed Warnicke",
+            "email": "hagbard@gmail.com",
+            "company": "cisco",
+            "id": "hagbard",
+            "timezone": "America/Chicago",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Peter Mikus",
+            "email": "pmikus@cisco.com",
+            "company": "cisco",
+            "id": "pmikus",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Vratko Polak",
+            "email": "vrpolak@cisco.com",
+            "company": "cisco",
+            "id": "vrpolak",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io",
+          "key": "CIMANAGE",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          ".github"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/.github/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "udpi",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "udpi",
+        "full_path": "gerrit.fd.io/udpi",
+        "creation_date": "2019-29-08",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Hongjun Ni",
+          "email": "hongjun.ni@intel.com",
+          "company": "intel",
+          "id": "Henry_Ni",
+          "timezone": "Asia/Shanghai"
+        },
+        "committers": [
+          {
+            "name": "Hongjun Ni",
+            "email": "hongjun.ni@intel.com",
+            "company": "intel",
+            "id": "Henry_Ni",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Xiang Wang",
+            "email": "xiang.w.wang@intel.com",
+            "company": "intel",
+            "id": "xiangwa1",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Yang Hong",
+            "email": "yang.a.hong@intel.com",
+            "company": "intel",
+            "id": "Nor7th",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Harry Chang",
+            "email": "harry.chang@intel.com",
+            "company": "intel",
+            "id": "fatchanghao",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jian Gu",
+            "email": "gu.jian1@zte.com.cn",
+            "company": "ZTE",
+            "id": "jerryian",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jianghua Shan",
+            "email": "shanjiangh@chinatelecom.cn",
+            "company": "China Telecom",
+            "id": "shanjianghua",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Yang Zhang",
+            "email": "zhangy.yun@chinatelecom.cn",
+            "company": "China Telecom",
+            "id": "",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Xingfu Li",
+            "email": "lixingfu@huachentel.com",
+            "company": "HuachenTel",
+            "id": "xingfu li",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Xiaofan Li",
+            "email": "lixiaofan@inspur.com",
+            "company": "Inspur",
+            "id": "Xiaofan.Li",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Yuying Xia",
+            "email": "yuyingxia@yxlink.com",
+            "company": "Yxlink",
+            "id": "yuyingxia",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Chenggang Fan",
+            "email": "fanchenggang@sunyainfo.com",
+            "company": "Sunyainfo",
+            "id": "",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Feng Gao",
+            "email": "davidfgao@tencent.com",
+            "company": "Tencent",
+            "id": "davidfgao",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Zhong Liu",
+            "email": "liuzhong1@chinaunicom.cn",
+            "company": "China Unicom",
+            "id": "celiliu",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Yong Zhao",
+            "email": "zhaoyong11@huawei.com",
+            "company": "Huawei",
+            "id": "zhao_yong",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Haiquan Chen",
+            "email": "oc@yunify.com",
+            "company": "QingCloud",
+            "id": "chenhaiq",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jim Thompson",
+            "email": "jim@netgate.com",
+            "company": "Netgate",
+            "id": "gonzopancho",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Pengjie Li",
+            "email": "pengjie.lpj@alibaba-inc.com",
+            "company": "Alibaba",
+            "id": "pengjie.lpj",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Zhao Zhang",
+            "email": "zhangzhao.zz@alibaba-inc.com",
+            "company": "Alibaba",
+            "id": "zhangzhao.zz",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Zhangpeng Xie",
+            "email": "zhangpeng.xzp@alibaba-inc.com",
+            "company": "Alibaba",
+            "id": "zhangpeng.xzp",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Drenfong Wang",
+            "email": "drenfong.wang@intel.com",
+            "company": "intel",
+            "id": "DrenfongWong",
+            "timezone": "Asia/Shanghai",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/secure/RapidBoard.jspa?rapidView=17&projectKey=OPFLEX",
+          "key": "OPFLEX",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "udpi"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/udpi/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "hicn",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "hicn",
+        "full_path": "gerrit.fd.io/hicn",
+        "creation_date": "2019-01-15",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Luca Muscariello",
+          "email": "lumuscar+fdio@cisco.com",
+          "company": "Cisco",
+          "id": "muscariello",
+          "timezone": ""
+        },
+        "committers": [
+          {
+            "name": "Luca Muscariello",
+            "email": "lumuscar+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "muscariello",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Alberto Compagno",
+            "email": "acompagn+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "acompagn",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jordan Augé",
+            "email": "jordan.auge+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "jordan.auge",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Michele Papalini",
+            "email": "micpapal+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "micpapal",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Mauro Sardara",
+            "email": "msardara@cisco.com",
+            "company": "Cisco",
+            "id": "mauro91",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jacques Samain",
+            "email": "jsamain+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "jsamain",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Angelo Mantellini",
+            "email": "manangel@cisco.com",
+            "company": "Cisco",
+            "id": "manang",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Olivier Roques",
+            "email": "oroques+fdio@cisco.com",
+            "company": "Cisco",
+            "id": "oroques",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/projects/hicn",
+          "key": "HICN",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "hicn"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/hicn/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "tldk",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "tldk",
+        "full_path": "gerrit.fd.io/tldk",
+        "creation_date": "2016-05-19",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Konstantin Ananyev",
+          "email": "konstantin.ananyev@intel.com",
+          "company": "intel",
+          "id": "konstantin_ananyev",
+          "timezone": "Atlantis/Shangri-la"
+        },
+        "committers": [
+          {
+            "name": "Konstantin Ananyev",
+            "email": "konstantin.ananyev@intel.com",
+            "company": "intel",
+            "id": "konstantin_ananyev",
+            "timezone": "Atlantis/Shangri-la",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Mohammad Abdul Awal",
+            "email": "abdulawal@gmail.com",
+            "company": "gmail",
+            "id": "abdulawal",
+            "timezone": "Atlantis/Shangri-la",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ed Warnicke",
+            "email": "hagbard@gmail.com",
+            "company": "gmail",
+            "id": "hagbard",
+            "timezone": "Atlantis/Shangri-la",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Keith Wiles",
+            "email": "keith.wiles@intel.com",
+            "company": "intel",
+            "id": "keithwiles",
+            "timezone": "Atlantis/Shangri-la",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/browse/TLDK",
+          "key": "TLDK",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "tldk"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/tldk/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "cicn",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "cicn",
+        "full_path": "gerrit.fd.io/cicn",
+        "creation_date": "2017-02-02",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Luca Muscariello",
+          "email": "lumuscar+fdio@cisco.com",
+          "company": "cisco",
+          "id": "muscariello",
+          "timezone": "Unknown/Unknown"
+        },
+        "committers": [
+          {
+            "name": "Luca Muscariello",
+            "email": "lumuscar+fdio@cisco.com",
+            "company": "cisco",
+            "id": "muscariello",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Alberto Compagno",
+            "email": "acompagn+fdio@cisco.com",
+            "company": "cisco",
+            "id": "acompagn",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jim Gibson",
+            "email": "gibson+fdio@cisco.com",
+            "company": "cisco",
+            "id": "jgibson",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jordan Augé",
+            "email": "jordan.auge+fdio@cisco.com",
+            "company": "cisco",
+            "id": "jordan.auge",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Mauro Sardara",
+            "email": "msardara@cisco.com",
+            "company": "cisco",
+            "id": "mauro91",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": " Michele Papalini",
+            "email": "micpapal@cisco.com",
+            "company": "cisco",
+            "id": "micpapal",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": " Angelo Mantellini",
+            "email": "manangel@cisco.com",
+            "company": "cisco",
+            "id": "manang",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "Jira",
+          "url": "https://jira.fd.io/projects/CICN/issues",
+          "key": "CICN",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "cicn"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/cicn/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "vpp",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "vpp",
+        "full_path": "gerrit.fd.io/vpp",
+        "creation_date": "2015-12-08",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Damjan Marion",
+          "email": "dmarion@me.com",
+          "company": "cisco",
+          "id": "dmarion",
+          "timezone": "Europe/Zagreb"
+        },
+        "committers": [
+          {
+            "name": "Damjan Marion",
+            "email": "dmarion@me.com",
+            "company": "cisco",
+            "id": "dmarion",
+            "timezone": "Europe/Zagreb",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Barach",
+            "email": "openvpp@barachs.net",
+            "company": "cisco",
+            "id": "dbarach",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Florin Coras",
+            "email": "florin.coras@gmail.com",
+            "company": "cisco",
+            "id": "florin.coras",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Benoit Ganne",
+            "email": "bganne@cisco.com",
+            "company": "cisco",
+            "id": "bganne",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "John Lo",
+            "email": "loj@cisco.com",
+            "company": "cisco",
+            "id": "lojohn",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Chris Luke",
+            "email": "chris_luke@comcast.com",
+            "company": "comcast",
+            "id": "chrisluke",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Neale Ranns",
+            "email": "nranns@cisco.com",
+            "company": "cisco",
+            "id": "nranns",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Matthew Smith",
+            "email": "mgsmith@netgate.com",
+            "company": "netgate",
+            "id": "mgsmith",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ole Trøan",
+            "email": "otroan@employees.org",
+            "company": "employees",
+            "id": "otroan",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Paul Vinciguerra",
+            "email": "pvinci@vinciconsulting.com",
+            "company": "vinciconsulting",
+            "id": "pvinci",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Wallace",
+            "email": "dwallacelf@gmail.com",
+            "company": "gmail",
+            "id": "dwallacelf",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ed Warnicke",
+            "email": "hagbard@gmail.com",
+            "company": "gmail",
+            "id": "hagbard",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Andrew Yourtchenko",
+            "email": "ayourtch@cisco.com",
+            "company": "cisco",
+            "id": "ayourtch",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Fan Zhang",
+            "email": "roy.fan.zhang@intel.com",
+            "company": "intel",
+            "id": "royzhang1980",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Mohammed HAWARI",
+            "email": "momohawari@gmail.com",
+            "company": "cisco",
+            "id": "momohawari",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/projects/vpp",
+          "key": "VPP",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "vpp"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/vpp/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "vsap",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "vsap",
+        "full_path": "gerrit.fd.io/vsap",
+        "creation_date": "2019-12-10",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Ping Yu",
+          "email": "ping.yu@intel.com",
+          "company": "Intel",
+          "id": "",
+          "timezone": ""
+        },
+        "committers": [
+          {
+            "name": "Ping Yu",
+            "email": "ping.yu@intel.com",
+            "company": "Intel",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Florin Coras",
+            "email": "florin.coras@gmail.com",
+            "company": "Cisco",
+            "id": "florin.coras",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Stephen Belair",
+            "email": "sbelair@cisco.com",
+            "company": "Cisco",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Jian Li",
+            "email": "li-jian@sjtu.edu.cn",
+            "company": "Shanghai Jiaotong University",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Yuwei Zhang",
+            "email": "yuwei1.zhang@intel.com",
+            "company": "Intel",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Shujun Zhuang",
+            "email": "shujun.zhuang@intel.com",
+            "company": "Intel",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Hongjun Ni",
+            "email": "hongjun.ni@intel.com",
+            "company": "Intel",
+            "id": "Henry_Ni",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Wei Xu",
+            "email": "cweixu@tencent.com",
+            "company": "Tencent",
+            "id": "",
+            "timezone": "",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/browse/VSAP",
+          "key": "VSAP",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "vsap"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/vsap/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "csit",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "csit",
+        "full_path": "gerrit.fd.io/csit",
+        "creation_date": "2016-01-05",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Maciek Konstantynowicz",
+          "email": "mkonstan@cisco.com",
+          "company": "cisco",
+          "id": "mackonstan",
+          "timezone": "Europe/London"
+        },
+        "committers": [
+          {
+            "name": "Maciek Konstantynowicz",
+            "email": "mkonstan@cisco.com",
+            "company": "cisco",
+            "id": "mackonstan",
+            "timezone": "Europe/London",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Wallace",
+            "email": "dwallacelf@gmail.com",
+            "company": "",
+            "id": "dwallacelf",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Juraj Linkeš",
+            "email": "juraj.linkes@pantheon.tech",
+            "company": "PANTHEON.tech",
+            "id": "juraj.linkes",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Peter Mikus",
+            "email": "pmikus@cisco.com",
+            "company": "cisco",
+            "id": "pmikus",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Tibor Frank",
+            "email": "tifrank@cisco.com",
+            "company": "cisco",
+            "id": "tifrank",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Vratko Polak",
+            "email": "vrpolak@cisco.com",
+            "company": "cisco",
+            "id": "vrpolak",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/secure/RapidBoard.jspa",
+          "key": "CSIT",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "csit"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/csit/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      },
+      {
+        "project_name": "honeycomb",
+        "gerrit_server": "gerrit.fd.io",
+        "project_path": "honeycomb",
+        "full_path": "gerrit.fd.io/honeycomb",
+        "creation_date": "2016-12-18",
+        "lifecycle_state": "Incubation",
+        "project_lead": {
+          "name": "Marek Gradzki",
+          "email": "margradz@gmail.com",
+          "company": "",
+          "id": "mgradzki",
+          "timezone": "Unknown/Unknown"
+        },
+        "committers": [
+          {
+            "name": "Marek Gradzki",
+            "email": "margradz@gmail.com",
+            "company": "",
+            "id": "mgradzki",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Dave Wallace",
+            "email": "dwallacelf@gmail.com",
+            "company": "",
+            "id": "dwallacelf",
+            "timezone": "America/New_York",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Ed Warnicke",
+            "email": "hagbard@gmail.com",
+            "company": "",
+            "id": "hagbard",
+            "timezone": "America/Chicago",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Juraj Sloboda",
+            "email": "jsloboda@cisco.com",
+            "company": "cisco",
+            "id": "jsloboda",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Marek Gradzki",
+            "email": "margradz@gmail.com",
+            "company": "",
+            "id": "mgradzki",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "MaroÅ¡ MarÅ¡alek",
+            "email": "maros.mars@gmail.com",
+            "company": "",
+            "id": "mmarsale",
+            "timezone": "Unknown/Unknown",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          },
+          {
+            "name": "Robert Varga",
+            "email": "nite@hq.sk",
+            "company": "PANTHEON.tech",
+            "id": "rovarga",
+            "timezone": "Europe/Bratislava",
+            "activity_status": "unknown",
+            "activity_color": "gray",
+            "days_since_last_commit": null
+          }
+        ],
+        "issue_tracking": {
+          "type": "jira",
+          "url": "https://jira.fd.io/projects/HONEYCOMB",
+          "key": "HONEYCOMB",
+          "is_valid": false,
+          "validation_error": ""
+        },
+        "repositories": [
+          "honeycomb"
+        ],
+        "yaml_file_path": "/tmp/info-master-i6nzr2zq/info-master/gerrit.fd.io/honeycomb/INFO.yaml",
+        "has_git_data": false,
+        "project_days_since_last_commit": null,
+        "errors": []
+      }
+    ],
+    "lifecycle_summary": [
+      {
+        "state": "Incubation",
+        "count": 11,
+        "percentage": 100.0
+      }
+    ],
+    "total_projects": 11,
+    "servers": [
+      "gerrit.fd.io"
+    ],
+    "activity_windows": {
+      "current": 365,
+      "active": 1095
+    }
+  },
+  "jenkins_allocation": {
+    "total_jenkins_jobs": 17,
+    "allocated_jobs": 0,
+    "unallocated_jobs": 17,
+    "allocated_job_names": [],
+    "allocation_percentage": 0.0,
+    "unallocated_job_names": [
+      "ci-management-info-yaml-verify",
+      "ci-management-jenkins-cfg-merge",
+      "ci-management-jenkins-cfg-verify",
+      "ci-management-jenkins-sandbox-cleanup",
+      "ci-management-jjb-deploy-job",
+      "ci-management-jjb-merge",
+      "ci-management-jjb-verify",
+      "ci-management-packer-merge-centos-7-builder",
+      "ci-management-packer-merge-centos-8-builder",
+      "ci-management-packer-verify",
+      "ci-management-packer-verify-build-centos-7-builder",
+      "ci-management-packer-verify-build-centos-8-builder",
+      "csit-info-yaml-verify",
+      "csit-sonar",
+      "csit-verify-tox-master-ubuntu2404-x86_64",
+      "test_job",
+      "vpp-cov-verify-master-ubuntu2404-x86_64"
+    ],
+    "unallocated_job_details": [
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-info-yaml-verify",
+        "url": "https://jenkins.fd.io/job/ci-management-info-yaml-verify/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jenkins-cfg-merge",
+        "url": "https://jenkins.fd.io/job/ci-management-jenkins-cfg-merge/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jenkins-cfg-verify",
+        "url": "https://jenkins.fd.io/job/ci-management-jenkins-cfg-verify/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jenkins-sandbox-cleanup",
+        "url": "https://jenkins.fd.io/job/ci-management-jenkins-sandbox-cleanup/",
+        "buildable": true,
+        "color": "red",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jjb-deploy-job",
+        "url": "https://jenkins.fd.io/job/ci-management-jjb-deploy-job/",
+        "buildable": true,
+        "color": "notbuilt",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jjb-merge",
+        "url": "https://jenkins.fd.io/job/ci-management-jjb-merge/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-jjb-verify",
+        "url": "https://jenkins.fd.io/job/ci-management-jjb-verify/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-packer-merge-centos-7-builder",
+        "url": "https://jenkins.fd.io/job/ci-management-packer-merge-centos-7-builder/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-packer-merge-centos-8-builder",
+        "url": "https://jenkins.fd.io/job/ci-management-packer-merge-centos-8-builder/",
+        "buildable": true,
+        "color": "notbuilt",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-packer-verify",
+        "url": "https://jenkins.fd.io/job/ci-management-packer-verify/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-packer-verify-build-centos-7-builder",
+        "url": "https://jenkins.fd.io/job/ci-management-packer-verify-build-centos-7-builder/",
+        "buildable": true,
+        "color": "notbuilt",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "ci-management-packer-verify-build-centos-8-builder",
+        "url": "https://jenkins.fd.io/job/ci-management-packer-verify-build-centos-8-builder/",
+        "buildable": true,
+        "color": "notbuilt",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "csit-info-yaml-verify",
+        "url": "https://jenkins.fd.io/job/csit-info-yaml-verify/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "csit-sonar",
+        "url": "https://jenkins.fd.io/job/csit-sonar/",
+        "buildable": true,
+        "color": "red",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "csit-verify-tox-master-ubuntu2404-x86_64",
+        "url": "https://jenkins.fd.io/job/csit-verify-tox-master-ubuntu2404-x86_64/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "test_job",
+        "url": "https://jenkins.fd.io/job/test_job/",
+        "buildable": true,
+        "color": "blue",
+        "disabled": false
+      },
+      {
+        "_class": "hudson.model.FreeStyleProject",
+        "name": "vpp-cov-verify-master-ubuntu2404-x86_64",
+        "url": "https://jenkins.fd.io/job/vpp-cov-verify-master-ubuntu2404-x86_64/",
+        "buildable": true,
+        "color": "yellow",
+        "disabled": false
+      }
+    ]
+  },
+  "orphaned_jenkins_jobs": {
+    "total_orphaned_jobs": 0,
+    "by_state": {},
+    "jobs": {}
+  }
+}
