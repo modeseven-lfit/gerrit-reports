@@ -6,17 +6,17 @@
 # 🛠️ Project Reporting Artifacts
 
 This repository stores generated reports and data artifacts from the
-[Project Reporting Tool][tool-repo]. Reports are produced automatically by a
-daily GitHub Actions workflow running in the tool repository, then copied here
-for long-term storage and historical archival.
+[Project Reporting Tool][tool-repo]. A daily GitHub Actions workflow in the
+tool repository generates these reports and copies them here for long-term
+storage and historical archival.
 
-> **Note**: Reports are generated automatically every day at 7:00 AM UTC.
+> **Note**: The workflow generates reports automatically every day at 7:00 AM UTC.
 > Published reports are available at the [GitHub Pages site][pages-site].
 
 ## Repository Structure
 
-All report artifacts are stored in the `data/artifacts/` directory, organized
-by date:
+The `data/artifacts/` directory contains all report artifacts, organized by
+date:
 
 ```text
 data/artifacts/
@@ -63,35 +63,35 @@ Each report includes comprehensive analytics such as:
 - Feature detection (documentation, security tools, dependency management)
 - Historical trends and analysis
 
-## How Reports Are Generated
+## How the Workflow Generates Reports
 
 The [Project Reporting Tool][tool-repo] runs a production workflow daily:
 
 1. The workflow clones all repositories from each configured Gerrit server
-2. For each project, it analyzes repositories and generates reports in multiple
-   formats (JSON, Markdown, HTML)
-3. Reports are uploaded as workflow artifacts
+2. For each project, it analyzes repositories and generates reports in JSON,
+   Markdown, and HTML formats
+3. The workflow uploads reports as artifacts
 4. A final job copies all artifacts to this repository, organized by date
 
 For details on report generation, see the [tool documentation][tool-docs].
 
 ## Contributing
 
-This repository is automatically maintained. Manual changes will be overwritten
-by subsequent workflow runs.
+This repository is automatically maintained. Later workflow runs will overwrite
+any manual changes.
 
 To make changes:
 
 - **Add a new project** — Update the `PROJECTS_JSON` secret in the
   [tool repository][tool-repo]
-- **Modify report generation** — Update the Python code or templates in the
+- **Change report generation** — Update the Python code or templates in the
   [tool repository][tool-repo]
 - **Report issues** — Open an issue in the [tool repository issues][tool-issues]
 
 ## License
 
-All content is licensed under the Apache License 2.0 — see the [LICENSE][lic]
-file for details.
+The Apache License 2.0 covers all content — see the [LICENSE][lic] file for
+details.
 
 <!-- Link references -->
 
