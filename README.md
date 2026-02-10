@@ -3,58 +3,54 @@
 # SPDX-FileCopyrightText: 2025 The Linux Foundation
 -->
 
-# 🛠️ Gerrit Reports
+# 🛠️ Project Reporting Artifacts
 
-Automated reports on Linux Foundation Gerrit servers and the projects/repositories they contain.
+This repository stores generated reports and data artifacts from the
+[Project Reporting Tool][tool-repo]. Reports are produced automatically by a
+daily GitHub Actions workflow running in the tool repository, then copied here
+for long-term storage and historical archival.
 
-## Project Report Links
+> **Note**: Reports are generated automatically every day at 7:00 AM UTC.
+> Published reports are available at the [GitHub Pages site][pages-site].
 
-### Active Projects
+## Repository Structure
 
-- [AGL](https://modeseven-lfit.github.io/gerrit-reports/projects/agl/report.html)
-- [FDio](https://modeseven-lfit.github.io/gerrit-reports/projects/fdio/report.html)
-- [LF Broadband](https://modeseven-lfit.github.io/gerrit-reports/projects/lf-broadband/report.html)
-- [Linux Foundation](https://modeseven-lfit.github.io/gerrit-reports/projects/linux-foundation/report.html)
-- [O-RAN-SC](https://modeseven-lfit.github.io/gerrit-reports/projects/o-ran-sc/report.html)
-- [ONAP](https://modeseven-lfit.github.io/gerrit-reports/projects/onap/report.html)
-- [Opendaylight](https://modeseven-lfit.github.io/gerrit-reports/projects/opendaylight/report.html)
-- [OPNFV](https://modeseven-lfit.github.io/gerrit-reports/projects/opnfv/report.html)
+All report artifacts are stored in the `data/artifacts/` directory, organized
+by date:
 
-
-> **Note**: Reports are updated automatically every Monday at 7:00 AM UTC, or can be triggered manually via workflow dispatch.
-
-## Overview
-
-This repository contains automatically generated reports for various Linux Foundation projects. Reports are published automatically by the [project-reports](https://github.com/modeseven-lfit/project-reports) repository's CI/CD workflow.
-
-## Report Structure
-
-Reports are organized in a hierarchical folder structure:
-
-```
-projects/
-├── onap/
-│   ├── report.html
-│   └── .provenance.json
-├── opendaylight/
-│   ├── report.html
-│   └── .provenance.json
-└── [project-slug]/
-    ├── report.html
-    └── .provenance.json
+```text
+data/artifacts/
+└── YYYY-MM-DD/
+    ├── README.md                     # Summary of that day's run
+    ├── reports-<slug>/               # Generated reports
+    │   ├── report.html               # Interactive HTML report
+    │   ├── report.md                 # Markdown report
+    │   ├── report_raw.json           # Complete raw data
+    │   ├── config_resolved.json      # Applied configuration
+    │   ├── metadata.json             # Generation metadata
+    │   ├── theme.css                 # Report styling
+    │   └── <PROJECT>_report_bundle.zip
+    ├── raw-data-<slug>/              # Raw JSON data files
+    │   ├── report_raw.json
+    │   ├── config_resolved.json
+    │   └── metadata.json
+    └── clone-manifest-<slug>/        # Repository clone manifests
+        └── clone-manifest.json
 ```
 
-Each project folder contains:
-- **`report.html`**: The main report file with comprehensive analytics
-- **`.provenance.json`**: Metadata about when and how the report was generated
+This structure preserves a complete history of daily report runs for all
+configured Linux Foundation projects.
 
 ## Viewing Reports
 
-Reports can be viewed in several ways:
+For the latest published reports, visit the [GitHub Pages site][pages-site]
+hosted by the project-reporting-tool repository.
 
-1. **GitHub Pages** (recommended): Click any project link above to view the rendered HTML report
-2. **Raw HTML**: Access via GitHub's raw content URLs
-3. **Local Clone**: Clone this repository and open the HTML files in your browser
+To browse historical data stored here:
+
+1. **GitHub web interface** — Navigate the `data/artifacts/YYYY-MM-DD/`
+   directories to find reports from a specific date
+2. **Clone locally** — Clone this repository and open HTML files in a browser
 
 ## Report Contents
 
@@ -62,45 +58,45 @@ Each report includes comprehensive analytics such as:
 
 - Repository statistics and metrics
 - Commit activity and contributor information
-- Code review metrics
-- Project health indicators
+- INFO.yaml project metadata and committer tracking
+- Jenkins job allocation and CI/CD workflow status
+- Feature detection (documentation, security tools, dependency management)
 - Historical trends and analysis
 
-## Automation
+## How Reports Are Generated
 
-Reports are automatically generated and published by the [project-reports workflow](https://github.com/modeseven-lfit/project-reports/blob/main/.github/workflows/reporting.yaml).
+The [Project Reporting Tool][tool-repo] runs a production workflow daily:
 
-### How It Works
+1. The workflow clones all repositories from each configured Gerrit server
+2. For each project, it analyzes repositories and generates reports in multiple
+   formats (JSON, Markdown, HTML)
+3. Reports are uploaded as workflow artifacts
+4. A final job copies all artifacts to this repository, organized by date
 
-1. The workflow runs on a schedule (weekly) or manual trigger
-2. For each configured project, it:
-   - Clones all Gerrit repositories
-   - Runs comprehensive analytics
-   - Generates an HTML report
-   - Publishes the report to this repository
-3. Reports are committed with metadata tracking the source run
-4. This Pages workflow automatically updates the index and deploys to GitHub Pages
-
-### Project Slug Naming
-
-Project names are converted to slugs using the following rules:
-- Converted to lowercase
-- Non-alphanumeric characters replaced with hyphens
-- Leading/trailing hyphens removed
-
-Examples:
-- `ONAP` → `onap`
-- `OpenDaylight` → `opendaylight`
-- `LF Broadband` → `lf-broadband`
+For details on report generation, see the [tool documentation][tool-docs].
 
 ## Contributing
 
-This repository is automatically maintained. If you need to:
+This repository is automatically maintained. Manual changes will be overwritten
+by subsequent workflow runs.
 
-- **Add a new project**: Update the `PROJECTS_JSON` variable in the [project-reports repository](https://github.com/modeseven-lfit/project-reports)
-- **Modify report generation**: Update the Python scripts in the [project-reports repository](https://github.com/modeseven-lfit/project-reports)
-- **Report issues**: Open an issue in the [project-reports repository](https://github.com/modeseven-lfit/project-reports/issues)
+To make changes:
+
+- **Add a new project** — Update the `PROJECTS_JSON` secret in the
+  [tool repository][tool-repo]
+- **Modify report generation** — Update the Python code or templates in the
+  [tool repository][tool-repo]
+- **Report issues** — Open an issue in the [tool repository issues][tool-issues]
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+All content is licensed under the Apache License 2.0 — see the [LICENSE][lic]
+file for details.
+
+<!-- Link references -->
+
+[tool-repo]: https://github.com/modeseven-lfit/project-reporting-tool
+[tool-docs]: https://github.com/modeseven-lfit/project-reporting-tool#readme
+[tool-issues]: https://github.com/modeseven-lfit/project-reporting-tool/issues
+[pages-site]: https://modeseven-lfit.github.io/project-reporting-tool/
+[lic]: LICENSE
