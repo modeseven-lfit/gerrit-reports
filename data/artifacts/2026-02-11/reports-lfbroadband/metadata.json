@@ -1,0 +1,14 @@
+{
+  "project": "LF Broadband",
+  "slug": "lfbroadband",
+  "gerrit_server": "gerrit.lfbroadband.org",
+  "jenkins_server": "jenkins.lfbroadband.org",
+  "github_org": "",
+  "generated_at":     "2026-02-11T14:44:52Z",
+  "workflow_run_id": "21909649984",
+  "workflow_run_number": "157",
+  "workflow_run_attempt": "1",
+  "git_sha": "0b88823eda9cd7854220510e7c86c70ca065a721",
+  "git_ref": "refs/heads/main",
+  "environment": "production"
+}
