@@ -1,0 +1,140 @@
+project: ONAP
+output:
+  directory: reports
+  formats:
+  - json
+  - md
+  - html
+  create_bundle: true
+  bundle_name: '{project}_report_{date}.zip'
+  include_sections:
+    contributors: true
+    organizations: true
+    repo_feature_matrix: true
+    inactive_distributions: true
+    global_summary: true
+    activity_distribution: true
+    all_repositories: true
+    contributor_leaderboards: true
+    organization_leaderboard: true
+    workflows: true
+    orphaned_jobs: true
+    unattributed_jobs: true
+time_windows:
+  last_30:
+    days: 30
+  last_90:
+    days: 90
+  last_365:
+    days: 365
+  last_3_years:
+    days: 1095
+activity_thresholds:
+  current_days: 365
+  active_days: 1095
+features:
+  enabled:
+  - dependabot
+  - github2gerrit_workflow
+  - g2g
+  - pre_commit
+  - readthedocs
+  - sonatype_config
+  - project_types
+  - workflows
+  - gitreview
+workflows:
+  classify:
+    verify:
+    - verify
+    - test
+    - ci
+    - check
+    merge:
+    - merge
+    - release
+    - deploy
+    - publish
+performance:
+  max_workers: 8
+  cache: true
+render:
+  table_of_contents: true
+  show_net_lines: true
+  show_added_removed: false
+  abbreviate_large_numbers: true
+  large_number_threshold: 10000
+  emoji:
+    active: "\u2705"
+    inactive: "\u26A0\uFE0F"
+    missing: "\u274C"
+    present: "\u2705"
+    very_old: "\U0001F534"
+    old: "\U0001F7E1"
+  max_repo_name_length: 50
+  max_author_name_length: 30
+privacy:
+  mask_emails: false
+  anonymize_authors: false
+logging:
+  level: INFO
+  include_timestamps: true
+  log_per_repo_timing: false
+data_quality:
+  unknown_email_placeholder: unknown@unknown
+  skip_binary_changes: true
+html_tables:
+  sortable: true
+  searchable: true
+  pagination: true
+  entries_per_page: 20
+  page_size_options:
+  - 20
+  - 50
+  - 100
+  - 200
+  min_rows_for_sorting: 3
+gerrit:
+  enabled: true
+  host: gerrit.onap.org
+  base_url: ''
+  timeout: 30.0
+jenkins:
+  enabled: true
+  host: jenkins.onap.org
+  timeout: 30.0
+  allow_http_fallback: false
+jjb_attribution:
+  enabled: true
+  url: ''
+  branch: master
+  cache_dir: /tmp
+  update_interval: 86400
+info_yaml:
+  enabled: true
+  clone_url: https://gerrit.linuxfoundation.org/infra/releng/info-master
+  exclude_archived: true
+  activity_windows:
+    current: 365
+    active: 1095
+  validate_urls: true
+  url_timeout: 10.0
+extensions:
+  github_api:
+    enabled: true
+    token: ''
+    timeout: 30.0
+    include_issues: false
+    include_prs: false
+    github_org: onap
+  language_analysis:
+    enabled: false
+  security_scanning:
+    enabled: false
+schema_version: 1.5.0
+_github_org_auto_derived: true
+github: onap
+_github_org_source: auto_derived
+_script_version: 0.1.dev1+g0b88823ed
+_schema_version: 1.5.0
+_github_token_env: CLASSIC_READ_ONLY_PAT_TOKEN
